@@ -1,9 +1,11 @@
+<h2 align="center">Tifenn Guillas</h2>
+
 <h3 align="center">Deploying soon...</h3>
 
 <p align="center">
     <img alt="Under construction, come back later..." src="https://media.giphy.com/media/tAeB6dptxnoli/giphy.gif">
 </p>
-<br><br>
+<br>
 
 <h3 align="center">Essential links:</h3>
 <p align="center">
