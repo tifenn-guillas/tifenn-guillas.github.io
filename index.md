@@ -1,5 +1,3 @@
-<h2 align="center">Tifenn Guillas</h2>
-
 <h3 align="center">Deploying soon...</h3>
 
 <p align="center">
