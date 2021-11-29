@@ -1,0 +1,20 @@
+<footer class="bg-tgBlue py-6 ">
+    <div class="container mx-auto grid grid-cols-3 items-center">
+        <div class="uppercase text-gray-50 font-extralight text-xxs tracking-widest">
+            <p>&copy; Tifenn Guillas {{ 'now' | date: "%Y" }} Tous droits réservés.</p>
+        </div>
+
+        <a class=" href="#page-top">
+            <img class="w-12 mx-auto" src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
+        </a>
+
+       <div class="text-tgPink text-lg text-right">
+           {% for s in site.socials %}
+           {% assign social = s[1] %}
+            <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
+                <span class="{{ social.fontawesome }}"></span>
+            </a>
+           {% endfor %}
+        </div>
+    </div>
+</footer>
