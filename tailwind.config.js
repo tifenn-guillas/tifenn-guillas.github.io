@@ -7,8 +7,11 @@ module.exports = {
                 xxs: '.65rem',
             },
             colors: {
-                tgPink: '#ff7777',
-                tgBlue: '#22273f'
+                'tg-pink': '#ff7777',
+                'tg-blue': '#22273f',
+                'tg-white': '#FCFCFC',
+                'tg-soft-gray': '#d3d3d3',
+                'tg-gray': '#555555'
             },
             fontFamily: {
                 roboto: ['Roboto'],
