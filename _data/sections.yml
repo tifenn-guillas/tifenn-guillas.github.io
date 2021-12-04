@@ -1,0 +1,15 @@
+- name: about
+  label: A propos
+
+- name: skills
+  label: Compétences
+
+- name: resume
+  label: Parcours
+
+- name: goals
+  label: Objectifs
+
+- name: contact
+  label: Contact
+

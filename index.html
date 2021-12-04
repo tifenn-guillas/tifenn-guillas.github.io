@@ -2,9 +2,8 @@
 layout: default
 ---
 
-It works!
+{% for section in site.data.sections %}
+    {% include {{ section.name }}.html label=section.label %}
+{% endfor %}
 
-{% include resume.html %}
-{% include aims.html %}
-{% include contact.html %}
 {% include footer.html %}
