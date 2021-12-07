@@ -2,6 +2,12 @@ module.exports = {
     purge: ["**/*.{html,md,js}"],
     darkMode: false, // or 'media' or 'class'
     theme: {
+        letterSpacing: {
+            normal: '.025em',
+            wide: '.05em',
+            wider: '.1em',
+            widest: '.25em',
+        },
         extend: {
             fontSize: {
                 xxs: '.65rem',

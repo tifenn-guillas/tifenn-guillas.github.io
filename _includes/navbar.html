@@ -1,0 +1,25 @@
+<nav class="flex sticky top-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <a class="flex-none my-auto mx-2.5" href="#page-top">
+        <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
+    </a>
+
+    <ul class="flex-auto text-center">
+    {% for section in site.data.sections %}
+        <li class="inline-block p-4 hover:text-tg-pink">
+            <a href="#{{section.name}}">
+                {{ section.label }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    {% if site.lang == 'fr-FR' %}
+        <a class="flex-none self-stretch py-4 px-2.5" href="{{ site.baseurl }}/fr/">
+            <img src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">
+        </a>
+    {% else %}
+        <a class="flex-none py-auto px-2.5" href="{{ site.baseurl }}/en/">
+            <img src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">
+        </a>
+    {% endif %}
+</nav>
