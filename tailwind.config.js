@@ -21,7 +21,11 @@ module.exports = {
             },
             fontFamily: {
                 roboto: ['Roboto'],
-            }
+            },
+            backgroundImage: theme => ({
+                'header-image': "url('/assets/images/background.jpg')",
+                'parallax-image': "url('/assets/images/parallax.jpg')"
+            })
         }
     },
     variants: {
