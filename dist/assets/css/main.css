@@ -14445,7 +14445,7 @@ img, video { max-width: 100%; height: auto; }
 
 .ease-in-out { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
 
-h1, h2, h3, h4, h5, h6 { margin-bottom: 1rem; font-weight: 500; text-transform: uppercase; letter-spacing: .05em; }
+h1, h2, h3, h4, h5, h6 { font-weight: 500; letter-spacing: .05em; }
 
 h4 { font-size: 1.125rem; line-height: 1.75rem; }
 

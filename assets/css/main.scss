@@ -9,7 +9,7 @@ $parallax-image: "/assets/images/parallax.jpg";
 $background-image: "/assets/images/background.jpg";
 
 h1, h2, h3, h4, h5, h6 {
-    @apply uppercase mb-4 tracking-wide font-medium;
+    @apply tracking-wide font-medium;
 }
 
 h4 {
