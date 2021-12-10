@@ -1,5 +1,11 @@
+- name: header
+  label: header
+
 - name: about
   label: A propos
+
+- name: links
+  label: links
 
 - name: skills
   label: Compétences
