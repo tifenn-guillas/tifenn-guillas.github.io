@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-{% include navbar.html %}
-
 {% for section in site.data.sections %}
     {% include {{ section.name }}.html name=section.name label=section.label %}
 {% endfor %}
-
-{% include footer.html %}

@@ -1,21 +1,32 @@
+- name: navbar
+  menu_displayed: false
+
 - name: header
-  label: header
+  menu_displayed: false
 
 - name: about
   label: A propos
+  menu_displayed: true
 
 - name: links
-  label: links
+  menu_displayed: false
 
 - name: skills
   label: Compétences
+  menu_displayed: true
 
 - name: resume
   label: Parcours
+  menu_displayed: true
 
 - name: goals
   label: Objectifs
+  menu_displayed: true
 
 - name: contact
   label: Contact
+  menu_displayed: true
+
+- name: footer
+  menu_displayed: false
 
