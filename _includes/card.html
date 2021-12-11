@@ -1,0 +1,17 @@
+<div class="border-2 border-tg-pink">
+    <h3 class="p-4 uppercase">{{ include.name }}</h3>
+    <div class="mx-4 h-px bg-tg-pink"></div>
+    <ul class="my-4">
+        {% for techno in include.technologies %}
+            {% if techno.icon_type == "fontawesome" %}
+                <li>
+                    {{ techno.name }}
+                </li>
+            {% else %}
+                <li>
+                    {{ techno.name }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

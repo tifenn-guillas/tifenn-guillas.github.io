@@ -1,0 +1,27 @@
+- stack: Backend
+  technologies:
+      - name: PHP
+        icon_type: fontawesome
+        icon: fab fa-php
+      - name: Python
+        icon_type: fontawesome
+        icon: fab fa-python
+
+- stack: Frontend
+  technologies:
+      - name: Angular
+        icon_type: fontawesome
+        icon: fab fa-angular
+      - name: RxJS
+        icon_type: custom
+        icon: rxjs.svg
+
+- stack: Environnement
+  technologies:
+        - name: Linux
+          icon_type: fontawesome
+          icon: fab fa-linux
+        - name: MacOS
+          icon_type: fontawesome
+          icon: fab fa-apple
+
