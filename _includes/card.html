@@ -1,17 +1,22 @@
 <div class="border-2 border-tg-pink">
     <h3 class="p-4 uppercase">{{ include.name }}</h3>
     <div class="mx-4 h-px bg-tg-pink"></div>
-    <ul class="my-4">
+    <div class="my-4">
         {% for techno in include.technologies %}
             {% if techno.icon_type == "fontawesome" %}
-                <li>
-                    {{ techno.name }}
-                </li>
+                <div class="flex gap-4">
+                    <div class="ml-4 w-8 flex-none">
+                        <span class="fa-2x {{ techno.icon }}"></span>
+                    </div>
+                    <div class="flex-initial self-center">
+                        {{ techno.name }}
+                    </div>
+                </div>
             {% else %}
-                <li>
-                    {{ techno.name }}
-                </li>
+<!--                <li>-->
+<!--                    {{ techno.name }}-->
+<!--                </li>-->
             {% endif %}
         {% endfor %}
-    </ul>
+    </div>
 </div>

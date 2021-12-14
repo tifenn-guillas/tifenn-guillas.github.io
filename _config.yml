@@ -40,17 +40,17 @@ socials:
         name: Twitter
         username: "@tifenn_guillas"
         url: https://twitter.com/tifenn_guillas
-        fontawesome: fa fa-twitter
+        fontawesome: fab fa-twitter
     github:
         name: GitHub
         username: tifenn-guillas
         url: https://github.com/tifenn-guillas
-        fontawesome: fa fa-github
+        fontawesome: fab fa-github
     linkedin:
         name: LinkedIn
         username: tifenn-guillas
         url: https://www.linkedin.com/in/tifenn-guillas
-        fontawesome: fa fa-linkedin
+        fontawesome: fab fa-linkedin-in
 
     # Build settings
 plugins:
