@@ -14,5 +14,18 @@
         <div class="flex justify-center mt-2.5">
             <div class="bg-tg-pink w-10 h-0.5"></div>
         </div>
+
+        <div class="container mx-auto py-16 grid grid-flow-col">
+            {% for s in site.socials %}
+            {% assign social = s[1] %}
+                {% if social.contact" %}
+                    <div class="text-center text-tg-pink">
+                        <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
+                            <span class="fa-5x {{ social.fontawesome }}"></span>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 </div>
