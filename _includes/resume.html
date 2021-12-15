@@ -1,7 +1,58 @@
-<div id="{{ include.name }}" class="py-16 bg-tg-blue">
+<div id="{{ include.name }}" class="pt-16 pb-24 bg-tg-blue">
     <div class="container mx-auto">
         <div class="flex justify-end">
             {% include block-name.html label=include.label background="blue" %}
+        </div>
+
+        <div class="my-20 mx-40">
+            <h4 class="mb-4 text-center text-tg-pink uppercase">Expériences professionnelles</h4>
+            <div class="my-12">
+                {% for job in site.data.jobs %}
+                    <div class="my-10 grid grid-cols-4 gap-6">
+                        <div class="text-tg-white text-right tracking-wide font-light">
+                            {{ job.start }} - {{ job.end }}
+                        </div>
+                        <div class="col-span-3">
+                            <p class="text-tg-soft-gray italic">{{ job.title }}</p>
+                            <p class="text-tg-pink font-light italic">{{ job.location }}</p>
+                            <p class="pt-4 text-tg-soft-gray">{{ job.description }}</p>
+                            <p class="pt-4 text-tg-soft-gray">{{ job.tasks }}</p>
+                            <p class="pt-4 text-tg-soft-gray">
+                                {% for techno in job.technologies %}
+                                    #{{ techno }}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="my-20 mx-40">
+            <h4 class="mb-4 text-center text-tg-pink uppercase">Formation</h4>
+            <div class="my-12">
+                {% for formation in site.data.formations %}
+                <div class="my-10 grid grid-cols-4 gap-6">
+                    <div class="text-tg-white text-right tracking-wide font-light">
+                        {{ formation.date }}
+                    </div>
+                    <div class="col-span-3">
+                        <p class="text-tg-soft-gray italic">{{ formation.title }}</p>
+                        <p class="text-tg-soft-gray font-thin italic">{{ formation.note }}</p>
+                        <p class="text-tg-pink font-light italic">{{ formation.location }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+               target="_blank"
+               class="border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
+               title="Téléchargez mon CV">
+                Téléchargez mon CV
+            </a>
         </div>
     </div>
 </div>
