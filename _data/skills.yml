@@ -3,9 +3,18 @@
       - name: PHP
         icon_type: fontawesome
         icon: fab fa-php
+      - name: Symfony
+        icon_type: fontawesome
+        icon: fab fa-symfony
+      - name: Doctrine
+        icon_type: custom
+        icon: doctrine.svg
       - name: Python
         icon_type: fontawesome
         icon: fab fa-python
+      - name: PostgreSQL MySQL
+        icon_type: fontawesome
+        icon: fas fa-database
 
 - stack: Frontend
   technologies:
@@ -15,13 +24,37 @@
       - name: RxJS
         icon_type: custom
         icon: rxjs.svg
+      - name: Unit testing with Jasmine and Jest
+        icon_type: fontawesome
+        icon: far fa-check-square
+      - name: Bootstrap
+        icon_type: fontawesome
+        icon: fab fa-bootstrap
+      - name: tailwindcss
+        icon_type: custom
+        icon: tailwindcss.svg
+      - name: Jekyll
+        icon_type: custom
+        icon: jekyll.svg
 
 - stack: Environnement
   technologies:
+        - name: Docker
+          icon_type: fontawesome
+          icon: fab fa-docker
+        - name: git
+          icon_type: fontawesome
+          icon: fab fa-git-alt
+        - name: CI/CD
+          icon_type: fontawesome
+          icon: fas fa-sync-alt
         - name: Linux
           icon_type: fontawesome
           icon: fab fa-linux
         - name: MacOS
           icon_type: fontawesome
           icon: fab fa-apple
+        - name: PHPStorm VSCode
+          icon_type: fontawesome
+          icon: fas fa-code
 

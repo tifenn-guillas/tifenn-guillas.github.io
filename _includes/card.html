@@ -3,20 +3,20 @@
     <div class="mx-4 h-px bg-tg-pink"></div>
     <div class="my-4">
         {% for techno in include.technologies %}
-            {% if techno.icon_type == "fontawesome" %}
-                <div class="flex gap-4">
-                    <div class="ml-4 w-8 flex-none">
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    {% if techno.icon_type == "fontawesome" %}
                         <span class="fa-2x {{ techno.icon }}"></span>
-                    </div>
-                    <div class="flex-initial self-center">
-                        {{ techno.name }}
-                    </div>
+                    {% else %}
+        <!--                <li>-->
+        <!--                    {{ techno.name }}-->
+        <!--                </li>-->
+                    {% endif %}
                 </div>
-            {% else %}
-<!--                <li>-->
-<!--                    {{ techno.name }}-->
-<!--                </li>-->
-            {% endif %}
+                <div class="flex-initial self-center">
+                    {{ techno.name }}
+                </div>
+            </div>
         {% endfor %}
     </div>
 </div>
