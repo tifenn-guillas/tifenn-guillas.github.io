@@ -3,5 +3,15 @@
         <div class="flex justify-start">
             {% include block-name.html label=include.label background="white" %}
         </div>
+
+        <div class="my-20 mx-40">
+            <div class="goals-carousel">
+                {% for goal in site.data.goals %}
+                <div>
+                    <h3>{{ goal.year }}</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>

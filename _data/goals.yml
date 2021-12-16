@@ -1,0 +1,78 @@
+- year: 2018
+  tasks:
+    - 
+
+
+- title: Ingénieur software
+  start: 08/2017
+  end: 02/2018
+  location: The Currency Shop - Melbourne, Australie
+  description: The Currency Shop est un site de comparaison de taux de change et frais liés au transfert d'argent à
+    l'étranger. Ils fournissent des guides, revues et convertisseurs afin de trouver le meilleur taux.
+  tasks: Mise en production de sites web pour l'international en WordPress hébergés sur Microsoft Azure. Rapatriement
+    en interne du site web principal sous Symfony, sous-traité par une agence web. Création d'un convertisseur de
+    devises communiquant avec les API de TransferWise.
+  technologies:
+      - Azure
+      - Symfony3
+      - Bootstrap3
+      - ResponsiveDesign
+      - PHPOO
+      - Doctrine2
+      - MySQL
+
+- title: Ingénieur en développement et déploiement d'applications
+  start: 04/2016
+  end: 04/2017
+  location: CNRS - Laboratoire d'Astrophysique de Marseille
+  description: GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent
+    exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des
+    résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.
+  tasks: Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment
+    en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros
+    volumes. Ajout de nouveaux algorithmes de traitements de catalogues.
+  technologies:
+      - Angular2
+      - Bootstrap3
+      - ResponsiveDesign
+      - PHPOO
+      - Slim3
+      - Doctrine2
+      - PostgreSQL
+
+- title: Ingénieur en base de données et programmation
+  start: 10/2015
+  end: 01/2016
+  location: GIS Posidonie - Marseille
+  description: POPCOrn, est un outil de comptage des poissons et coraux présents dans le Parc National des Calanques
+    afin de déterminer l'efficacité de l’espace protégé. Cette application interne est destinée aux plongeurs du
+    Groupement d’Intérêt Scientifique Posidonie, du parc, et à terme à ceux du Parc National de Port Cros.
+  tasks: Conception d'une base de données PostgreSQL et importation de données provenant d'une base Access. Stockage et
+    manipulation de données spatiales grâce à PostGIS. Conception d'une application web afin d'intégrer de nouvelles
+    données dans la base.
+  technologies:
+      - PostgreSQL
+      - PostGIS
+      - jQuery
+      - Twig
+      - Bootstrap3
+      - PHP
+      - Doctrine2
+
+- title: Stage Développeur Web
+  start: 04/2015
+  end: 08/2015
+  location: CNRS - Institut de Biologie du Développement de Marseille
+  description: Création d'une application interne de gestion des publications de l'institut et des préférences
+    utilisateurs liées à ces publications. Opération faite manuellement auparavant.
+  tasks: Création d'une base de données MySQL avec MERISE. Création d'une interface web afin de recenser les
+    publications du laboratoire et gestion des préférences utilisateurs en PHP, HTML/CSS et jQuery (+ différents
+    plugins jQuery).
+  technologies:
+      - MySQL
+      - MERISE
+      - PHP
+      - Doctrine2
+      - Twig
+      - jQuery
+      - jQueryPlugins
