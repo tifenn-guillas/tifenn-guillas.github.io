@@ -13,15 +13,27 @@
         </li>
         {% endif %}
     {% endfor %}
+        <li class="inline-block">
+            {% if site.lang == 'fr-FR' %}
+            <a class="p-4" href="{{ site.baseurl }}/fr/">
+                <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">
+            </a>
+            {% else %}
+            <a class="p-4" href="{{ site.baseurl }}/en/">
+                <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">
+            </a>
+            {% endif %}
+        </li>
     </ul>
 
-    {% if site.lang == 'fr-FR' %}
-        <a class="flex-none self-stretch py-4 px-2.5" href="{{ site.baseurl }}/fr/">
-            <img src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">
-        </a>
-    {% else %}
-        <a class="flex-none py-auto px-2.5" href="{{ site.baseurl }}/en/">
-            <img src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">
-        </a>
-    {% endif %}
+    <div class="flex-none my-auto mx-2.5">
+<!--        <div class="border border-tg-white">-->
+            <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+                target="_blank"
+                class="border border-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:text-tg-pink"
+                title="Téléchargez mon CV">
+                <span class="fas fa-download"></span> CV
+            </a>
+<!--        </div>-->
+    </div>
 </nav>
