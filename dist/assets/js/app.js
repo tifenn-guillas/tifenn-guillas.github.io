@@ -8,10 +8,7 @@ $(document).ready(function () {
 
     // Carousel
     $('.carousel').slick({
-        dots: false,
-        infinite: true,
-        fade: true,
-        adaptiveHeight: true
+        infinite: true
     });
 
     // jQuery smooth scrolling

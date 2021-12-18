@@ -15,5 +15,10 @@ h4 {
 
 .slick-prev:before,
 .slick-next:before {
-    @apply text-tg-pink;
+    @apply text-tg-pink p-14 hover:text-opacity-50;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    @apply text-opacity-50;
 }

@@ -7,20 +7,22 @@
         <div class="my-20 mx-80">
             <div class="carousel">
                 {% for goal in site.data.goals %}
-                <div>
-                    <h3 class="text-center">{{ goal.year }}</h3>
+                <div class="">
+                    <h3 class="mb-9 pl-12 text-center text-xl font-semibold text-wide">{{ goal.year }}</h3>
                     {% for task in goal.tasks %}
-                        <div class="rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink transform translate-y-36">
+                    <div class="relative ml-28 mb-9">
+                        <div class="rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink absolute inset-y-0 my-auto">
                             {% if task.icon_type == "fontawesome" %}
                                 <span class="fa-3x {{ task.icon }}"></span>
                             {% else %}
                                 <!-- TODO: insert techno custom image -->
                             {% endif %}
                         </div>
-                        <div class="ml-14 mb-9 py-6 pl-16 pr-4 bg-gray-100 border-b-2 border-r border-tg-pink">
+                        <div class="ml-14 py-6 pl-20 pr-6 bg-gray-100 border-b-2 border-r border-tg-pink">
                             <h4>{{ task.title }}</h4>
                             <p class="text-justify">{{ task.description }}</p>
                         </div>
+                    </div>
                     {% endfor %}
                 </div>
                 {% endfor %}
