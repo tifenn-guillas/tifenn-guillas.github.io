@@ -21,6 +21,8 @@ exports.default = function() {
 
     gulp.src(['./node_modules/slick-carousel/slick/fonts/**/*'])
         .pipe(gulp.dest('assets/dist'));
+    gulp.src(['./node_modules/slick-carousel/slick/ajax-loader.gif'])
+        .pipe(gulp.dest('assets/dist'));
 
     return gulp.src([
         './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
@@ -30,6 +32,8 @@ exports.default = function() {
     ])
     .pipe(concat('assets/dist/libs.css'))
     .pipe(replace('../webfonts/fa-', 'fa-'))
+    .pipe(replace('fonts/slick', 'slick'))
+    .pipe(replace('../ajax-loader.gif', 'ajax-loader.gif'))
     .pipe(uglifycss())
     .pipe(gulp.dest('./'));
 }

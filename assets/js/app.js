@@ -6,6 +6,14 @@ $(document).ready(function () {
         $(this).remove();
     });
 
+    // Carousel
+    $('.carousel').slick({
+        dots: false,
+        infinite: true,
+        fade: true,
+        adaptiveHeight: true
+    });
+
     // jQuery smooth scrolling
     $('.navbar-nav .nav-link, footer a, a.active-anchor').bind('click', function (event) {
         var anchor = $(this);

@@ -4,11 +4,24 @@
             {% include block-name.html label=include.label background="white" %}
         </div>
 
-        <div class="my-20 mx-40">
-            <div class="goals-carousel">
+        <div class="my-20 mx-80">
+            <div class="carousel">
                 {% for goal in site.data.goals %}
                 <div>
-                    <h3>{{ goal.year }}</h3>
+                    <h3 class="text-center">{{ goal.year }}</h3>
+                    {% for task in goal.tasks %}
+                        <div class="rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink transform translate-y-36">
+                            {% if task.icon_type == "fontawesome" %}
+                                <span class="fa-3x {{ task.icon }}"></span>
+                            {% else %}
+                                <!-- TODO: insert techno custom image -->
+                            {% endif %}
+                        </div>
+                        <div class="ml-14 mb-9 py-6 pl-16 pr-4 bg-gray-100 border-b-2 border-r border-tg-pink">
+                            <h4>{{ task.title }}</h4>
+                            <p class="text-justify">{{ task.description }}</p>
+                        </div>
+                    {% endfor %}
                 </div>
                 {% endfor %}
             </div>
