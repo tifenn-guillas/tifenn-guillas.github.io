@@ -16,12 +16,23 @@
   menu_displayed: true
 
 - name: resume
-  label: Parcours
+  label: Carrière
+  menu_displayed: true
+
+- name: formation
+  label: Formation
+  menu_displayed: true
+
+- name: portfolio
+  label: Portfolio
   menu_displayed: true
 
 - name: goals
   label: Objectifs
   menu_displayed: true
+
+- name: hobbies
+  menu_displayed: false
 
 - name: contact
   label: Contact

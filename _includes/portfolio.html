@@ -1,0 +1,12 @@
+<div id="{{ include.name }}" class="pt-16 pb-24 bg-tg-blue">
+    <div class="container mx-auto">
+        <div class="flex justify-end">
+            {% include block-name.html label=include.label background="blue" %}
+        </div>
+
+        <div class="my-20 mx-40">
+            {% for project in site.data.portfolio %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

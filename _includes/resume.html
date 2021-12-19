@@ -28,24 +28,6 @@
             </div>
         </div>
 
-        <div class="my-20 mx-40">
-            <h4 class="mb-4 text-center text-tg-pink uppercase">Formation</h4>
-            <div class="my-12">
-                {% for formation in site.data.formations %}
-                <div class="my-10 grid grid-cols-4 gap-6">
-                    <div class="text-tg-white text-right tracking-wide font-light">
-                        {{ formation.date }}
-                    </div>
-                    <div class="col-span-3">
-                        <p class="text-tg-soft-gray italic">{{ formation.title }}</p>
-                        <p class="text-tg-soft-gray font-thin italic">{{ formation.note }}</p>
-                        <p class="text-tg-pink font-light italic">{{ formation.location }}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
         <div class="text-center">
             <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
                target="_blank"

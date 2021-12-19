@@ -1,0 +1,25 @@
+<div id="{{ include.name }}" class="pt-16 pb-10 bg-tg-white">
+    <div class="container mx-auto">
+        <div class="flex justify-start">
+            {% include block-name.html label=include.label background="white" %}
+        </div>
+
+        <div class="my-20 mx-40">
+            <h4 class="mb-4 text-center uppercase">Études et certifications</h4>
+            <div class="my-12">
+                {% for formation in site.data.formations %}
+                <div class="my-10 grid grid-cols-4 gap-6">
+                    <div class="text-right tracking-wide font-light">
+                        {{ formation.date }}
+                    </div>
+                    <div class="col-span-3">
+                        <p class="italic">{{ formation.title }}</p>
+                        <p class="font-thin italic">{{ formation.note }}</p>
+                        <p class="text-tg-pink italic">{{ formation.location }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
