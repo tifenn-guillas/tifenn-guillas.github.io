@@ -1,7 +1,7 @@
 var uri = new URI();
 
 $(document).ready(function () {
-    // LOADER
+    // Loader
     $('.loader').fadeOut(1000, function () {
         $(this).remove();
     });
@@ -11,25 +11,16 @@ $(document).ready(function () {
         infinite: true
     });
 
+    // Popup for portfolio
+    $('.image-popup').magnificPopup({
+        type: 'inline',
+    });
+
     // jQuery smooth scrolling
     $('.navbar-nav .nav-link, footer a, a.active-anchor').bind('click', function (event) {
         var anchor = $(this);
         var anchorId = anchor.attr('href').split("#")[1];
         animateAnchor(anchorId, event);
-    });
-
-    // POPUP FOR IMAGES
-    $('.image-popup').magnificPopup({
-        type: 'image',
-        mainClass: 'mfp-with-zoom',
-        zoom: {
-            enabled: true,
-            duration: 300,
-            easing: 'ease-in-out',
-            opener: function (openerElement) {
-                return openerElement.is('img') ? openerElement : openerElement.find('img');
-            }
-        }
     });
 
     // CHECK HASH
