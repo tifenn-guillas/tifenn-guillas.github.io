@@ -13,12 +13,37 @@ h4 {
     @apply text-lg;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    @apply text-tg-pink p-14 hover:text-opacity-50;
+/* Carousel */
+.slick-prev, .slick-next {
+    &::before {
+        @apply text-tg-pink p-14 hover:text-opacity-50;
+    }
 }
 
-.slick-prev:hover:before,
-.slick-next:hover:before {
-    @apply text-opacity-50;
+/* Portfolio thumbnail */
+.image-popup {
+    @apply relative bg-tg-pink overflow-hidden;
+
+    img {
+        @apply transition-all duration-300 ease-in hover:opacity-20;
+    }
+
+    &::before, &::after {
+        content: '';
+        @apply bg-tg-white absolute opacity-0 top-1/2 left-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in;
+    }
+    &::before {
+        @apply w-16 h-0.5 left-0;
+    }
+    &::after {
+        @apply h-16 w-0.5 top-full;
+    }
+    &:hover::before, &:hover::after {
+        @apply top-1/2 left-1/2 opacity-100;
+    }
+}
+
+/* Portfolio popup */
+.mfp-close-btn-in .mfp-close {
+    @apply text-tg-white;
 }

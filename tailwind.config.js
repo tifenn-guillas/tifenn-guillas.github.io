@@ -30,7 +30,7 @@ module.exports = {
     },
     variants: {
         extend: {
-            filter: ['hover']
+            visibility: ['hover']
         },
     },
     plugins: [],

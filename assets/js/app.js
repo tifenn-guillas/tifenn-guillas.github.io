@@ -14,6 +14,10 @@ $(document).ready(function () {
     // Popup for portfolio
     $('.image-popup').magnificPopup({
         type: 'inline',
+        gallery:{
+            enabled:true
+        },
+        mainClass: 'mfp-zoom-in'
     });
 
     // jQuery smooth scrolling

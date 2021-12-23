@@ -1,6 +1,36 @@
+- title: SVOM
+  id: svom
+  miniature: svom-min.png
+  images:
+    - svom.png
+    - svom2.png
+    - svom3.png
+    - svom4.png
+  description: La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons
+    gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les
+    étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.<br>
+    Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de
+    visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je
+    suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires
+    pour la partie frontend sous Angular.
 - title: tifenn-guillas.fr
   id: tifenn-guillas
-  miniature: tifenn-guillas.min.png
-  image: tifenn-guillas.png
+  miniature: tifenn-guillas-min.png
+  images:
+  - tifenn-guillas.png
   description: blavlabla
+- title: GAZPAR
+  id: gazpar
+  miniature: gazpar-min.png
+  images:
+    - gazpar.png
+    - gazpar2.png
+    - gazpar3.png
+  description: GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent
+    exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des
+    résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.<br>
+    Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment
+    en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros
+    volumes. Ajout de nouveaux algorithmes de traitements de catalogues.
+
 
