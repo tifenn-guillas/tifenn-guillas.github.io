@@ -12,9 +12,16 @@
             <div id="{{ project.id }}" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
                 <div class="p-9 bg-tg-blue">
                     <h4 class="text-tg-white">{{ project.title }}</h4>
-                    <p class="pt-6 pb-9 text-tg-soft-gray">{{ project.description }}</p>
+                    <p class="pt-6 text-tg-soft-gray">{{ project.description }}</p>
+                    {% if project.hashtags %}
+                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                        {% for tech in project.hashtags %}
+                        #{{ tech }}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
                     {% for image in project.images %}
-                    <img class="pb-6" src="{{ site.baseurl }}/assets/images/portfolio/{{ image }}" alt="Image {{ image }}">
+                    <img class="pt-9 pb-6" src="{{ site.baseurl }}/assets/images/portfolio/{{ image }}" alt="Image {{ image }}">
                     {% endfor %}
                 </div>
             </div>

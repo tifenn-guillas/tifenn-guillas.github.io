@@ -18,7 +18,12 @@
   miniature: tifenn-guillas-min.png
   images:
   - tifenn-guillas.png
-  description: blavlabla
+  description: Pouvoir me présenter tout en apprenant de nouvelles choses, voilà ce que me permet mon site web ! La V1
+    sous Symfony avec un formulaire de contact classique était très fonctionelle mais j'ai décidé de le remettre au goût
+    du jour avec un hébergement sous GitHub Pages, moins contraignant que d'avoir à gérer un serveur dédié. Je voulais
+    aussi m'attaquer à Tailwindcss afin de m'approprier le design du thème. C'est avec fierté que je pense avoir
+    réussi ! Hâte de savoir quelles seront les modifications approtées par la V3 !
+  hashtags: [Symfony, Jekyll, Tailwindcss, jQuery, GitHubPages, GitHubActions, Docker]
 - title: GAZPAR
   id: gazpar
   miniature: gazpar-min.png
