@@ -31,34 +31,14 @@ defaults:
         values:
             title: Tifenn Guillas
             description: Développeur d'Applications Web
-            socials:
+            resume: https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing
+            seo:
                 url: https://tifenn-guillas.fr
                 title: Tifenn Guillas - Développeur d'Applications Web
 
-socials:
-    twitter:
-        name: Twitter
-        username: "@tifenn_guillas"
-        url: https://twitter.com/tifenn_guillas
-        fontawesome: fab fa-twitter
-        contact: true
-    github:
-        name: GitHub
-        username: tifenn-guillas
-        url: https://github.com/tifenn-guillas
-        fontawesome: fab fa-github
-        contact: false
-    linkedin:
-        name: LinkedIn
-        username: tifenn-guillas
-        url: https://www.linkedin.com/in/tifenn-guillas
-        fontawesome: fab fa-linkedin-in
-        contact: true
 
-    # Build settings
+# Build settings
 plugins:
-    #  - jekyll-feed
-    #  - jekyll-seo-tag
     - jekyll-postcss
 
 # other configs

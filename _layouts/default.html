@@ -9,9 +9,9 @@
         <meta name="keywords" content="web, developer, développeur, symfony, angular2, angular4, angular, php, postgresql, mysql, html, html5, css3, javascript">
 
         <!-- Open Graph -->
-        <meta property='og:url' content='{{ page.socials.url }}'/>
+        <meta property='og:url' content='{{ page.seo.url }}'/>
         <meta property='og:type' content='website'/>
-        <meta property='og:title' content="{{ page.socials.title }}"/>
+        <meta property='og:title' content="{{ page.seo.title }}"/>
         <meta property='og:description' content="{{ page.description }}"/>
         <meta property='og:locale' content='{{ site.lang }}'/>
         <meta property='og:site_name' content='{{ page.title }}'/>
@@ -21,10 +21,11 @@
         <meta property="fb:app_id" content="264362930673821">
 
         <!-- Twitter -->
+        {% assign twitter = site.data.socials | where: "name", "Twitter" | first %}
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="{{ site.socials.twitter.username }}">
-        <meta name="twitter:creator" content="{{ site.socials.twitter.username }}">
-        <meta name="twitter:title" content="{{ page.socials.title }}">
+        <meta name="twitter:site" content="{{ twitter.username }}">
+        <meta name="twitter:creator" content="{{ twitter.username }}">
+        <meta name="twitter:title" content="{{ page.seo.title }}">
         <meta name="twitter:description" content="{{ page.description }}">
         <meta name="twitter:image" content="{{ site.url }}/assets/images/miniature.jpg">
 
@@ -35,10 +36,6 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet">
 
         <!-- CSS -->
-<!--        <link rel="stylesheet" href="{{ site.url }}/dist/assets/css/bootstrap/dist/css/bootstrap.min.css">-->
-<!--        <link rel="stylesheet" href="{{ site.url }}/dist/assets/css/animate.css/animate.min.css">-->
-<!--        <link rel="stylesheet" href="{{ site.url }}/dist/assets/css/magnific-popup/dist/magnific-popup.css"> &lt;!&ndash; CSS for animation on popup &ndash;&gt;-->
-<!--        <link rel="stylesheet" href="{{ site.url }}/dist/assets/css/font-awesome/css/font-awesome.min.css">-->
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/dist/libs.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
@@ -70,17 +67,6 @@
         <!-- Scripts JS -->
         <script src="{{ site.baseurl }}/assets/dist/libs.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app.js"></script>
-<!--        <script src="{{ site.url }}/dist/assets/js/jquery/dist/jquery.min.js'"></script>-->
-<!--        <script src="{{ site.url }}/dist/assets/js/bootstrap/dist/js/bootstrap.min.js"></script>-->
-<!--        <script src="{{ site.url }}/dist/assets/js/tifennguillas/js/wow.min.js"></script> &lt;!&ndash; Script Wow for animations on scroll &ndash;&gt;-->
-<!--        <script src="{{ site.url }}/dist/assets/js/jquery-parallax.js/parallax.min.js"></script>-->
-<!--        <script src="{{ site.url }}/dist/assets/js/isotope-layout/dist/isotope.pkgd.min.js"></script> &lt;!&ndash; Script Isotope for Portfolio &ndash;&gt;-->
-<!--        <script src="{{ site.url }}/dist/assets/js/magnific-popup/dist/jquery.magnific-popup.min.js"></script> &lt;!&ndash; Script for animation on popup &ndash;&gt;-->
-<!--        <script src="{{ site.url }}/dist/assets/js/jquery.easing.min.js"></script> &lt;!&ndash; Script for scroll animations &ndash;&gt;-->
-<!--        &lt;!&ndash;<script src="site.url }}/dist/assets/js/jquery.fallings.min.js"></script>&ndash;&gt; &lt;!&ndash; Script for parallax effect &ndash;&gt;-->
-<!--        <script src="{{ site.url }}/dist/assets/js/bootstrap-validator/dist/validator.js"></script> &lt;!&ndash; Script for Bootstrap form validator &ndash;&gt;-->
-<!--        <script src="{{ site.url }}/dist/assets/js/jquery-form/dist/jquery.form.min.js"></script>-->
-<!--        <script src="{{ site.url }}/dist/assets/js/main.js"></script>-->
 
         <script type="application/ld+json">
             {
@@ -88,12 +74,12 @@
                 "@type": "Person",
                 "name": "{{ page.title }}",
                 "jobTitle": "{{ page.description }}",
-                "url": "{{ page.socials.url }}",
+                "url": "{{ page.seo.url }}",
                 "image": "{{ site.url }}/dist/assets/logo.svg",
                 "sameAs" : [
-                    "{{ site.socials.twitter.url }}",
-                    "{{ site.socials.linkedIn.url }}",
-                    "{{ site.socials.github.url }}"
+                    {% for social in site.data.socials %}
+                    "{{ social.url }}",
+                    {% endfor %}
                 ],
                 "email": "tifenn.guillas@gmail.com"
             }

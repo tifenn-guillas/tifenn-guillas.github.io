@@ -16,8 +16,7 @@
         </div>
 
         <div class="container mx-auto py-16 px-80 grid grid-flow-col">
-            {% for s in site.socials %}
-            {% assign social = s[1] %}
+            {% for social in site.data.socials %}
                 {% if social.contact" %}
                     <div class="text-center text-tg-pink">
                         <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
