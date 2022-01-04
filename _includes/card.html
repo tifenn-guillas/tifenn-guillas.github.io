@@ -1,0 +1,20 @@
+<div class="border-2 border-tg-pink">
+    <h3 class="p-4 uppercase">{{ include.name }}</h3>
+    <div class="mx-4 h-px bg-tg-pink"></div>
+    <div class="my-4">
+        {% for techno in include.technologies %}
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    {% if techno.icon_type == "fontawesome" %}
+                        <span class="fa-2x {{ techno.icon }}"></span>
+                    {% else %}
+                        <!-- TODO: insert techno custom image -->
+                    {% endif %}
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    {{ techno.description }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

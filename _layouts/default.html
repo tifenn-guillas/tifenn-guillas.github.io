@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "fr-FR" }}">
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}">
+        <meta name="author" content="Tifenn Guillas">
+        <meta name="keywords" content="web, developer, développeur, symfony, angular2, angular4, angular, php, postgresql, mysql, html, html5, css3, javascript">
+
+        <!-- Open Graph -->
+        <meta property='og:url' content='{{ page.seo.url }}'/>
+        <meta property='og:type' content='website'/>
+        <meta property='og:title' content="{{ page.seo.title }}"/>
+        <meta property='og:description' content="{{ page.description }}"/>
+        <meta property='og:locale' content='{{ site.lang }}'/>
+        <meta property='og:site_name' content='{{ page.title }}'/>
+        <meta property="og:image" content="{{ site.url }}/assets/images/miniature.jpg">
+
+        <!-- Facebook -->
+        <meta property="fb:app_id" content="264362930673821">
+
+        <!-- Twitter -->
+        {% assign twitter = site.data.socials | where: "name", "Twitter" | first %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="{{ twitter.username }}">
+        <meta name="twitter:creator" content="{{ twitter.username }}">
+        <meta name="twitter:title" content="{{ page.seo.title }}">
+        <meta name="twitter:description" content="{{ page.description }}">
+        <meta name="twitter:image" content="{{ site.url }}/assets/images/miniature.jpg">
+
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/dist/libs.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
+        <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/assets/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/assets/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/assets/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/assets/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/assets/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/apple-touch-icon-180x180.png" />
+
+        <!-- Google analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-88060393-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="bg-tg-blue font-roboto text-tg-gray">
+        {{ content }}
+
+        <!-- Scripts JS -->
+        <script src="{{ site.baseurl }}/assets/dist/libs.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org/",
+                "@type": "Person",
+                "name": "{{ page.title }}",
+                "jobTitle": "{{ page.description }}",
+                "url": "{{ page.seo.url }}",
+                "image": "{{ site.url }}/dist/assets/logo.svg",
+                "sameAs" : [
+                    {% for social in site.data.socials %}
+                    "{{ social.url }}",
+                    {% endfor %}
+                ],
+                "email": "tifenn.guillas@gmail.com"
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+- stack: Backend
+  technologies:
+      - description: PHP
+        icon_type: fontawesome
+        icon: fab fa-php
+      - description: Framework Symfony, Doctrine, Twig...
+        icon_type: fontawesome
+        icon: fab fa-symfony
+      - description: Python
+        icon_type: fontawesome
+        icon: fab fa-python
+      - description: "SGBDR : MySQL, PostgreSQL, PL/SQL, PostGIS..."
+        icon_type: fontawesome
+        icon: fas fa-database
+
+- stack: Frontend
+  technologies:
+      - description: Framework Angular, Typescript, NgRx, RxJS...
+        icon_type: fontawesome
+        icon: fab fa-angular
+      - description: "Tests unitaires : Jasmine, Jest"
+        icon_type: fontawesome
+        icon: far fa-check-square
+      - description: "Frameworks CSS : Bootstrap, Tailwindcss"
+        icon_type: fontawesome
+        icon: fab fa-bootstrap
+      - description: "Sites web statiques : Jekyll - GitHub Pages"
+        icon_type: fontawesome
+        icon: far fa-file-code
+
+- stack: Environnement
+  technologies:
+        - description: CI/CD, Docker, git
+          icon_type: fontawesome
+          icon: fas fa-cubes
+        - description: "OS : Linux, MacOS"
+          icon_type: fontawesome
+          icon: fab fa-linux
+        - description: "IDE : PHPStorm, VSCode..."
+          icon_type: fontawesome
+          icon: fas fa-code
+        - description: "Du bon café ou chocolat chaud :)"
+          icon_type: fontawesome
+          icon: fas fa-mug-hot
+

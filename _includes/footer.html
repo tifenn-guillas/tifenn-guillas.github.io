@@ -1,0 +1,25 @@
+<footer class="bg-tg-blue py-6">
+    <div class="container mx-auto grid grid-cols-3 items-center">
+        <div class="text-tg-white font-extralight text-xxs">
+            <p class="uppercase tracking-widest">&copy; Tifenn Guillas {{ 'now' | date: "%Y" }}</p>
+            <p class="pt-2">
+                Code source disponible sur
+                <a class="underline" href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank" title="GitHub">
+                    GitHub
+                </a>
+            </p>
+        </div>
+
+        <a href="#page-top">
+            <img class="w-12 mx-auto" src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
+        </a>
+
+       <div class="text-tg-pink text-xl text-right">
+           {% for social in site.data.socials %}
+            <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
+                <span class="{{ social.fontawesome }}"></span>
+            </a>
+           {% endfor %}
+        </div>
+    </div>
+</footer>

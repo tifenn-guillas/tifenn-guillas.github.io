@@ -1,0 +1,43 @@
+- name: navbar
+  menu_displayed: false
+
+- name: header
+  menu_displayed: false
+
+- name: about
+  label: A propos
+  menu_displayed: true
+
+- name: links
+  menu_displayed: false
+
+- name: skills
+  label: Compétences
+  menu_displayed: true
+
+- name: resume
+  label: Carrière
+  menu_displayed: true
+
+- name: formation
+  label: Formation
+  menu_displayed: true
+
+- name: portfolio
+  label: Portfolio
+  menu_displayed: true
+
+- name: goals
+  label: Objectifs
+  menu_displayed: true
+
+- name: hobbies
+  menu_displayed: false
+
+- name: contact
+  label: Contact
+  menu_displayed: true
+
+- name: footer
+  menu_displayed: false
+

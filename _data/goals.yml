@@ -1,0 +1,36 @@
+- year: 2018
+  tasks:
+    - title: Symfony
+      icon_type: fontawesome
+      icon: fab fa-symfony
+      description: Ravie par sa polyvalence et ses performances depuis plus d'un an maintenant, je souhaite aller
+        encore plus loin. EasyAdminBundle et ApiPlatform par exemple, pourront m'être três utiles à l'avenir. Sans
+        parler de Symfony4 !
+    - title: AWS
+      icon_type: fontawesome
+      icon: fab fa-aws
+      description: Lors de mon passage chez The Currency Shop j'ai pu travailler avec Azure et toucher du bout des
+        doigts AWS. Il n'en fallait pas plus pour piquer ma curiosité !
+    - title: Retour aux sources
+      icon_type: fontawesome
+      icon: fas fa-book
+      description: "Cette année je reviens en France, comme on dit l'herbe n'est pas plus verte ailleurs. L'occasion
+      de faire de même coté professionnel : retour aux fondamentaux pour les consolider."
+- year: 2017
+  tasks:
+    - title: Symfony
+      icon_type: fontawesome
+      icon: fab fa-symfony
+      description: Parmi mes bonnes résolutions 2017, celle d'apprendre à utiliser pleinement ce framework si connu.
+        Il était temps !
+    - title: Docker
+      icon_type: fontawesome
+      icon: fab fa-docker
+      description: "Celui-là depuis le temps qu'on m'en parle... Devenu incontournable, c'est donc décidé je m'y met !
+        Objectif : maitriser la bête cette année."
+    - title: Anglais
+      icon_type: fontawesome
+      icon: fas fa-globe-asia
+      description: "2017 : année de tous les défis ! J'ai décidé de m'installer à Melbourne en Australie. Ne parlant
+        pas (encore) fluently english, je compte bien relever ce défi afin de pouvoir m'intégrer pleinement là-bas, que
+        ce soit professionnellement ou personnellement."

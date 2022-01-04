@@ -1,0 +1,30 @@
+<div id="{{ include.name }}" class="py-16 bg-tg-white">
+    <div class="container mx-auto">
+        <div class="flex justify-start">
+            {% include block-name.html label=include.label background="white" %}
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h4 class="mb-4 uppercase">Restons en contact</h4>
+        <p>
+            Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
+            suivante :
+        </p>
+        <div class="flex justify-center mt-2.5">
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+        </div>
+
+        <div class="container mx-auto py-16 px-80 grid grid-flow-col">
+            {% for social in site.data.socials %}
+                {% if social.contact" %}
+                    <div class="text-center text-tg-pink">
+                        <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
+                            <span class="fa-5x {{ social.fontawesome }}"></span>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div id="{{ include.name }}" class="pt-16 pb-24 bg-tg-blue">
+    <div class="container mx-auto">
+        <div class="flex justify-end">
+            {% include block-name.html label=include.label background="blue" %}
+        </div>
+
+        <div class="my-20 mx-40 grid grid-flow-col gap-12">
+            {% for project in site.data.portfolio %}
+            <a class="image-popup" href="#{{ project.id }}">
+                <img src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}" alt="Project {{ project.title }} thumbnail">
+            </a>
+            <div id="{{ project.id }}" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
+                <div class="p-9 bg-tg-blue">
+                    <h4 class="text-tg-white">{{ project.title }}</h4>
+                    <p class="pt-6 text-tg-soft-gray">{{ project.description }}</p>
+                    {% if project.hashtags %}
+                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                        {% for tech in project.hashtags %}
+                        #{{ tech }}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    {% for image in project.images %}
+                    <img class="pt-9 pb-6" src="{{ site.baseurl }}/assets/images/portfolio/{{ image }}" alt="Image {{ image }}">
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

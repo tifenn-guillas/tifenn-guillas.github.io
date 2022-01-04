@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% include loader.html %}
+
+{% for section in site.data.sections %}
+    {% include {{ section.name }}.html name=section.name label=section.label %}
+{% endfor %}
