@@ -16,7 +16,7 @@ jobs:
               run: |
                   docker run \
                   -v ${{ github.workspace }}:/srv/jekyll \
-                  jekyll/jekyll:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build --destination dist"
+                  jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build --destination dist"
 
             - name: GitHub Pages
               uses: crazy-max/ghaction-github-pages@v2.5.0

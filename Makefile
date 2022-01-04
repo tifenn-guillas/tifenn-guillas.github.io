@@ -37,5 +37,5 @@ restart:	stop start
 
 build:          ## Build application for production
 build:
-	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) jekyll build --destination dist
+	docker run --rm -v $(PWD):/srv/jekyll jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build --destination dist --trace"
 
