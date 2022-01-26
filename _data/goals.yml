@@ -1,36 +1,78 @@
+#- year: 2021
+#  tasks:
+#    - title: Tailwindcss
+#      icon_type: custom
+#      icon: tailwincss
+#      description: "Mon collègue m'a dit \"Vas-y essaye Tailwind, c'est trop de la bombe !\". Et quand je vois à quel
+#        point il avait raison sur Docker, je ne peux que l'écouter. Une bonne occasion de faire un petit refresh de mon
+#        site web."
+#   - title: BB
+#      icon_type: fontawesome
+#      icon: fas fa-baby
+#      description: "Non BB çe n'est pas le nom d'un nouvelle techno, mais c'est le nom de ma nouvelle occupation
+#        principale pendant quelques temps. Lever le pied pour mieux revenir :)"
+- year: 2020
+  tasks:
+    - title: Tests unitaires
+      icon_type: fontawesome
+      icon: fas fa-bug
+      description: "Les tests... J'en entends parler depuis le début de ma carrière et pourtant je ne vois personne en
+        faire autour de moi. Une contrainte projet plus tard, je réalise vraiment le potentiel des tests unitaires. De
+        quoi me donner envie de m'y jeter corps et âme, si si !"
+    - title: Talk Angular
+      icon_type: fontawesome
+      icon: fas fa-microphone-alt
+      description: "J'ai été sollicitée afin de dispenser un petit talk dans un réseaux d'informaticiens interne au
+        CNRS. Quel honneur mais quelle pression afin de leur faire toucher du doigt le potentiel d'Angular."
+- year: 2019
+  tasks:
+    - title: Symfony
+      icon_type: fontawesome
+      icon: fab fa-symfony
+      description: ""
+    - title: Hey Baby!
+      icon_type: fontawesome
+      icon: fas fa-baby
+      description: "Cette année voit la venue de mon premier enfant. C'est peut être un détail pour vous, mais pour moi
+        ça veut dire beaucoup (pardon). Bref, il est temps de mettre un peu le dev de coté afin de revenir plus
+        <del>fatiguée</del> motivée que jamais."
 - year: 2018
   tasks:
     - title: Symfony
       icon_type: fontawesome
       icon: fab fa-symfony
-      description: Ravie par sa polyvalence et ses performances depuis plus d'un an maintenant, je souhaite aller
-        encore plus loin. EasyAdminBundle et ApiPlatform par exemple, pourront m'être três utiles à l'avenir. Sans
-        parler de Symfony4 !
-    - title: AWS
+      description: "J'ai découvert Symfony avec mon site web, puis chez The Currency Shop. Mais clairement, je suis
+        loin d'avoir exploité son potentiel. J'aimerai bien m'en servir pour le back-end, et du coup, à moi la stack
+        complète."
+    - title: Angular
       icon_type: fontawesome
-      icon: fab fa-aws
-      description: Lors de mon passage chez The Currency Shop j'ai pu travailler avec Azure et toucher du bout des
-        doigts AWS. Il n'en fallait pas plus pour piquer ma curiosité !
-    - title: Retour aux sources
-      icon_type: fontawesome
-      icon: fas fa-book
-      description: "Cette année je reviens en France, comme on dit l'herbe n'est pas plus verte ailleurs. L'occasion
-      de faire de même coté professionnel : retour aux fondamentaux pour les consolider."
+      icon: fab fa-angular
+      description: "Angular, encore ?! Bah ouais, histoire de conserver mes acquis, rester up-to-date (Angular ça évolue
+       tellement vite TMTC...), voir même tester des nouvelles fonctionnalités !"
 - year: 2017
   tasks:
-    - title: Symfony
-      icon_type: fontawesome
-      icon: fab fa-symfony
-      description: Parmi mes bonnes résolutions 2017, celle d'apprendre à utiliser pleinement ce framework si connu.
-        Il était temps !
     - title: Docker
       icon_type: fontawesome
       icon: fab fa-docker
-      description: "Celui-là depuis le temps qu'on m'en parle... Devenu incontournable, c'est donc décidé je m'y met !
-        Objectif : maitriser la bête cette année."
+      description: "Mon collègue m'a dit un jour \"Vas-y essaye Docker, tu verras c'est de la bombe !\" Et effectivement
+       ça à l'air ! Les points qui ont fini de me convaincre de l'adopter : ne plus être dépendant
+       de l'OS et ne rien avoir à installer sur son système à part Docker. La maniaque que je suis apprécie :)"
     - title: Anglais
       icon_type: fontawesome
       icon: fas fa-globe-asia
       description: "2017 : année de tous les défis ! J'ai décidé de m'installer à Melbourne en Australie. Ne parlant
         pas (encore) fluently english, je compte bien relever ce défi afin de pouvoir m'intégrer pleinement là-bas, que
         ce soit professionnellement ou personnellement."
+- year: 2016
+  tasks:
+    - title: Angular
+      icon_type: fontawesome
+      icon: fab fa-angular
+      description: "Angular, oui. Mais pas n'importe lequel ! Je parle ici de la toute nouvelle mouture de Google, qui
+        fait suite au feu AngularJS. L'avenir nous dira s'il va se démarquer des autres frameworks front-end ou non.
+        Faites vos jeux !"
+    - title: Bootstrap
+      icon_type: fontawesome
+      icon: fab fa-bootstrap
+      description: "Framework CSS hyper connu, il est temps de le rajouter à mes compétences. De plus c'est ultra
+        complémentaire avec Angular, histoire d'avoir une stack front-end complète."
