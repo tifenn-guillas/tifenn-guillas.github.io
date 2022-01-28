@@ -15,7 +15,7 @@
                             {% if task.icon_type == "fontawesome" %}
                                 <span class="fa-3x {{ task.icon }}"></span>
                             {% else %}
-                                <!-- TODO: insert techno custom image -->
+                                <img  class="max-h-12 max-w-12" src="{{ site.baseurl }}/assets/images/{{ task.icon }}" alt="NgRX logo">
                             {% endif %}
                         </div>
                         <div class="ml-14 py-6 pl-20 pr-6 bg-gray-100 border-b-2 border-r border-tg-pink">

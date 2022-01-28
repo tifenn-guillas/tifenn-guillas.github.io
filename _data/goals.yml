@@ -1,16 +1,17 @@
-#- year: 2021
-#  tasks:
-#    - title: Tailwindcss
-#      icon_type: custom
-#      icon: tailwincss
-#      description: "Mon collègue m'a dit \"Vas-y essaye Tailwind, c'est trop de la bombe !\". Et quand je vois à quel
-#        point il avait raison sur Docker, je ne peux que l'écouter. Une bonne occasion de faire un petit refresh de mon
-#        site web."
-#   - title: BB
-#      icon_type: fontawesome
-#      icon: fas fa-baby
-#      description: "Non BB çe n'est pas le nom d'un nouvelle techno, mais c'est le nom de ma nouvelle occupation
-#        principale pendant quelques temps. Lever le pied pour mieux revenir :)"
+- year: 2021
+  tasks:
+    - title: Tailwindcss
+      icon_type: custom
+      icon: tailwindcss.svg
+      description: "Mon collègue m'a dit \"Vas-y essaye Tailwind, c'est trop de la bombe !\". Et quand je vois à quel
+        point il avait raison sur Docker, je ne peux que l'écouter. Une bonne occasion de faire un petit refresh de mon
+        site web."
+    - title: BB
+      icon_type: fontawesome
+      icon: fas fa-baby
+      description: "Non BB çe n'est pas le nom d'un nouvelle techno, mais c'est le nom de ma nouvelle occupation
+        principale pendant quelques temps. Objectifs : développement de mes soft skills. Organisation, anticipation,
+        multitasking..."
 - year: 2020
   tasks:
     - title: Tests unitaires
@@ -26,10 +27,12 @@
         CNRS. Quel honneur mais quelle pression afin de leur faire toucher du doigt le potentiel d'Angular."
 - year: 2019
   tasks:
-    - title: Symfony
-      icon_type: fontawesome
-      icon: fab fa-symfony
-      description: ""
+    - title: NgRX
+      icon_type: custom
+      icon: ngrx.svg
+      description: "Pour pimenter un peu plus Angular et d'accroitre les similitudes avec React, je me lance dans
+        l'implémentation de NgRx dans Angular. Programmation réactive, Redux, state management, design pattern
+        Observer-Observable... Vous ne comprenez rien ? Moi non plus, enfin jusqu'à aujourd'hui ;)"
     - title: Hey Baby!
       icon_type: fontawesome
       icon: fas fa-baby
