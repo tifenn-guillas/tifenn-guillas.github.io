@@ -4,13 +4,13 @@
             {% include block-name.html label=include.label background="white" %}
         </div>
 
-        <div class="my-10 mx-80 pr-24">
+        <div class="my-10 mx-80">
             <div class="carousel">
                 {% for goal in site.data.goals %}
                 <div class="">
                     <h3 class="mb-9 pl-12 text-center text-xl font-semibold text-wide">{{ goal.year }}</h3>
                     {% for task in goal.tasks %}
-                    <div class="relative ml-28 mb-9">
+                    <div class="relative mx-28 mb-9">
                         <div class="rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink absolute inset-y-0 my-auto">
                             {% if task.icon_type == "fontawesome" %}
                                 <span class="fa-3x {{ task.icon }}"></span>

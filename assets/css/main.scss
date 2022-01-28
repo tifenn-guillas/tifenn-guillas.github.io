@@ -16,7 +16,7 @@ h4 {
 /* Carousel */
 .slick-prev, .slick-next {
     &::before {
-        @apply text-tg-pink p-14 hover:text-opacity-50;
+        @apply text-tg-pink hover:text-opacity-50;
     }
 }
 
