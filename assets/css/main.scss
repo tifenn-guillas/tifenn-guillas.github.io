@@ -22,7 +22,7 @@ h4 {
 
 /* Portfolio thumbnail */
 .image-popup {
-    @apply relative bg-tg-pink overflow-hidden;
+    @apply relative overflow-hidden bg-tg-pink;
 
     img {
         @apply transition-all duration-300 ease-in hover:opacity-20;

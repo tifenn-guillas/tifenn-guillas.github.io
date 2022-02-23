@@ -6,8 +6,8 @@
 
         <div class="my-20 mx-40 grid grid-flow-col gap-12">
             {% for project in site.data.portfolio %}
-            <a class="image-popup" href="#{{ project.id }}">
-                <img src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}" alt="Project {{ project.title }} thumbnail">
+            <a class="image-popup flex" href="#{{ project.id }}">
+                <img class="flex-1 object-fill" src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}" alt="Project {{ project.title }} thumbnail">
             </a>
             <div id="{{ project.id }}" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
                 <div class="p-9 bg-tg-blue">
