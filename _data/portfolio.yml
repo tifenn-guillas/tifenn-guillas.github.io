@@ -1,41 +1,59 @@
-- title: SVOM
-  id: svom
-  miniature: svom-min.png
-  images:
-    - svom.png
-    - svom2.png
-    - svom3.png
-    - svom4.png
-  description: La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons
-    gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les
-    étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.<br>
-    Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de
-    visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je
-    suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires
-    pour la partie frontend sous Angular.
-- title: tifenn-guillas.fr
-  id: tifenn-guillas
-  miniature: tifenn-guillas-min.png
-  images:
-  - tifenn-guillas.png
-  description: Pouvoir me présenter tout en apprenant de nouvelles choses, voilà ce que me permet mon site web ! La V1
-    sous Symfony avec un formulaire de contact classique était très fonctionelle mais j'ai décidé de le remettre au goût
-    du jour avec un hébergement sous GitHub Pages, moins contraignant que d'avoir à gérer un serveur dédié. Je voulais
-    aussi m'attaquer à Tailwindcss afin de m'approprier le design du thème. C'est avec fierté que je pense avoir
-    réussi ! Hâte de savoir quelles seront les modifications approtées par la V3 !
-  hashtags: [Symfony, Jekyll, Tailwindcss, jQuery, GitHubPages, GitHubActions, Docker]
-- title: GAZPAR
-  id: gazpar
-  miniature: gazpar-min.png
-  images:
-    - gazpar.png
-    - gazpar2.png
-    - gazpar3.png
-  description: GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent
-    exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des
-    résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.<br>
-    Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment
-    en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros
-    volumes. Ajout de nouveaux algorithmes de traitements de catalogues.
+-   title: Social Stats
+    id: social-stats
+    miniature: social-stats-min.png
+    images:
+        - social-stats.png
+    description: Il s'agit d'une petite application qui permet de voir le nomvre de posts par jour et par heure en
+        fonction de leurs types (Pinterest, Youtube, Instagram...). Un flux SSE envoie en temps réel des messages
+        contenant des informations sur ces posts. Le client web est abonné à ce flux et se met à jour en fonction des
+        données reçues.<br>
+        Application disponible
+        <a class="text-tg-pink hover:text-tg-soft-gray" href="https://tifenn-guillas.fr/social-stats/" target="_blank">ici</a>
+        et code source disponible
+        <a class="text-tg-pink hover:text-tg-soft-gray" href="https://github.com/tifenn-guillas/social-stats" target="_blank">là</a>.
+    hashtags: [Angular, StreamSSE, MaterialDesign, GitHubPages, GitHubActions, Docker]
+-   title: SVOM
+    id: svom
+    miniature: svom-min.png
+    images:
+        - svom.png
+        - svom2.png
+        - svom3.png
+        - svom4.png
+    description: La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons
+        gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les
+        étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.<br>
+        Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de
+        visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je
+        suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires
+        pour la partie frontend sous Angular.
+    hashtags: [Angular, RxJS, Jasmine, Jest, Bootstrap4, ResponsiveDesign, API, REST, git, Docker, CI/CD]
+-   title: tifenn-guillas.fr
+    id: tifenn-guillas
+    miniature: tifenn-guillas-min.png
+    images:
+        - tifenn-guillas.png
+    description: Pouvoir me présenter tout en apprenant de nouvelles choses, voilà ce que me permet mon site web ! La V1
+        sous Symfony avec un formulaire de contact classique était très fonctionelle mais j'ai décidé de le remettre au goût
+        du jour avec un hébergement sous GitHub Pages, moins contraignant que d'avoir à gérer un serveur dédié. Je voulais
+        aussi m'attaquer à Tailwindcss afin de m'approprier le design du thème. C'est avec fierté que je pense avoir
+        réussi ! Hâte de savoir quelles seront les modifications approtées par la V3 !<br>
+        Code source disponible
+        <a class="text-tg-pink hover:text-tg-soft-gray" href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank">ici</a>.
+    hashtags: [Symfony, Jekyll, Tailwindcss, jQuery, GitHubPages, GitHubActions, Docker]
+-   title: GAZPAR
+    id: gazpar
+    miniature: gazpar-min.png
+    images:
+        - gazpar.png
+        - gazpar2.png
+        - gazpar3.png
+    description: GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent
+        exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des
+        résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.<br>
+        Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment
+        en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros
+        volumes. Ajout de nouveaux algorithmes de traitements de catalogues.
+    hashtags: [Angular2, Bootstrap3, ResponsiveDesign, PHPOO, Slim3, Doctrine2, PostgreSQL]
 
 

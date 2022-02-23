@@ -16,13 +16,13 @@ h4 {
 /* Carousel */
 .slick-prev, .slick-next {
     &::before {
-        @apply text-tg-pink p-14 hover:text-opacity-50;
+        @apply text-tg-pink hover:text-opacity-50;
     }
 }
 
 /* Portfolio thumbnail */
 .image-popup {
-    @apply relative bg-tg-pink overflow-hidden;
+    @apply relative overflow-hidden bg-tg-pink;
 
     img {
         @apply transition-all duration-300 ease-in hover:opacity-20;
