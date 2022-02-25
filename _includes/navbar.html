@@ -1,9 +1,67 @@
-<nav class="flex fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
-    <a class="flex-none my-auto mx-2.5" href="#page-top">
-        <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
-    </a>
+<!-- Navbar for mobile menu -->
+<nav class="lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="flex justify-between">
+        <button type="button"
+                id="mobile-menu-button"
+                class="lg:hidden inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-soft-gray hover:text-tg-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <span id="mobile-menu-button-closed" class="fas fa-bars fa-lg fa-fw"></span>
+            <span id="mobile-menu-button-opened" class="fas fa-times fa-lg fa-fw hidden"></span>
+        </button>
 
-    <ul class="flex-auto text-center">
+        <div class="lg:flex-none my-auto mx-2.5 p-2">
+            <a class="" href="#page-top">
+                <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
+            </a>
+        </div>
+
+        <div class="flex-none my-auto mx-2.5">
+            <a href="{{ page.resume }}"
+               target="_blank"
+               class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+               title="Téléchargez mon CV">
+                <span class="hidden lg:inline-block">Télécharger</span>
+                <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
+            </a>
+        </div>
+    </div>
+    <div id="mobile-menu-sections" class="hidden">
+        <ul class="text-center">
+            {% for section in site.data.sections %}
+            {% if section.menu_displayed %}
+            <li class="li-section p-4">
+                <a href="#{{ section.name }}" class="hover:text-tg-pink">
+                    {{ section.label }}
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            <!--        <li class="inline-block">-->
+            <!--            {% if site.lang == 'fr-FR' %}-->
+            <!--            <a class="p-4" href="{{ site.baseurl }}/fr/">-->
+            <!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
+            <!--            </a>-->
+            <!--            {% else %}-->
+            <!--            <a class="p-4" href="{{ site.baseurl }}/en/">-->
+            <!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
+            <!--            </a>-->
+            <!--            {% endif %}-->
+            <!--        </li>-->
+        </ul>
+    </div>
+</nav>
+
+<!--Navbar for desktop menu-->
+<nav class="hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="flex-none my-auto mx-2.5 p-2">
+        <a class="" href="#page-top">
+            <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
+        </a>
+    </div>
+
+    <ul class="text-center">
     {% for section in site.data.sections %}
         {% if section.menu_displayed %}
         <li class="inline-block p-4 hover:text-tg-pink">
@@ -29,9 +87,9 @@
     <div class="flex-none my-auto mx-2.5">
         <a href="{{ page.resume }}"
             target="_blank"
-            class="p-2.5 border border-tg-pink bg-tg-pink text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+            class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
             title="Téléchargez mon CV">
-            Télécharger
+            <span>Télécharger</span>
         </a>
     </div>
 </nav>

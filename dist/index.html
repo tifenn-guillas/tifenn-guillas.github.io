@@ -15,7 +15,7 @@
         <meta property='og:description' content="Développeur d'Applications Web"/>
         <meta property='og:locale' content='fr-FR'/>
         <meta property='og:site_name' content='Tifenn Guillas'/>
-        <meta property="og:image" content="https://tifenn-guillas.fr/assets/images/miniature.jpg">
+        <meta property="og:image" content="http://0.0.0.0:4000/assets/images/miniature.jpg">
 
         <!-- Facebook -->
         <meta property="fb:app_id" content="264362930673821">
@@ -27,7 +27,7 @@
         <meta name="twitter:creator" content="@tifenn_guillas">
         <meta name="twitter:title" content="Tifenn Guillas - Développeur d'Applications Web">
         <meta name="twitter:description" content="Développeur d'Applications Web">
-        <meta name="twitter:image" content="https://tifenn-guillas.fr/assets/images/miniature.jpg">
+        <meta name="twitter:image" content="http://0.0.0.0:4000/assets/images/miniature.jpg">
 
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -67,12 +67,126 @@
 </div>
 
 
-    <nav class="flex fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
-    <a class="flex-none my-auto mx-2.5" href="#page-top">
-        <img src="/assets/images/logo.svg" alt="logo">
-    </a>
+    <!-- Navbar for mobile menu -->
+<nav class="lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="flex justify-between">
+        <button type="button"
+                id="mobile-menu-button"
+                class="lg:hidden inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-soft-gray hover:text-tg-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <span id="mobile-menu-button-closed" class="fas fa-bars fa-lg fa-fw"></span>
+            <span id="mobile-menu-button-opened" class="fas fa-times fa-lg fa-fw hidden"></span>
+        </button>
 
-    <ul class="flex-auto text-center">
+        <div class="lg:flex-none my-auto mx-2.5 p-2">
+            <a class="" href="#page-top">
+                <img src="/assets/images/logo.svg" alt="logo">
+            </a>
+        </div>
+
+        <div class="flex-none my-auto mx-2.5">
+            <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+               target="_blank"
+               class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+               title="Téléchargez mon CV">
+                <span class="hidden lg:inline-block">Télécharger</span>
+                <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
+            </a>
+        </div>
+    </div>
+    <div id="mobile-menu-sections" class="hidden">
+        <ul class="text-center">
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#about" class="hover:text-tg-pink">
+                    A propos
+                </a>
+            </li>
+            
+            
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#skills" class="hover:text-tg-pink">
+                    Compétences
+                </a>
+            </li>
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#resume" class="hover:text-tg-pink">
+                    Carrière
+                </a>
+            </li>
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#formation" class="hover:text-tg-pink">
+                    Formation
+                </a>
+            </li>
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#portfolio" class="hover:text-tg-pink">
+                    Portfolio
+                </a>
+            </li>
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#goals" class="hover:text-tg-pink">
+                    Objectifs
+                </a>
+            </li>
+            
+            
+            
+            
+            
+            <li class="li-section p-4">
+                <a href="#contact" class="hover:text-tg-pink">
+                    Contact
+                </a>
+            </li>
+            
+            
+            
+            
+            <!--        <li class="inline-block">-->
+            <!--            -->
+            <!--            <a class="p-4" href="/fr/">-->
+            <!--                <img class="inline-block" src="/assets/images/fr_flag.png" alt="`French flag">-->
+            <!--            </a>-->
+            <!--            -->
+            <!--        </li>-->
+        </ul>
+    </div>
+</nav>
+
+<!--Navbar for desktop menu-->
+<nav class="hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="flex-none my-auto mx-2.5 p-2">
+        <a class="" href="#page-top">
+            <img src="/assets/images/logo.svg" alt="logo">
+        </a>
+    </div>
+
+    <ul class="text-center">
     
         
     
@@ -154,12 +268,13 @@
     <div class="flex-none my-auto mx-2.5">
         <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
             target="_blank"
-            class="p-2.5 border border-tg-pink bg-tg-pink text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+            class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
             title="Téléchargez mon CV">
-            Télécharger
+            <span>Télécharger</span>
         </a>
     </div>
 </nav>
+
 
     <div class="fixed z-10 top-12 inset-x-0 bg-tg-pink bg-opacity-80 text-center text-tg-white text-xs tracking-wider">
     <span class="fas fa-exclamation-triangle"></span>
@@ -189,8 +304,8 @@
 
     <div id="about" class="py-16 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start">
-            <div>
+        <div class="flex justify-start pb-12">
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 uppercase">A propos</h2>
     
@@ -198,8 +313,15 @@
 </div>
         </div>
 
-        <div class="flex gap-28 my-20 mx-40">
-            <div class="flex-grow">
+        <div class="flex flex-col md:flex-row lg:gap-12 lg:px-20 xl:px-40">
+            <div class="flex-none self-center md:order-last p-2.5">
+                <div class="rounded-full border-2 border-tg-pink">
+                    <div class="w-64 h-64 rounded-full border-4 border-tg-white overflow-hidden">
+                        <img src="/assets/images/profile.jpg" alt="Profile image">
+                    </div>
+                </div>
+            </div>
+            <div class="flex-grow py-12 md:py-0 px-2.5 text-center md:text-left">
                 <h3 class="mb-2.5 text-tg-gray text-xl tracking-normal">
                     Tifenn Guillas, enchantée !
                 </h3>
@@ -215,7 +337,7 @@
                     absolument pas aujourd'hui, et c'est avec grand plaisir que je me lève tous les matins pour aller
                     au travail !
                 </p>
-                <div class="mt-12 grid grid-flow-col auto-cols-max gap-4 text-sm">
+                <div class="mt-12 flex justify-around md:justify-start gap-4 text-sm">
                     <div>
                         <a href="#contact" class="border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink">
                             Contactez-moi
@@ -228,13 +350,6 @@
                            title="Téléchargez mon CV">
                             Téléchargez mon CV
                         </a>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-none">
-                <div class="rounded-full border-2 border-tg-pink">
-                    <div class="w-64 h-64 rounded-full border-4 border-tg-white overflow-hidden">
-                        <img src="/assets/images/profile.jpg" alt="Profile image">
                     </div>
                 </div>
             </div>
@@ -271,7 +386,7 @@
     <div id="skills" class="py-16 bg-tg-white">
     <div class="container mx-auto">
         <div class="flex justify-start">
-            <div>
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 uppercase">Compétences</h2>
     
@@ -451,7 +566,7 @@
     <div id="resume" class="pt-16 pb-24 bg-tg-blue">
     <div class="container mx-auto">
         <div class="flex justify-end">
-            <div>
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 text-tg-soft-gray uppercase">Carrière</h2>
     
@@ -633,7 +748,7 @@
     <div id="formation" class="pt-16 pb-10 bg-tg-white">
     <div class="container mx-auto">
         <div class="flex justify-start">
-            <div>
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 uppercase">Formation</h2>
     
@@ -719,7 +834,7 @@
     <div id="portfolio" class="pt-16 pb-24 bg-tg-blue">
     <div class="container mx-auto">
         <div class="flex justify-end">
-            <div>
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 text-tg-soft-gray uppercase">Portfolio</h2>
     
@@ -880,7 +995,7 @@
     <div id="goals" class="py-16 bg-tg-white">
     <div class="container mx-auto">
         <div class="flex justify-start">
-            <div>
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 uppercase">Objectifs</h2>
     
@@ -897,7 +1012,7 @@
                     <div class="relative mx-28 mb-9">
                         <div class="rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink absolute inset-y-0 my-auto">
                             
-                                <img  class="max-h-12 max-w-12" src="/assets/images/tailwindcss.svg" alt="NgRX logo">
+                                <img  class="max-h-12 max-w-12" src="/assets/images/tailwindcss.svg" alt="Tailwindcss logo">
                             
                         </div>
                         <div class="ml-14 py-6 pl-20 pr-6 bg-gray-100 border-b-2 border-r border-tg-pink">
@@ -1089,7 +1204,7 @@
     <div id="contact" class="py-16 bg-tg-white">
     <div class="container mx-auto">
         <div class="flex justify-start">
-            <div>
+            <div class="px-2.5">
     
         <h2 class="mb-2.5 uppercase">Contact</h2>
     
@@ -1180,7 +1295,7 @@
                 "name": "Tifenn Guillas",
                 "jobTitle": "Développeur d'Applications Web",
                 "url": "https://tifenn-guillas.fr",
-                "image": "https://tifenn-guillas.fr/dist/assets/logo.svg",
+                "image": "http://0.0.0.0:4000/dist/assets/logo.svg",
                 "sameAs" : [
                     
                     "https://twitter.com/tifenn_guillas",
