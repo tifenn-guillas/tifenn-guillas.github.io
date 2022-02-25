@@ -6,6 +6,19 @@ $(document).ready(function () {
         $(this).remove();
     });
 
+    // Mobile menu
+    $('#mobile-menu-button').on('click', function(e) {
+        e.preventDefault();
+        if ($('#mobile-menu-button').attr('aria-expanded') === 'true') {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    });
+    $('.li-section').click(function() {
+        closeMobileMenu();
+    });
+
     // Carousel
     $('.carousel').slick({
         infinite: true
@@ -54,4 +67,17 @@ function changeUrl(title, url) {
     } else {
         console.error("Browser does not support HTML5.");
     }
+}
+
+function openMobileMenu() {
+    $('#mobile-menu-button-closed').addClass('hidden');
+    $('#mobile-menu-button-opened').removeClass('hidden');
+    $('#mobile-menu-button').attr('aria-expanded', 'true');
+    $('#mobile-menu-sections').removeClass('hidden');
+}
+function closeMobileMenu() {
+    $('#mobile-menu-button-closed').removeClass('hidden');
+    $('#mobile-menu-button-opened').addClass('hidden');
+    $('#mobile-menu-button').attr('aria-expanded', 'false');
+    $('#mobile-menu-sections').addClass('hidden');
 }
