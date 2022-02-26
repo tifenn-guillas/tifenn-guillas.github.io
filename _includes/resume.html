@@ -1,22 +1,24 @@
-<div id="{{ include.name }}" class="pt-16 pb-24 bg-tg-blue">
+<div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
-        <div class="flex justify-end">
+        <div class="flex justify-end pb-12">
             {% include block-name.html label=include.label background="blue" %}
         </div>
 
-        <div class="my-20 mx-40">
+        <div class="px-2.5 lg:px-20 xl:px-40">
             <h4 class="mb-4 text-center text-tg-pink uppercase">Expériences professionnelles</h4>
             <div class="my-12">
                 {% for job in site.data.jobs %}
-                    <div class="my-10 grid grid-cols-4 gap-6">
-                        <div class="text-tg-white text-right tracking-wide font-light">
+                    <div class="my-10 grid grid-flow-raw md:grid-flow-col md:gap-6">
+                        <div class="leading-loose md:leading-normal text-tg-pink md:text-tg-soft-gray
+                            text-sm md:text-base tracking-widest md:tracking-wider font-light
+                            border-b-2 border-tg-pink md:border-0 mb-3">
                             {{ job.start }} - {{ job.end }}
                         </div>
                         <div class="col-span-3">
                             <p class="text-tg-soft-gray italic">{{ job.title }}</p>
                             <p class="text-tg-pink font-light italic">{{ job.location }}</p>
-                            <p class="pt-4 text-tg-soft-gray">{{ job.description }}</p>
-                            <p class="pt-4 text-tg-soft-gray">{{ job.tasks }}</p>
+                            <p class="pt-4 text-tg-white">{{ job.description }}</p>
+                            <p class="pt-4 text-tg-white">{{ job.tasks }}</p>
                             <p class="pt-4 text-tg-soft-gray">
                                 {% for techno in job.technologies %}
                                     #{{ techno }}
@@ -31,7 +33,7 @@
         <div class="text-center">
             <a href="{{ page.resume }}"
                target="_blank"
-               class="border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
+               class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
                title="Téléchargez mon CV">
                 Téléchargez mon CV
             </a>
