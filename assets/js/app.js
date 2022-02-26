@@ -32,6 +32,10 @@ $(document).ready(function () {
         },
         mainClass: 'mfp-zoom-in'
     });
+    $('.popup-modal-close').click(function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+    });
 
     // jQuery smooth scrolling
     $('.navbar-nav .nav-link, footer a, a.active-anchor').bind('click', function (event) {
