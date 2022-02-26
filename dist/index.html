@@ -328,7 +328,7 @@
                 <h5 class="mb-6 italic text-sm font-thin">
                     Un peu plus sur moi ?
                 </h5>
-                <p class="leading-6">
+                <p class="leading-6 text-justify">
                     D'un naturel très curieux, les domaines de l'Informatique et de la Biologie m'ont toujours attiré.
                     Mais après le baccalauréat, il a bien fallu choisir. La voie de la raison l'a emportée, n'ayant
                     jamais eu de cours d'informatique avant le bac, je me suis orientée en Biologie. Néanmoins j'avais
@@ -855,9 +855,9 @@
     </div>
 </div>
 
-    <div id="portfolio" class="pt-16 pb-24 bg-tg-blue">
+    <div id="portfolio" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
-        <div class="flex justify-end">
+        <div class="flex justify-end pb-12">
             <div class="px-2.5">
     
         <h2 class="mb-2.5 text-tg-soft-gray uppercase">Portfolio</h2>
@@ -866,35 +866,42 @@
 </div>
         </div>
 
-        <div class="my-20 mx-40 grid grid-flow-col gap-12">
+        <div class="px-2.5 lg:px-20 xl:px-40 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-12">
             
             <a class="image-popup flex" href="#social-stats">
                 <img class="flex-1 object-fill" src="/assets/images/portfolio/social-stats-min.png" alt="Project Social Stats thumbnail">
             </a>
             <div id="social-stats" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
-                <div class="p-9 bg-tg-blue">
-                    <h4 class="text-tg-white">Social Stats</h4>
-                    <p class="pt-6 text-tg-soft-gray">Il s'agit d'une petite application qui permet de voir le nomvre de posts par jour et par heure en fonction de leurs types (Pinterest, Youtube, Instagram...). Un flux SSE envoie en temps réel des messages contenant des informations sur ces posts. Le client web est abonné à ce flux et se met à jour en fonction des données reçues.<br> Application disponible <a class="text-tg-pink hover:text-tg-soft-gray" href="https://tifenn-guillas.fr/social-stats/" target="_blank">ici</a> et code source disponible <a class="text-tg-pink hover:text-tg-soft-gray" href="https://github.com/tifenn-guillas/social-stats" target="_blank">là</a>.</p>
-                    
-                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                <div class="bg-tg-blue">
+                    <div class="flex justify-end">
+                        <button type="button" class="popup-modal-close p-2.5 text-tg-pink">
+                            <span class="fas fa-times fa-lg fa-fw"></span>
+                        </button>
+                    </div>
+                    <div class="px-14">
+                        <h4 class="text-tg-white">Social Stats</h4>
+                        <p class="pt-6 text-justify text-tg-soft-gray">Il s'agit d'une petite application qui permet de voir le nomvre de posts par jour et par heure en fonction de leurs types (Pinterest, Youtube, Instagram...). Un flux SSE envoie en temps réel des messages contenant des informations sur ces posts. Le client web est abonné à ce flux et se met à jour en fonction des données reçues.<br> Application disponible <a class="text-tg-pink hover:text-tg-soft-gray" href="https://tifenn-guillas.fr/social-stats/" target="_blank">ici</a> et code source disponible <a class="text-tg-pink hover:text-tg-soft-gray" href="https://github.com/tifenn-guillas/social-stats" target="_blank">là</a>.</p>
                         
-                        #Angular
+                        <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                            
+                            #Angular
+                            
+                            #StreamSSE
+                            
+                            #MaterialDesign
+                            
+                            #GitHubPages
+                            
+                            #GitHubActions
+                            
+                            #Docker
+                            
+                        </p>
                         
-                        #StreamSSE
                         
-                        #MaterialDesign
+                        <img class="py-9" src="/assets/images/portfolio/social-stats.png" alt="Image social-stats.png">
                         
-                        #GitHubPages
-                        
-                        #GitHubActions
-                        
-                        #Docker
-                        
-                    </p>
-                    
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/social-stats.png" alt="Image social-stats.png">
-                    
+                    </div>
                 </div>
             </div>
             
@@ -902,45 +909,52 @@
                 <img class="flex-1 object-fill" src="/assets/images/portfolio/svom-min.png" alt="Project SVOM thumbnail">
             </a>
             <div id="svom" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
-                <div class="p-9 bg-tg-blue">
-                    <h4 class="text-tg-white">SVOM</h4>
-                    <p class="pt-6 text-tg-soft-gray">La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.<br> Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires pour la partie frontend sous Angular.</p>
-                    
-                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                <div class="bg-tg-blue">
+                    <div class="flex justify-end">
+                        <button type="button" class="popup-modal-close p-2.5 text-tg-pink">
+                            <span class="fas fa-times fa-lg fa-fw"></span>
+                        </button>
+                    </div>
+                    <div class="px-14">
+                        <h4 class="text-tg-white">SVOM</h4>
+                        <p class="pt-6 text-justify text-tg-soft-gray">La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.<br> Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires pour la partie frontend sous Angular.</p>
                         
-                        #Angular
+                        <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                            
+                            #Angular
+                            
+                            #RxJS
+                            
+                            #Jasmine
+                            
+                            #Jest
+                            
+                            #Bootstrap4
+                            
+                            #ResponsiveDesign
+                            
+                            #API
+                            
+                            #REST
+                            
+                            #git
+                            
+                            #Docker
+                            
+                            #CI/CD
+                            
+                        </p>
                         
-                        #RxJS
                         
-                        #Jasmine
+                        <img class="py-9" src="/assets/images/portfolio/svom.png" alt="Image svom.png">
                         
-                        #Jest
+                        <img class="py-9" src="/assets/images/portfolio/svom2.png" alt="Image svom2.png">
                         
-                        #Bootstrap4
+                        <img class="py-9" src="/assets/images/portfolio/svom3.png" alt="Image svom3.png">
                         
-                        #ResponsiveDesign
+                        <img class="py-9" src="/assets/images/portfolio/svom4.png" alt="Image svom4.png">
                         
-                        #API
-                        
-                        #REST
-                        
-                        #git
-                        
-                        #Docker
-                        
-                        #CI/CD
-                        
-                    </p>
-                    
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/svom.png" alt="Image svom.png">
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/svom2.png" alt="Image svom2.png">
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/svom3.png" alt="Image svom3.png">
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/svom4.png" alt="Image svom4.png">
-                    
+                    </div>
                 </div>
             </div>
             
@@ -948,31 +962,38 @@
                 <img class="flex-1 object-fill" src="/assets/images/portfolio/tifenn-guillas-min.png" alt="Project tifenn-guillas.fr thumbnail">
             </a>
             <div id="tifenn-guillas" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
-                <div class="p-9 bg-tg-blue">
-                    <h4 class="text-tg-white">tifenn-guillas.fr</h4>
-                    <p class="pt-6 text-tg-soft-gray">Pouvoir me présenter tout en apprenant de nouvelles choses, voilà ce que me permet mon site web ! La V1 sous Symfony avec un formulaire de contact classique était très fonctionelle mais j'ai décidé de le remettre au goût du jour avec un hébergement sous GitHub Pages, moins contraignant que d'avoir à gérer un serveur dédié. Je voulais aussi m'attaquer à Tailwindcss afin de m'approprier le design du thème. C'est avec fierté que je pense avoir réussi ! Hâte de savoir quelles seront les modifications approtées par la V3 !<br> Code source disponible <a class="text-tg-pink hover:text-tg-soft-gray" href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank">ici</a>.</p>
-                    
-                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                <div class="bg-tg-blue">
+                    <div class="flex justify-end">
+                        <button type="button" class="popup-modal-close p-2.5 text-tg-pink">
+                            <span class="fas fa-times fa-lg fa-fw"></span>
+                        </button>
+                    </div>
+                    <div class="px-14">
+                        <h4 class="text-tg-white">tifenn-guillas.fr</h4>
+                        <p class="pt-6 text-justify text-tg-soft-gray">Pouvoir me présenter tout en apprenant de nouvelles choses, voilà ce que me permet mon site web ! La V1 sous Symfony avec un formulaire de contact classique était très fonctionelle mais j'ai décidé de le remettre au goût du jour avec un hébergement sous GitHub Pages, moins contraignant que d'avoir à gérer un serveur dédié. Je voulais aussi m'attaquer à Tailwindcss afin de m'approprier le design du thème. C'est avec fierté que je pense avoir réussi ! Hâte de savoir quelles seront les modifications approtées par la V3 !<br> Code source disponible <a class="text-tg-pink hover:text-tg-soft-gray" href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank">ici</a>.</p>
                         
-                        #Symfony
+                        <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                            
+                            #Symfony
+                            
+                            #Jekyll
+                            
+                            #Tailwindcss
+                            
+                            #jQuery
+                            
+                            #GitHubPages
+                            
+                            #GitHubActions
+                            
+                            #Docker
+                            
+                        </p>
                         
-                        #Jekyll
                         
-                        #Tailwindcss
+                        <img class="py-9" src="/assets/images/portfolio/tifenn-guillas.png" alt="Image tifenn-guillas.png">
                         
-                        #jQuery
-                        
-                        #GitHubPages
-                        
-                        #GitHubActions
-                        
-                        #Docker
-                        
-                    </p>
-                    
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/tifenn-guillas.png" alt="Image tifenn-guillas.png">
-                    
+                    </div>
                 </div>
             </div>
             
@@ -980,35 +1001,42 @@
                 <img class="flex-1 object-fill" src="/assets/images/portfolio/gazpar-min.png" alt="Project GAZPAR thumbnail">
             </a>
             <div id="gazpar" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
-                <div class="p-9 bg-tg-blue">
-                    <h4 class="text-tg-white">GAZPAR</h4>
-                    <p class="pt-6 text-tg-soft-gray">GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.<br> Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.</p>
-                    
-                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                <div class="bg-tg-blue">
+                    <div class="flex justify-end">
+                        <button type="button" class="popup-modal-close p-2.5 text-tg-pink">
+                            <span class="fas fa-times fa-lg fa-fw"></span>
+                        </button>
+                    </div>
+                    <div class="px-14">
+                        <h4 class="text-tg-white">GAZPAR</h4>
+                        <p class="pt-6 text-justify text-tg-soft-gray">GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.<br> Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.</p>
                         
-                        #Angular2
+                        <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                            
+                            #Angular2
+                            
+                            #Bootstrap3
+                            
+                            #ResponsiveDesign
+                            
+                            #PHPOO
+                            
+                            #Slim3
+                            
+                            #Doctrine2
+                            
+                            #PostgreSQL
+                            
+                        </p>
                         
-                        #Bootstrap3
                         
-                        #ResponsiveDesign
+                        <img class="py-9" src="/assets/images/portfolio/gazpar.png" alt="Image gazpar.png">
                         
-                        #PHPOO
+                        <img class="py-9" src="/assets/images/portfolio/gazpar2.png" alt="Image gazpar2.png">
                         
-                        #Slim3
+                        <img class="py-9" src="/assets/images/portfolio/gazpar3.png" alt="Image gazpar3.png">
                         
-                        #Doctrine2
-                        
-                        #PostgreSQL
-                        
-                    </p>
-                    
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/gazpar.png" alt="Image gazpar.png">
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/gazpar2.png" alt="Image gazpar2.png">
-                    
-                    <img class="pt-9 pb-6" src="/assets/images/portfolio/gazpar3.png" alt="Image gazpar3.png">
-                    
+                    </div>
                 </div>
             </div>
             

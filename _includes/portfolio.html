@@ -1,28 +1,35 @@
-<div id="{{ include.name }}" class="pt-16 pb-24 bg-tg-blue">
+<div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
-        <div class="flex justify-end">
+        <div class="flex justify-end pb-12">
             {% include block-name.html label=include.label background="blue" %}
         </div>
 
-        <div class="my-20 mx-40 grid grid-flow-col gap-12">
+        <div class="px-2.5 lg:px-20 xl:px-40 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-12">
             {% for project in site.data.portfolio %}
             <a class="image-popup flex" href="#{{ project.id }}">
                 <img class="flex-1 object-fill" src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}" alt="Project {{ project.title }} thumbnail">
             </a>
             <div id="{{ project.id }}" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
-                <div class="p-9 bg-tg-blue">
-                    <h4 class="text-tg-white">{{ project.title }}</h4>
-                    <p class="pt-6 text-tg-soft-gray">{{ project.description }}</p>
-                    {% if project.hashtags %}
-                    <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
-                        {% for tech in project.hashtags %}
-                        #{{ tech }}
+                <div class="bg-tg-blue">
+                    <div class="flex justify-end">
+                        <button type="button" class="popup-modal-close p-2.5 text-tg-pink">
+                            <span class="fas fa-times fa-lg fa-fw"></span>
+                        </button>
+                    </div>
+                    <div class="px-14">
+                        <h4 class="text-tg-white">{{ project.title }}</h4>
+                        <p class="pt-6 text-justify text-tg-soft-gray">{{ project.description }}</p>
+                        {% if project.hashtags %}
+                        <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
+                            {% for tech in project.hashtags %}
+                            #{{ tech }}
+                            {% endfor %}
+                        </p>
+                        {% endif %}
+                        {% for image in project.images %}
+                        <img class="py-9" src="{{ site.baseurl }}/assets/images/portfolio/{{ image }}" alt="Image {{ image }}">
                         {% endfor %}
-                    </p>
-                    {% endif %}
-                    {% for image in project.images %}
-                    <img class="pt-9 pb-6" src="{{ site.baseurl }}/assets/images/portfolio/{{ image }}" alt="Image {{ image }}">
-                    {% endfor %}
+                    </div>
                 </div>
             </div>
             {% endfor %}

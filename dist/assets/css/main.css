@@ -14473,8 +14473,9 @@ h4 { font-size: 1.125rem; line-height: 1.75rem; }
 
 .image-popup:hover::before, .image-popup:hover::after { top: 50%; left: 50%; opacity: 1; }
 
-/* Portfolio popup */
-.mfp-close-btn-in .mfp-close { --tw-text-opacity: 1; color: rgba(252, 252, 252, var(--tw-text-opacity)); }
+.mfp-arrow-left { transform-origin: inherit; }
+
+.mfp-arrow-right { transform-origin: 50%; }
 
 @media (min-width: 640px) { .sm\:container { width: 100%; } }
 

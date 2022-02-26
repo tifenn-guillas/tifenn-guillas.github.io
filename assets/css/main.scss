@@ -42,8 +42,11 @@ h4 {
         @apply top-1/2 left-1/2 opacity-100;
     }
 }
-
-/* Portfolio popup */
-.mfp-close-btn-in .mfp-close {
-    @apply text-tg-white;
+.mfp-arrow-left {
+    -webkit-transform-origin: inherit;
+    transform-origin: inherit;
+}
+.mfp-arrow-right {
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
 }
