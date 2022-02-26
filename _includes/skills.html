@@ -1,16 +1,16 @@
 <div id="{{ include.name }}" class="py-16 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start">
+        <div class="flex justify-start pb-12">
             {% include block-name.html label=include.label background="white" %}
         </div>
 
-        <div class="my-20 mx-40">
-            <h4 class="mb-4 text-center uppercase">Mon savoir-faire</h4>
-            <p>
+        <div class="text-center px-2.5 lg:px-20 xl:px-40">
+            <h4 class="mb-4 uppercase">Mon savoir-faire</h4>
+            <p class="md:text-left">
                 Grâce à mes différentes expériences, qu'elles soient professionnelles ou personnelles, j'ai pu acquérir
                 des compétences, en particulier dans les catégories suivantes :
             </p>
-            <div class="my-12 grid grid-flow-col gap-10">
+            <div class="mt-10 grid grid-flow-raw lg:grid-flow-col gap-10 md:px-12 lg:px-0 text-left">
                 {% for stack in site.data.skills %}
                     {% include card.html name=stack.stack technologies=stack.technologies %}
                 {% endfor %}
