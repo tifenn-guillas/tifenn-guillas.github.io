@@ -4,7 +4,7 @@
             {% include block-name.html label=include.label background="blue" %}
         </div>
 
-        <div class="px-2.5 lg:px-20 xl:px-40 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-12">
+        <div class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12">
             {% for project in site.data.portfolio %}
             <a class="image-popup flex" href="#{{ project.id }}">
                 <img class="flex-1 object-fill" src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}" alt="Project {{ project.title }} thumbnail">

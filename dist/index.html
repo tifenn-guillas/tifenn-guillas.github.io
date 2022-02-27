@@ -314,14 +314,14 @@
         </div>
 
         <div class="flex flex-col md:flex-row lg:gap-12 lg:px-20 xl:px-40">
-            <div class="flex-none self-center md:order-last p-2.5">
+            <div class="flex-none self-center md:order-last p-6">
                 <div class="rounded-full border-2 border-tg-pink">
                     <div class="w-64 h-64 rounded-full border-4 border-tg-white overflow-hidden">
                         <img src="/assets/images/profile.jpg" alt="Profile image">
                     </div>
                 </div>
             </div>
-            <div class="flex-grow py-12 md:py-0 px-2.5 text-center md:text-left">
+            <div class="flex-grow py-12 md:py-0 px-6 text-center md:text-left">
                 <h3 class="mb-2.5 text-tg-gray text-xl tracking-normal">
                     Tifenn Guillas, enchantée !
                 </h3>
@@ -394,7 +394,7 @@
 </div>
         </div>
 
-        <div class="text-center px-2.5 lg:px-20 xl:px-40">
+        <div class="text-center px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 uppercase">Mon savoir-faire</h4>
             <p class="md:text-left">
                 Grâce à mes différentes expériences, qu'elles soient professionnelles ou personnelles, j'ai pu acquérir
@@ -563,7 +563,16 @@
     </div>
 </div>
 
-    <div id="resume" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
+    <div class="text-center">
+    <div class="sm:hidden bg-gray-300">XS</div>
+    <div class="hidden sm:block md:hidden bg-yellow-300">SM</div>
+    <div class="hidden md:block lg:hidden bg-yellow-600">MD</div>
+    <div class="hidden lg:block xl:hidden bg-red-600 text-white">LG</div>
+    <div class="hidden xl:block 2xl:hidden bg-red-900 text-white">XL</div>
+    <div class="hidden 2xl:block bg-purple-800 text-white">2XL</div>
+</div>
+
+<div id="resume" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
         <div class="flex justify-end pb-12">
             <div class="px-2.5">
@@ -574,172 +583,182 @@
 </div>
         </div>
 
-        <div class="px-2.5 lg:px-20 xl:px-40">
+        <div class="px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 text-center text-tg-pink uppercase">Expériences professionnelles</h4>
             <div class="my-12">
                 
-                    <div class="my-10 grid grid-flow-raw md:grid-flow-col md:gap-6">
-                        <div class="leading-loose md:leading-normal text-tg-pink md:text-tg-soft-gray
-                            text-sm md:text-base tracking-widest md:tracking-wider font-light
-                            border-b-2 border-tg-pink md:border-0 mb-3">
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
                             04/2018 - 04/2022
-                        </div>
-                        <div class="col-span-3">
-                            <p class="text-tg-soft-gray italic">Ingénieur et développement et déploiement d'applications</p>
-                            <p class="text-tg-pink font-light italic">CNRS - Laboratoire d'Astrophysique de Marseille</p>
-                            <p class="pt-4 text-tg-white">La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.</p>
-                            <p class="pt-4 text-tg-white">Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires pour la partie frontend sous Angular.</p>
-                            <p class="pt-4 text-tg-soft-gray">
-                                
-                                    #Angular
-                                
-                                    #RxJS
-                                
-                                    #Jasmine
-                                
-                                    #Jest
-                                
-                                    #Bootstrap4
-                                
-                                    #ResponsiveDesign
-                                
-                                    #API
-                                
-                                    #REST
-                                
-                                    #git
-                                
-                                    #Docker
-                                
-                                    #CI/CD
-                                
-                            </p>
-                        </div>
+                        </span>
                     </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur et développement et déploiement d'applications</p>
+                        <p class="text-tg-pink font-light italic">CNRS - Laboratoire d'Astrophysique de Marseille</p>
+                        <p class="pt-4 text-tg-white">La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.</p>
+                        <p class="pt-4 text-tg-white">Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires pour la partie frontend sous Angular.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #Angular
+                            
+                            #RxJS
+                            
+                            #Jasmine
+                            
+                            #Jest
+                            
+                            #Bootstrap4
+                            
+                            #ResponsiveDesign
+                            
+                            #API
+                            
+                            #REST
+                            
+                            #git
+                            
+                            #Docker
+                            
+                            #CI/CD
+                            
+                        </p>
+                    </div>
+                </div>
                 
-                    <div class="my-10 grid grid-flow-raw md:grid-flow-col md:gap-6">
-                        <div class="leading-loose md:leading-normal text-tg-pink md:text-tg-soft-gray
-                            text-sm md:text-base tracking-widest md:tracking-wider font-light
-                            border-b-2 border-tg-pink md:border-0 mb-3">
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
                             08/2017 - 02/2018
-                        </div>
-                        <div class="col-span-3">
-                            <p class="text-tg-soft-gray italic">Ingénieur software</p>
-                            <p class="text-tg-pink font-light italic">The Currency Shop - Melbourne, Australie</p>
-                            <p class="pt-4 text-tg-white">The Currency Shop est un site de comparaison de taux de change et frais liés au transfert d'argent à l'étranger. Ils fournissent des guides, revues et convertisseurs afin de trouver le meilleur taux.</p>
-                            <p class="pt-4 text-tg-white">Mise en production de sites web pour l'international en WordPress hébergés sur Microsoft Azure. Rapatriement en interne du site web principal sous Symfony, sous-traité par une agence web. Création d'un convertisseur de devises communiquant avec les API de TransferWise.</p>
-                            <p class="pt-4 text-tg-soft-gray">
-                                
-                                    #Azure
-                                
-                                    #Symfony3
-                                
-                                    #Bootstrap3
-                                
-                                    #ResponsiveDesign
-                                
-                                    #PHPOO
-                                
-                                    #Doctrine2
-                                
-                                    #MySQL
-                                
-                            </p>
-                        </div>
+                        </span>
                     </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur software</p>
+                        <p class="text-tg-pink font-light italic">The Currency Shop - Melbourne, Australie</p>
+                        <p class="pt-4 text-tg-white">The Currency Shop est un site de comparaison de taux de change et frais liés au transfert d'argent à l'étranger. Ils fournissent des guides, revues et convertisseurs afin de trouver le meilleur taux.</p>
+                        <p class="pt-4 text-tg-white">Mise en production de sites web pour l'international en WordPress hébergés sur Microsoft Azure. Rapatriement en interne du site web principal sous Symfony, sous-traité par une agence web. Création d'un convertisseur de devises communiquant avec les API de TransferWise.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #Azure
+                            
+                            #Symfony3
+                            
+                            #Bootstrap3
+                            
+                            #ResponsiveDesign
+                            
+                            #PHPOO
+                            
+                            #Doctrine2
+                            
+                            #MySQL
+                            
+                        </p>
+                    </div>
+                </div>
                 
-                    <div class="my-10 grid grid-flow-raw md:grid-flow-col md:gap-6">
-                        <div class="leading-loose md:leading-normal text-tg-pink md:text-tg-soft-gray
-                            text-sm md:text-base tracking-widest md:tracking-wider font-light
-                            border-b-2 border-tg-pink md:border-0 mb-3">
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
                             04/2016 - 04/2017
-                        </div>
-                        <div class="col-span-3">
-                            <p class="text-tg-soft-gray italic">Ingénieur en développement et déploiement d'applications</p>
-                            <p class="text-tg-pink font-light italic">CNRS - Laboratoire d'Astrophysique de Marseille</p>
-                            <p class="pt-4 text-tg-white">GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.</p>
-                            <p class="pt-4 text-tg-white">Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.</p>
-                            <p class="pt-4 text-tg-soft-gray">
-                                
-                                    #Angular2
-                                
-                                    #Bootstrap3
-                                
-                                    #ResponsiveDesign
-                                
-                                    #PHPOO
-                                
-                                    #Slim3
-                                
-                                    #Doctrine2
-                                
-                                    #PostgreSQL
-                                
-                            </p>
-                        </div>
+                        </span>
                     </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur en développement et déploiement d'applications</p>
+                        <p class="text-tg-pink font-light italic">CNRS - Laboratoire d'Astrophysique de Marseille</p>
+                        <p class="pt-4 text-tg-white">GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.</p>
+                        <p class="pt-4 text-tg-white">Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #Angular2
+                            
+                            #Bootstrap3
+                            
+                            #ResponsiveDesign
+                            
+                            #PHPOO
+                            
+                            #Slim3
+                            
+                            #Doctrine2
+                            
+                            #PostgreSQL
+                            
+                        </p>
+                    </div>
+                </div>
                 
-                    <div class="my-10 grid grid-flow-raw md:grid-flow-col md:gap-6">
-                        <div class="leading-loose md:leading-normal text-tg-pink md:text-tg-soft-gray
-                            text-sm md:text-base tracking-widest md:tracking-wider font-light
-                            border-b-2 border-tg-pink md:border-0 mb-3">
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
                             10/2015 - 01/2016
-                        </div>
-                        <div class="col-span-3">
-                            <p class="text-tg-soft-gray italic">Ingénieur en base de données et programmation</p>
-                            <p class="text-tg-pink font-light italic">GIS Posidonie - Marseille</p>
-                            <p class="pt-4 text-tg-white">POPCOrn, est un outil de comptage des poissons et coraux présents dans le Parc National des Calanques afin de déterminer l'efficacité de l’espace protégé. Cette application interne est destinée aux plongeurs du Groupement d’Intérêt Scientifique Posidonie, du parc, et à terme à ceux du Parc National de Port Cros.</p>
-                            <p class="pt-4 text-tg-white">Conception d'une base de données PostgreSQL et importation de données provenant d'une base Access. Stockage et manipulation de données spatiales grâce à PostGIS. Conception d'une application web afin d'intégrer de nouvelles données dans la base.</p>
-                            <p class="pt-4 text-tg-soft-gray">
-                                
-                                    #PostgreSQL
-                                
-                                    #PostGIS
-                                
-                                    #jQuery
-                                
-                                    #Twig
-                                
-                                    #Bootstrap3
-                                
-                                    #PHP
-                                
-                                    #Doctrine2
-                                
-                            </p>
-                        </div>
+                        </span>
                     </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur en base de données et programmation</p>
+                        <p class="text-tg-pink font-light italic">GIS Posidonie - Marseille</p>
+                        <p class="pt-4 text-tg-white">POPCOrn, est un outil de comptage des poissons et coraux présents dans le Parc National des Calanques afin de déterminer l'efficacité de l’espace protégé. Cette application interne est destinée aux plongeurs du Groupement d’Intérêt Scientifique Posidonie, du parc, et à terme à ceux du Parc National de Port Cros.</p>
+                        <p class="pt-4 text-tg-white">Conception d'une base de données PostgreSQL et importation de données provenant d'une base Access. Stockage et manipulation de données spatiales grâce à PostGIS. Conception d'une application web afin d'intégrer de nouvelles données dans la base.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #PostgreSQL
+                            
+                            #PostGIS
+                            
+                            #jQuery
+                            
+                            #Twig
+                            
+                            #Bootstrap3
+                            
+                            #PHP
+                            
+                            #Doctrine2
+                            
+                        </p>
+                    </div>
+                </div>
                 
-                    <div class="my-10 grid grid-flow-raw md:grid-flow-col md:gap-6">
-                        <div class="leading-loose md:leading-normal text-tg-pink md:text-tg-soft-gray
-                            text-sm md:text-base tracking-widest md:tracking-wider font-light
-                            border-b-2 border-tg-pink md:border-0 mb-3">
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
                             04/2015 - 08/2015
-                        </div>
-                        <div class="col-span-3">
-                            <p class="text-tg-soft-gray italic">Stage Développeur Web</p>
-                            <p class="text-tg-pink font-light italic">CNRS - Institut de Biologie du Développement de Marseille</p>
-                            <p class="pt-4 text-tg-white">Création d'une application interne de gestion des publications de l'institut et des préférences utilisateurs liées à ces publications. Opération faite manuellement auparavant.</p>
-                            <p class="pt-4 text-tg-white">Création d'une base de données MySQL avec MERISE. Création d'une interface web afin de recenser les publications du laboratoire et gestion des préférences utilisateurs en PHP, HTML/CSS et jQuery (+ différents plugins jQuery).</p>
-                            <p class="pt-4 text-tg-soft-gray">
-                                
-                                    #MySQL
-                                
-                                    #MERISE
-                                
-                                    #PHP
-                                
-                                    #Doctrine2
-                                
-                                    #Twig
-                                
-                                    #jQuery
-                                
-                                    #jQueryPlugins
-                                
-                            </p>
-                        </div>
+                        </span>
                     </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Stage Développeur Web</p>
+                        <p class="text-tg-pink font-light italic">CNRS - Institut de Biologie du Développement de Marseille</p>
+                        <p class="pt-4 text-tg-white">Création d'une application interne de gestion des publications de l'institut et des préférences utilisateurs liées à ces publications. Opération faite manuellement auparavant.</p>
+                        <p class="pt-4 text-tg-white">Création d'une base de données MySQL avec MERISE. Création d'une interface web afin de recenser les publications du laboratoire et gestion des préférences utilisateurs en PHP, HTML/CSS et jQuery (+ différents plugins jQuery).</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #MySQL
+                            
+                            #MERISE
+                            
+                            #PHP
+                            
+                            #Doctrine2
+                            
+                            #Twig
+                            
+                            #jQuery
+                            
+                            #jQueryPlugins
+                            
+                        </p>
+                    </div>
+                </div>
                 
             </div>
         </div>
@@ -766,7 +785,7 @@
 </div>
         </div>
 
-        <div class="px-2.5 lg:px-20 xl:px-40">
+        <div class="px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 text-center uppercase">Études et certifications</h4>
             <div class="my-12">
                 <div class="mt-10 grid grid-col-1 md:grid-col-2 md:gap-6">
@@ -866,7 +885,7 @@
 </div>
         </div>
 
-        <div class="px-2.5 lg:px-20 xl:px-40 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-12">
+        <div class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12">
             
             <a class="image-popup flex" href="#social-stats">
                 <img class="flex-1 object-fill" src="/assets/images/portfolio/social-stats-min.png" alt="Project Social Stats thumbnail">
