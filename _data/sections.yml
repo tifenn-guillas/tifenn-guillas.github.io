@@ -1,9 +1,6 @@
 - name: navbar
   menu_displayed: false
 
-- name: notification
-  menu_displayed: false
-
 - name: header
   menu_displayed: false
 

@@ -1,25 +1,31 @@
-<footer class="bg-tg-blue py-6">
-    <div class="container mx-auto grid grid-cols-3 items-center">
-        <div class="text-tg-white font-extralight text-xxs">
-            <p class="uppercase tracking-widest">&copy; Tifenn Guillas {{ 'now' | date: "%Y" }}</p>
-            <p class="pt-2">
-                Code source disponible sur
-                <a class="underline" href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank" title="GitHub">
-                    GitHub
-                </a>
-            </p>
-        </div>
-
+<footer class="bg-tg-blue p-6">
+    <div class="flex flex-col md:flex-row items-center gap-4">
         <a href="#page-top">
             <img class="w-12 mx-auto" src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
         </a>
 
-       <div class="text-tg-pink text-xl text-right">
-           {% for social in site.data.socials %}
+        <div class="flex-1 text-tg-pink text-center md:text-right text-xl">
+            {% for social in site.data.socials %}
             <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
                 <span class="{{ social.fontawesome }}"></span>
             </a>
-           {% endfor %}
+            {% endfor %}
+        </div>
+
+        <div class="flex-1 md:order-first text-tg-white text-center md:text-left font-extralight text-xs">
+            <span class="block xl:inline-block uppercase tracking-wider">
+                &copy; Tifenn Guillas {{'now'|date: "%Y"}}
+            </span>
+            <span class="hidden xl:inline-block pr-1">
+                |
+            </span>
+            <span class="block xl:inline-block pt-2">
+                Code source disponible sur
+                <a class="underline hover:text-tg-pink"
+                   href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank" title="GitHub">
+                    GitHub
+                </a>
+            </span>
         </div>
     </div>
 </footer>

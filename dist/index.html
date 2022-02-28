@@ -104,8 +104,6 @@
             
             
             
-            
-            
             <li class="li-section p-4">
                 <a href="#about" class="hover:text-tg-pink">
                     A propos
@@ -193,8 +191,6 @@
         
     
         
-    
-        
         <li class="inline-block p-4 hover:text-tg-pink">
             <a href="#about">
                 A propos
@@ -275,12 +271,6 @@
     </div>
 </nav>
 
-
-    <div class="fixed z-10 top-12 inset-x-0 bg-tg-pink bg-opacity-80 text-center text-tg-white text-xs tracking-wider">
-    <span class="fas fa-exclamation-triangle"></span>
-    En cours de construction
-    <span class="fas fa-exclamation-triangle"></span>
-</div>
 
     <div id="page-top" class="h-screen bg-header-image bg-cover bg-center bg-fixed">
     <div class="h-screen bg-tg-blue bg-opacity-30">
@@ -1335,36 +1325,42 @@
 </div>
 
 
-    <footer class="bg-tg-blue py-6">
-    <div class="container mx-auto grid grid-cols-3 items-center">
-        <div class="text-tg-white font-extralight text-xxs">
-            <p class="uppercase tracking-widest">&copy; Tifenn Guillas 2022</p>
-            <p class="pt-2">
-                Code source disponible sur
-                <a class="underline" href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank" title="GitHub">
-                    GitHub
-                </a>
-            </p>
-        </div>
-
+    <footer class="bg-tg-blue p-6">
+    <div class="flex flex-col md:flex-row items-center gap-4">
         <a href="#page-top">
             <img class="w-12 mx-auto" src="/assets/images/logo.svg" alt="logo">
         </a>
 
-       <div class="text-tg-pink text-xl text-right">
-           
+        <div class="flex-1 text-tg-pink text-center md:text-right text-xl">
+            
             <a href="https://twitter.com/tifenn_guillas" class="mx-1" target="_blank" title="Twitter">
                 <span class="fab fa-twitter"></span>
             </a>
-           
+            
             <a href="https://github.com/tifenn-guillas" class="mx-1" target="_blank" title="GitHub">
                 <span class="fab fa-github"></span>
             </a>
-           
+            
             <a href="https://www.linkedin.com/in/tifenn-guillas" class="mx-1" target="_blank" title="LinkedIn">
                 <span class="fab fa-linkedin-in"></span>
             </a>
-           
+            
+        </div>
+
+        <div class="flex-1 md:order-first text-tg-white text-center md:text-left font-extralight text-xs">
+            <span class="block xl:inline-block uppercase tracking-wider">
+                &copy; Tifenn Guillas 2022
+            </span>
+            <span class="hidden xl:inline-block pr-1">
+                |
+            </span>
+            <span class="block xl:inline-block pt-2">
+                Code source disponible sur
+                <a class="underline hover:text-tg-pink"
+                   href="https://github.com/tifenn-guillas/tifenn-guillas.github.io" target="_blank" title="GitHub">
+                    GitHub
+                </a>
+            </span>
         </div>
     </div>
 </footer>
