@@ -25,6 +25,9 @@ module.exports = {
             backgroundImage: theme => ({
                 'header-image': "url('/assets/images/background.jpg')",
                 'parallax-image': "url('/assets/images/parallax.jpg')"
+            }),
+            minHeight: (theme) => ({
+                ...theme('spacing'),
             })
         }
     },
