@@ -1,25 +1,25 @@
-<div id="{{ include.name }}" class="py-16 bg-tg-white">
+<div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start">
+        <div class="flex justify-start pb-12">
             {% include block-name.html label=include.label background="white" %}
         </div>
     </div>
 
-    <div class="text-center">
+    <div class="px-6 lg:px-20 xl:px-40 text-center">
         <h4 class="mb-4 uppercase">Restons en contact</h4>
         <p>
             Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
             suivante :
         </p>
-        <div class="flex justify-center mt-2.5">
+        <div class="mt-2.5 mb-8 flex justify-center">
             <div class="bg-tg-pink w-10 h-0.5"></div>
         </div>
 
-        <div class="container mx-auto py-16 px-80 grid grid-flow-col">
+        <div class="sm:mx-12 md:mx-28 lg:mx-40 xl:mx-44 2xl:mx-52 flex justify-around">
             {% for social in site.data.socials %}
                 {% if social.contact" %}
-                    <div class="text-center text-tg-pink">
-                        <a href="{{ social.url }}" class="mx-1" target="_blank" title="{{ social.name }}">
+                    <div class="text-tg-pink">
+                        <a href="{{ social.url }}" target="_blank" title="{{ social.name }}">
                             <span class="fa-5x {{ social.fontawesome }}"></span>
                         </a>
                     </div>
