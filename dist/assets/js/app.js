@@ -6,11 +6,27 @@ $(document).ready(function () {
         $(this).remove();
     });
 
+    // Collapse navbar on scroll
+    collapseNavbar();
+    $(window).scroll(function () {
+        collapseNavbar();
+    })
+    function collapseNavbar() {
+        if ($('.nav-desktop').offset().top > 50 || $('.nav-mobile').offset().top > 50) {
+            $('nav').removeClass('navbar-expanded');
+            $('nav').addClass('navbar-collapsed');
+        } else {
+            $('nav').removeClass('navbar-collapsed');
+            $('nav').addClass('navbar-expanded');
+
+        }
+    }
+
     // WOW animations
     new WOW().init();
 
     // Mobile menu
-    $('#mobile-menu-button').on('click', function(e) {
+    $('#mobile-menu-button').click(function(e) {
         e.preventDefault();
         if ($('#mobile-menu-button').attr('aria-expanded') === 'true') {
             closeMobileMenu();
