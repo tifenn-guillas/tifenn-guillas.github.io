@@ -1,5 +1,5 @@
 <!-- Navbar for mobile menu -->
-<nav class="lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex justify-between">
         <button type="button"
                 id="mobile-menu-button"
@@ -12,7 +12,7 @@
         </button>
 
         <div class="lg:flex-none my-auto mx-2.5 p-2">
-            <a class="" href="#page-top">
+            <a class="anchor" href="#page-top">
                 <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
             </a>
         </div>
@@ -32,7 +32,7 @@
             {% for section in site.data.sections %}
             {% if section.menu_displayed %}
             <li class="li-section p-4">
-                <a href="#{{ section.name }}" class="hover:text-tg-pink">
+                <a href="#{{ section.name }}" class="anchor hover:text-tg-pink">
                     {{ section.label }}
                 </a>
             </li>
@@ -54,9 +54,9 @@
 </nav>
 
 <!--Navbar for desktop menu-->
-<nav class="hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-desktop hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex-none my-auto mx-2.5 p-2">
-        <a class="" href="#page-top">
+        <a class="anchor" href="#page-top">
             <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
         </a>
     </div>
@@ -65,7 +65,7 @@
     {% for section in site.data.sections %}
         {% if section.menu_displayed %}
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#{{ section.name }}">
+            <a href="#{{ section.name }}" class="anchor">
                 {{ section.label }}
             </a>
         </li>

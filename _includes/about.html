@@ -1,8 +1,6 @@
 <div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            {% include block-name.html label=include.label background="white" %}
-        </div>
+        {% include block-name.html label=include.label background="white" direction="left" %}
 
         <div class="flex flex-col md:flex-row lg:gap-12 lg:px-20 xl:px-40">
             <div class="flex-none self-center md:order-last p-6">
@@ -30,7 +28,7 @@
                 </p>
                 <div class="mt-12 flex flex-col sm:flex-row justify-around md:justify-start gap-10 text-sm">
                     <div>
-                        <a href="#contact" class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink">
+                        <a href="#contact" class="anchor inline-block border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink">
                             Contactez-moi
                         </a>
                     </div>

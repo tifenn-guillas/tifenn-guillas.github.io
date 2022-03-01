@@ -52,14 +52,15 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png" />
 
         <!-- Google analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88060393-1"></script>
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-88060393-1', 'auto');
-            ga('send', 'pageview');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-88060393-1', {cookie_flags: 'SameSite=None;Secure'});
         </script>
+
     </head>
     <body class="bg-tg-blue font-roboto text-tg-gray">
         <div class="loader fixed flex justify-center items-center z-50 bg-tg-pink h-screen w-screen">
@@ -68,7 +69,7 @@
 
 
     <!-- Navbar for mobile menu -->
-<nav class="lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex justify-between">
         <button type="button"
                 id="mobile-menu-button"
@@ -81,7 +82,7 @@
         </button>
 
         <div class="lg:flex-none my-auto mx-2.5 p-2">
-            <a class="" href="#page-top">
+            <a class="anchor" href="#page-top">
                 <img src="/assets/images/logo.svg" alt="logo">
             </a>
         </div>
@@ -105,7 +106,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#about" class="hover:text-tg-pink">
+                <a href="#about" class="anchor hover:text-tg-pink">
                     A propos
                 </a>
             </li>
@@ -115,7 +116,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#skills" class="hover:text-tg-pink">
+                <a href="#skills" class="anchor hover:text-tg-pink">
                     Compétences
                 </a>
             </li>
@@ -123,7 +124,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#resume" class="hover:text-tg-pink">
+                <a href="#resume" class="anchor hover:text-tg-pink">
                     Carrière
                 </a>
             </li>
@@ -131,7 +132,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#formation" class="hover:text-tg-pink">
+                <a href="#formation" class="anchor hover:text-tg-pink">
                     Formation
                 </a>
             </li>
@@ -139,7 +140,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#portfolio" class="hover:text-tg-pink">
+                <a href="#portfolio" class="anchor hover:text-tg-pink">
                     Portfolio
                 </a>
             </li>
@@ -147,7 +148,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#goals" class="hover:text-tg-pink">
+                <a href="#goals" class="anchor hover:text-tg-pink">
                     Objectifs
                 </a>
             </li>
@@ -157,7 +158,7 @@
             
             
             <li class="li-section p-4">
-                <a href="#contact" class="hover:text-tg-pink">
+                <a href="#contact" class="anchor hover:text-tg-pink">
                     Contact
                 </a>
             </li>
@@ -177,9 +178,9 @@
 </nav>
 
 <!--Navbar for desktop menu-->
-<nav class="hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-desktop hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex-none my-auto mx-2.5 p-2">
-        <a class="" href="#page-top">
+        <a class="anchor" href="#page-top">
             <img src="/assets/images/logo.svg" alt="logo">
         </a>
     </div>
@@ -192,7 +193,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#about">
+            <a href="#about" class="anchor">
                 A propos
             </a>
         </li>
@@ -202,7 +203,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#skills">
+            <a href="#skills" class="anchor">
                 Compétences
             </a>
         </li>
@@ -210,7 +211,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#resume">
+            <a href="#resume" class="anchor">
                 Carrière
             </a>
         </li>
@@ -218,7 +219,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#formation">
+            <a href="#formation" class="anchor">
                 Formation
             </a>
         </li>
@@ -226,7 +227,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#portfolio">
+            <a href="#portfolio" class="anchor">
                 Portfolio
             </a>
         </li>
@@ -234,7 +235,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#goals">
+            <a href="#goals" class="anchor">
                 Objectifs
             </a>
         </li>
@@ -244,7 +245,7 @@
     
         
         <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#contact">
+            <a href="#contact" class="anchor">
                 Contact
             </a>
         </li>
@@ -285,7 +286,7 @@
             </div>
         </div>
         <div class="absolute bottom-0 inset-x-0 text-center animate-bounce">
-            <a class="text-tg-white p-10 pb-0" href="#about">
+            <a class="anchor text-tg-white p-10 pb-0" href="#about">
                 <i class="fa fa-3x fa-angle-down"></i>
             </a>
         </div>
@@ -294,14 +295,16 @@
 
     <div id="about" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 uppercase">A propos</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+        
+<div class="flex justify-start pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInLeft" data-wow-offset="100" data-wow-duration="1s">A propos</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>
-        </div>
 
         <div class="flex flex-col md:flex-row lg:gap-12 lg:px-20 xl:px-40">
             <div class="flex-none self-center md:order-last p-6">
@@ -329,7 +332,7 @@
                 </p>
                 <div class="mt-12 flex flex-col sm:flex-row justify-around md:justify-start gap-10 text-sm">
                     <div>
-                        <a href="#contact" class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink">
+                        <a href="#contact" class="anchor inline-block border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink">
                             Contactez-moi
                         </a>
                     </div>
@@ -375,14 +378,16 @@
 
     <div id="skills" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 uppercase">Compétences</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+        
+<div class="flex justify-end pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInRight" data-wow-offset="100" data-wow-duration="1s">Compétences</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>
-        </div>
 
         <div class="text-center px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 uppercase">Mon savoir-faire</h4>
@@ -555,14 +560,16 @@
 
     <div id="resume" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
-        <div class="flex justify-end pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 text-tg-soft-gray uppercase">Carrière</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+        
+<div class="flex justify-start pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInLeft" data-wow-offset="100">Carrière</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>
-        </div>
 
         <div class="px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 text-center text-tg-pink uppercase">Expériences professionnelles</h4>
@@ -757,14 +764,16 @@
 
     <div id="formation" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 uppercase">Formation</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+        
+<div class="flex justify-end pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInRight" data-wow-offset="100" data-wow-duration="1s">Formation</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>
-        </div>
 
         <div class="px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 text-center uppercase">Études et certifications</h4>
@@ -857,14 +866,16 @@
 
     <div id="portfolio" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
-        <div class="flex justify-end pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 text-tg-soft-gray uppercase">Portfolio</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+        
+<div class="flex justify-start pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInLeft" data-wow-offset="100">Portfolio</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>
-        </div>
 
         <div class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12">
             
@@ -1046,14 +1057,16 @@
 
     <div id="goals" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 uppercase">Objectifs</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+        
+<div class="flex justify-end pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInRight" data-wow-offset="100" data-wow-duration="1s">Objectifs</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>
-        </div>
 
         <div class="px-12 lg:px-20 xl:px-40">
             <div class="carousel">
@@ -1280,46 +1293,48 @@
 
     <div id="contact" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            <div class="px-2.5">
-    
-        <h2 class="mb-2.5 uppercase">Contact</h2>
-    
-    <div class="bg-tg-pink w-10 h-0.5"></div>
-</div>
-        </div>
+        
+<div class="flex justify-start pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInLeft" data-wow-offset="100" data-wow-duration="1s">Contact</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
     </div>
+</div>
 
-    <div class="px-6 lg:px-20 xl:px-40 text-center">
-        <h4 class="mb-4 uppercase">Restons en contact</h4>
-        <p>
-            Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
-            suivante :
-        </p>
-        <div class="mt-2.5 mb-8 flex justify-center">
-            <div class="bg-tg-pink w-10 h-0.5"></div>
-        </div>
+        <div class="px-6 lg:px-20 xl:px-40 text-center">
+            <h4 class="mb-4 uppercase">Restons en contact</h4>
+            <p>
+                Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
+                suivante :
+            </p>
+            <div class="mt-2.5 mb-8 flex justify-center">
+                <div class="bg-tg-pink w-10 h-0.5"></div>
+            </div>
 
-        <div class="sm:mx-12 md:mx-28 lg:mx-40 xl:mx-44 2xl:mx-52 flex justify-around">
-            
+            <div class="sm:mx-12 md:mx-28 lg:mx-40 xl:mx-44 2xl:mx-52 flex justify-around">
                 
-                    <div class="text-tg-pink">
-                        <a href="https://twitter.com/tifenn_guillas" target="_blank" title="Twitter">
-                            <span class="fa-5x fab fa-twitter"></span>
-                        </a>
-                    </div>
+                    
+                        <div class="text-tg-pink">
+                            <a href="https://twitter.com/tifenn_guillas" target="_blank" title="Twitter">
+                                <span class="fa-5x fab fa-twitter"></span>
+                            </a>
+                        </div>
+                    
                 
-            
+                    
                 
-            
+                    
+                        <div class="text-tg-pink">
+                            <a href="https://www.linkedin.com/in/tifenn-guillas" target="_blank" title="LinkedIn">
+                                <span class="fa-5x fab fa-linkedin-in"></span>
+                            </a>
+                        </div>
+                    
                 
-                    <div class="text-tg-pink">
-                        <a href="https://www.linkedin.com/in/tifenn-guillas" target="_blank" title="LinkedIn">
-                            <span class="fa-5x fab fa-linkedin-in"></span>
-                        </a>
-                    </div>
-                
-            
+            </div>
         </div>
     </div>
 </div>
@@ -1327,7 +1342,7 @@
 
     <footer class="bg-tg-blue p-6">
     <div class="flex flex-col md:flex-row items-center gap-4">
-        <a href="#page-top">
+        <a href="#page-top" class="anchor">
             <img class="w-12 mx-auto" src="/assets/images/logo.svg" alt="logo">
         </a>
 

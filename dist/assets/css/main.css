@@ -14521,6 +14521,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; letter-spacing: .05em; }
 
 h4 { font-size: 1.125rem; line-height: 1.75rem; }
 
+/* Navbar height */
+.navbar-expanded { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+.navbar-collapsed { padding-top: 0px; padding-bottom: 0px; }
+
+nav { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; transition-duration: 300ms; transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
+
 /* Carousel */
 .slick-prev::before, .slick-next::before { --tw-text-opacity: 1; color: rgba(255, 119, 119, var(--tw-text-opacity)); }
 

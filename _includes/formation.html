@@ -1,8 +1,6 @@
 <div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            {% include block-name.html label=include.label background="white" %}
-        </div>
+        {% include block-name.html label=include.label background="white" direction="right" %}
 
         <div class="px-6 lg:px-20 xl:px-40">
             <h4 class="mb-4 text-center uppercase">Études et certifications</h4>

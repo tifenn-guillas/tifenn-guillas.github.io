@@ -1,8 +1,18 @@
-<div class="px-2.5">
-    {% if include.background == "blue" %}
-        <h2 class="mb-2.5 text-tg-soft-gray uppercase">{{ include.label }}</h2>
-    {% else %}
-        <h2 class="mb-2.5 uppercase">{{ include.label }}</h2>
-    {% endif %}
-    <div class="bg-tg-pink w-10 h-0.5"></div>
+{% if include.direction == "left" %}
+<div class="flex justify-start pb-12">
+{% else %}
+<div class="flex justify-end pb-12">
+{% endif %}
+    <div class="px-2.5">
+        {% if include.background == "blue" and include.direction == "left" %}
+        <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInLeft" data-wow-offset="100">{{ include.label }}</h2>
+        {% elsif include.background == "blue" and include.direction == "right" %}
+        <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInRight" data-wow-offset="100">{{ include.label }}</h2>
+        {% elsif include.background == "white" and include.direction == "left" %}
+        <h2 class="mb-2.5 uppercase wow fadeInLeft" data-wow-offset="100" data-wow-duration="1s">{{ include.label }}</h2>
+        {% elsif include.background == "white" and include.direction == "right" %}
+        <h2 class="mb-2.5 uppercase wow fadeInRight" data-wow-offset="100" data-wow-duration="1s">{{ include.label }}</h2>
+        {% endif %}
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
 </div>

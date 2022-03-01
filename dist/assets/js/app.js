@@ -6,8 +6,17 @@ $(document).ready(function () {
         $(this).remove();
     });
 
+    // Collapse navbar on scroll
+    collapseNavbar();
+    $(window).scroll(function () {
+        collapseNavbar();
+    })
+
+    // WOW animations
+    new WOW().init();
+
     // Mobile menu
-    $('#mobile-menu-button').on('click', function(e) {
+    $('#mobile-menu-button').click(function(e) {
         e.preventDefault();
         if ($('#mobile-menu-button').attr('aria-expanded') === 'true') {
             closeMobileMenu();
@@ -38,7 +47,7 @@ $(document).ready(function () {
     });
 
     // jQuery smooth scrolling
-    $('.navbar-nav .nav-link, footer a, a.active-anchor').bind('click', function (event) {
+    $('.anchor').bind('click', function (event) {
         var anchor = $(this);
         var anchorId = anchor.attr('href').split("#")[1];
         animateAnchor(anchorId, event);
@@ -49,6 +58,17 @@ $(document).ready(function () {
         animateAnchor(uri.hash().substr(1));
     }
 });
+
+function collapseNavbar() {
+    if ($('.nav-desktop').offset().top > 50 || $('.nav-mobile').offset().top > 50) {
+        $('nav').removeClass('navbar-expanded');
+        $('nav').addClass('navbar-collapsed');
+    } else {
+        $('nav').removeClass('navbar-collapsed');
+        $('nav').addClass('navbar-expanded');
+
+    }
+}
 
 function animateAnchor(anchorId, event) {
     var elm = $("[id="+anchorId+"]");

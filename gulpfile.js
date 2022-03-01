@@ -10,7 +10,8 @@ exports.default = function() {
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
         './node_modules/urijs/src/URI.min.js',
-        './node_modules/slick-carousel/slick/slick.min.js'
+        './node_modules/slick-carousel/slick/slick.min.js',
+        './node_modules/wowjs/dist/wow.min.js'
     ])
     .pipe(concat('assets/dist/libs.js'))
     .pipe(uglify())
@@ -28,7 +29,8 @@ exports.default = function() {
         './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
         './node_modules/magnific-popup/dist/magnific-popup.css',
         './node_modules/slick-carousel/slick/slick.css',
-        './node_modules/slick-carousel/slick/slick-theme.css'
+        './node_modules/slick-carousel/slick/slick-theme.css',
+        './node_modules/wowjs/css/libs/animate.css'
     ])
     .pipe(concat('assets/dist/libs.css'))
     .pipe(replace('../webfonts/fa-', 'fa-'))
