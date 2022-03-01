@@ -6,6 +6,9 @@ $(document).ready(function () {
         $(this).remove();
     });
 
+    // WOW animations
+    new WOW().init();
+
     // Mobile menu
     $('#mobile-menu-button').on('click', function(e) {
         e.preventDefault();

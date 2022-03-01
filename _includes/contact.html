@@ -1,30 +1,28 @@
 <div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
     <div class="container mx-auto">
-        <div class="flex justify-start pb-12">
-            {% include block-name.html label=include.label background="white" %}
-        </div>
-    </div>
+        {% include block-name.html label=include.label background="white" direction="left" %}
 
-    <div class="px-6 lg:px-20 xl:px-40 text-center">
-        <h4 class="mb-4 uppercase">Restons en contact</h4>
-        <p>
-            Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
-            suivante :
-        </p>
-        <div class="mt-2.5 mb-8 flex justify-center">
-            <div class="bg-tg-pink w-10 h-0.5"></div>
-        </div>
+        <div class="px-6 lg:px-20 xl:px-40 text-center">
+            <h4 class="mb-4 uppercase">Restons en contact</h4>
+            <p>
+                Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
+                suivante :
+            </p>
+            <div class="mt-2.5 mb-8 flex justify-center">
+                <div class="bg-tg-pink w-10 h-0.5"></div>
+            </div>
 
-        <div class="sm:mx-12 md:mx-28 lg:mx-40 xl:mx-44 2xl:mx-52 flex justify-around">
-            {% for social in site.data.socials %}
-                {% if social.contact" %}
-                    <div class="text-tg-pink">
-                        <a href="{{ social.url }}" target="_blank" title="{{ social.name }}">
-                            <span class="fa-5x {{ social.fontawesome }}"></span>
-                        </a>
-                    </div>
-                {% endif %}
-            {% endfor %}
+            <div class="sm:mx-12 md:mx-28 lg:mx-40 xl:mx-44 2xl:mx-52 flex justify-around">
+                {% for social in site.data.socials %}
+                    {% if social.contact" %}
+                        <div class="text-tg-pink">
+                            <a href="{{ social.url }}" target="_blank" title="{{ social.name }}">
+                                <span class="fa-5x {{ social.fontawesome }}"></span>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

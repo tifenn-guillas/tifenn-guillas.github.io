@@ -1,8 +1,6 @@
 <div id="{{ include.name }}" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
     <div class="container mx-auto">
-        <div class="flex justify-end pb-12">
-            {% include block-name.html label=include.label background="blue" %}
-        </div>
+        {% include block-name.html label=include.label background="blue" direction="left" %}
 
         <div class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12">
             {% for project in site.data.portfolio %}
