@@ -1,4 +1,4 @@
-var uri = new URI();
+const uri = new URI();
 
 $(document).ready(function () {
     // Loader
@@ -6,11 +6,54 @@ $(document).ready(function () {
         $(this).remove();
     });
 
-    // Collapse navbar on scroll
+    // Navbar
+    let lastId;
+    // All list items
+    let mobileMenuItems = $('nav:first').find('li').find('a');
+    let desktopMenuItems = $('nav:last').find('li').find('a');
+    // Anchors corresponding to menu items
+    let scrollItems = mobileMenuItems.map(function() {
+        const item = $($(this).attr('href'));
+        if (item.length) { return item; }
+    });
+
     collapseNavbar();
+    scrollSpyNavbar();
+
     $(window).scroll(function () {
         collapseNavbar();
+        scrollSpyNavbar();
     })
+
+    function scrollSpyNavbar() {
+        // Get container scroll position
+        const fromTop = $(this).scrollTop();
+
+        // Get id of current scroll item
+        let cur = scrollItems.map(function(){
+            if ($(this).offset().top < fromTop) {
+                return this;
+                // Page bottom reached
+            } else if ((window.innerHeight + window.scrollY + 1) >= document.body.scrollHeight) {
+                return this;
+            }
+        });
+
+        // Get the id of the current element
+        cur = cur[cur.length-1];
+        const id = cur && cur.length ? cur[0].id : "";
+
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            mobileMenuItems
+                .parent().removeClass('active')
+                .end().filter('[href="#'+id+'"]').parent().addClass('active');
+            desktopMenuItems
+                .parent().removeClass('active')
+                .end().filter('[href="#'+id+'"]').parent().addClass('active');
+        }
+    }
 
     // WOW animations
     new WOW().init();
@@ -48,8 +91,8 @@ $(document).ready(function () {
 
     // jQuery smooth scrolling
     $('.anchor').bind('click', function (event) {
-        var anchor = $(this);
-        var anchorId = anchor.attr('href').split("#")[1];
+        const anchor = $(this);
+        const anchorId = anchor.attr('href').split('#')[1];
         animateAnchor(anchorId, event);
     });
 
@@ -61,23 +104,21 @@ $(document).ready(function () {
 
 function collapseNavbar() {
     if ($('.nav-desktop').offset().top > 50 || $('.nav-mobile').offset().top > 50) {
-        $('nav').removeClass('navbar-expanded');
-        $('nav').addClass('navbar-collapsed');
+        $('nav').removeClass('navbar-expanded').addClass('navbar-collapsed');
     } else {
-        $('nav').removeClass('navbar-collapsed');
-        $('nav').addClass('navbar-expanded');
+        $('nav').removeClass('navbar-collapsed').addClass('navbar-expanded');
 
     }
 }
 
 function animateAnchor(anchorId, event) {
-    var elm = $("[id="+anchorId+"]");
+    const elm = $('[id='+anchorId+']');
 
     if (elm.length >= 1) {
         changeUrl(elm.text(), uri.origin()+uri.pathname()+'#'+anchorId);
         $('html, body').stop().animate({
-            scrollTop: parseInt(elm.offset().top)-100
-        }, 1000);
+            scrollTop: elm.offset().top
+        }, 1500, 'easeInOutExpo');
         if(event) {
             event.preventDefault();
         }
@@ -85,11 +126,11 @@ function animateAnchor(anchorId, event) {
 }
 
 function changeUrl(title, url) {
-    if (typeof (history.pushState) != "undefined") {
-        var obj = { Title: title, Url: url };
+    if (typeof (history.pushState) != 'undefined') {
+        const obj = { Title: title, Url: url };
         history.pushState(obj, obj.Title, obj.Url);
     } else {
-        console.error("Browser does not support HTML5.");
+        console.error('Browser does not support HTML5.');
     }
 }
 
