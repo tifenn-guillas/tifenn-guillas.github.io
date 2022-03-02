@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         // Get id of current scroll item
         let cur = scrollItems.map(function(){
-            if ($(this).offset().top < fromTop) {
+            if ($(this).offset().top <= fromTop + 1) {
                 return this;
                 // Page bottom reached
             } else if ((window.innerHeight + window.scrollY + 1) >= document.body.scrollHeight) {
