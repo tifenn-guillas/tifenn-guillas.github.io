@@ -14,6 +14,7 @@ module.exports = {
             },
             colors: {
                 'tg-pink': '#ff7777',
+                'tg-soft-pink': '#ff8888',
                 'tg-blue': '#22273f',
                 'tg-white': '#FCFCFC',
                 'tg-soft-gray': '#d3d3d3',
@@ -33,7 +34,8 @@ module.exports = {
     },
     variants: {
         extend: {
-            visibility: ['hover']
+            visibility: ['hover'],
+            textColor: ['active']
         },
     },
     plugins: [],

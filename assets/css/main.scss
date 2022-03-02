@@ -13,7 +13,7 @@ h4 {
     @apply text-lg;
 }
 
-/* Navbar height */
+/* Navbar */
 .navbar-expanded {
     @apply py-3;
 }
@@ -22,6 +22,9 @@ h4 {
 }
 nav {
     @apply transition-all duration-300 ease-in;
+}
+.active {
+    @apply text-tg-soft-pink;
 }
 
 /* Carousel */
