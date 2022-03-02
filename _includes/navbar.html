@@ -31,8 +31,8 @@
         <ul class="text-center">
             {% for section in site.data.sections %}
             {% if section.menu_displayed %}
-            <li class="li-section p-4">
-                <a href="#{{ section.name }}" class="anchor hover:text-tg-pink">
+            <li class="li-section flex hover:text-tg-pink">
+                <a href="#{{ section.name }}" class="anchor py-4 flex-1">
                     {{ section.label }}
                 </a>
             </li>
@@ -54,7 +54,7 @@
 </nav>
 
 <!--Navbar for desktop menu-->
-<nav class="nav-desktop hidden lg:flex justify-between fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-desktop hidden lg:flex justify-between items-center fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex-none my-auto mx-2.5 p-2">
         <a class="anchor" href="#page-top">
             <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
@@ -64,8 +64,8 @@
     <ul class="text-center">
     {% for section in site.data.sections %}
         {% if section.menu_displayed %}
-        <li class="inline-block p-4 hover:text-tg-pink">
-            <a href="#{{ section.name }}" class="anchor">
+        <li class="inline-block hover:text-tg-pink">
+            <a href="#{{ section.name }}" class="anchor p-4">
                 {{ section.label }}
             </a>
         </li>

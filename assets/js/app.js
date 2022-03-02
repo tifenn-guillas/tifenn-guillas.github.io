@@ -23,7 +23,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         collapseNavbar();
         scrollSpyNavbar();
-    })
+    });
 
     function scrollSpyNavbar() {
         // Get container scroll position
