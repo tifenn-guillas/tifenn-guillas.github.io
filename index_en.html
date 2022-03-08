@@ -1,10 +1,11 @@
 ---
 permalink: /en/
 layout: default
-lang: en-US
+lang: en
 ---
 {% include loader.html %}
 
 {% for section in site.data.sections %}
-{% include {{ section.name }}.html name=section.name label=section.label %}
+{% assign label = section.label[page.lang] %}
+{% include {{ section.name }}.html name=section.name label=label %}
 {% endfor %}

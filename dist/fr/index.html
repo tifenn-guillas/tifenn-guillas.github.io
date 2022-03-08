@@ -69,6 +69,9 @@
 </div>
 
 
+
+
+
 <!-- Navbar for mobile menu -->
 <nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex justify-between">
@@ -93,7 +96,6 @@
                target="_blank"
                class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
                title="Téléchargez mon CV">
-                <span class="hidden lg:inline-block">Télécharger</span>
                 <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
             </a>
         </div>
@@ -103,19 +105,41 @@
             
             
             
-<!--            <li class="flex">-->
-<!--                -->
-<!--                <a href="/en/" class="py-4 flex-1">-->
-<!--                    <img src="/assets/images/en_flag.png" alt="English flag">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="inline-block">-->
-<!--                -->
-<!--                <a class="p-4" href="/fr/">-->
-<!--                    <img class="inline-block" src="/assets/images/fr_flag.png" alt="`French flag">-->
-<!--                </a>-->
-<!--                -->
-<!--            </li>-->
+            
+            
+            
+            <li class="li-section flex hover:text-tg-pink">
+                <a href="#about" class="anchor py-4 flex-1">
+                    A propos
+                </a>
+            </li>
+            
+            
+            
+            
+            
+            <li class="li-section flex hover:text-tg-pink">
+                <a href="#skills" class="anchor py-4 flex-1">
+                    Compétences
+                </a>
+            </li>
+            
+            
+            
+            <li class="li-section flex hover:text-tg-pink">
+                <a href="#resume" class="anchor py-4 flex-1">
+                    Carrière
+                </a>
+            </li>
+            
+            
+            <li class="flex">
+                <a href="/en/" class="py-4 flex-1">
+                    <img src="/assets/images/en_flag.png"
+                         class="inline-block"
+                         alt="English">
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -132,10 +156,39 @@
     
         
     
+        
+    
+        
+        <li class="inline-block hover:text-tg-pink">
+            <a href="#about" class="anchor p-4">
+                A propos
+            </a>
+        </li>
+        
+    
+        
+    
+        
+        <li class="inline-block hover:text-tg-pink">
+            <a href="#skills" class="anchor p-4">
+                Compétences
+            </a>
+        </li>
+        
+    
+        
+        <li class="inline-block hover:text-tg-pink">
+            <a href="#resume" class="anchor p-4">
+                Carrière
+            </a>
+        </li>
+        
+    
         <li class="inline-block">
-            
             <a class="inline-block" href="/en/">
-                <img class="inline-block" src="/assets/images/en_flag.png" alt="English flag">
+                <img class="inline-block"
+                     src="/assets/images/en_flag.png"
+                     alt="English">
             </a>
         </li>
     </ul>
@@ -145,11 +198,505 @@
             target="_blank"
             class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
             title="Téléchargez mon CV">
-            <span>Télécharger</span>
+            <span>
+                Télécharger
+            </span>
         </a>
     </div>
 </nav>
 
+
+
+<div id="page-top" class="h-screen bg-header-image bg-cover bg-center bg-fixed">
+    <div class="h-screen bg-tg-blue bg-opacity-30">
+        <div class="absolute top-1/3 inset-x-0">
+            <h1 class="pb-8 text-7xl text-tg-white text-center">
+                Tifenn Guillas
+            </h1>
+            <div class="text-center">
+                <span class="inline-block bg-tg-pink text-tg-white uppercase m-2.5 p-2.5 tracking-widest">
+                    
+                    Développeuse d'Applications Web
+                </span>
+            </div>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 text-center animate-bounce">
+            <a class="anchor text-tg-white p-10 pb-0" href="#about">
+                <i class="fa fa-3x fa-angle-down"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div id="about" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+    <div class="container mx-auto">
+        
+<div class="flex justify-start pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInLeft" data-wow-offset="100" data-wow-duration="1s">A propos</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
+</div>
+
+        <div class="flex flex-col md:flex-row lg:gap-12 lg:px-20 xl:px-40">
+            <div class="flex-none self-center md:order-last p-6">
+                <div class="rounded-full border-2 border-tg-pink">
+                    <div class="w-64 h-64 rounded-full border-4 border-tg-white overflow-hidden">
+                        <img src="/assets/images/profile.jpg" alt="Profile image">
+                    </div>
+                </div>
+            </div>
+            <div class="flex-grow py-12 md:py-0 px-6 text-center md:text-left">
+                <h3 class="mb-2.5 text-tg-gray text-xl tracking-normal">
+                    Tifenn Guillas, enchantée !
+                </h3>
+                <h5 class="mb-6 italic text-sm font-thin">
+                    Un peu plus sur moi ?
+                </h5>
+                <p class="leading-6 text-justify">
+                    D'un naturel très curieux, les domaines de l'Informatique et de la Biologie m'ont toujours attiré. Mais après le baccalauréat, il a bien fallu choisir. La voie de la raison l'a emportée, n'ayant jamais eu de cours d'informatique avant le bac, je me suis orientée en Biologie. Néanmoins j'avais toujours l'Informatique dans un coin de ma tête. C'est donc naturellement que, sitôt ma licence de Biologie en poche, j'ai décidé de me réorienter dans la Programmation Web. Choix que je ne regrette absolument pas aujourd'hui, et c'est avec grand plaisir que je me lève tous les matins pour aller au travail !
+                </p>
+                <div class="mt-12 flex flex-col sm:flex-row justify-around md:justify-start gap-10 text-sm">
+                    <div>
+                        <a href="#contact" class="anchor inline-block border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink">
+                            Contactez-moi
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+                           target="_blank"
+                           class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
+                           title="Téléchargez mon CV">
+                            Téléchargez mon CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="links" class="bg-parallax-image bg-cover bg-center bg-fixed">
+    <div class="bg-tg-blue bg-opacity-70">
+        <div class="container mx-auto py-16 grid grid-cols-3 divide-x divide-tg-pink">
+            
+            <div class="text-center text-tg-pink">
+                <a href="https://twitter.com/tifenn_guillas" class="mx-1" target="_blank" title="Twitter">
+                    <span class="fa-4x fab fa-twitter"></span>
+                </a>
+            </div>
+            
+            <div class="text-center text-tg-pink">
+                <a href="https://github.com/tifenn-guillas" class="mx-1" target="_blank" title="GitHub">
+                    <span class="fa-4x fab fa-github"></span>
+                </a>
+            </div>
+            
+            <div class="text-center text-tg-pink">
+                <a href="https://www.linkedin.com/in/tifenn-guillas" class="mx-1" target="_blank" title="LinkedIn">
+                    <span class="fa-4x fab fa-linkedin-in"></span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="skills" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+    <div class="container mx-auto">
+        
+<div class="flex justify-end pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 uppercase wow fadeInRight" data-wow-offset="100" data-wow-duration="1s">Compétences</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
+</div>
+
+        <div class="text-center px-6 lg:px-20 xl:px-40">
+            <h4 class="mb-4 uppercase">
+                Mon savoir-faire
+            </h4>
+            <p>
+                Grâce à mes différentes expériences, qu'elles soient professionnelles ou personnelles, j'ai pu acquérir des compétences, en particulier dans les catégories suivantes:
+            </p>
+            <div class="mt-10 grid grid-flow-raw lg:grid-flow-col gap-10 md:px-12 lg:px-0 text-left">
+                
+                    <div class="border-2 border-tg-pink">
+    <h3 class="p-4 uppercase">Backend</h3>
+    <div class="mx-4 h-px bg-tg-pink"></div>
+    <div class="my-4">
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fab fa-php"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    PHP
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fab fa-symfony"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Framework Symfony, Doctrine, Twig...
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fab fa-python"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Python
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fas fa-database"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    MySQL, PostgreSQL, PL/SQL, PostGIS...
+                </div>
+            </div>
+        
+    </div>
+</div>
+                
+                    <div class="border-2 border-tg-pink">
+    <h3 class="p-4 uppercase">Frontend</h3>
+    <div class="mx-4 h-px bg-tg-pink"></div>
+    <div class="my-4">
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fab fa-angular"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Framework Angular, Typescript, NgRx, RxJS...
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x far fa-check-square"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Tests unitaires : Jasmine, Jest
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fab fa-bootstrap"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Frameworks CSS : Bootstrap, Tailwindcss
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x far fa-file-code"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Sites web statiques : Jekyll - GitHub Pages
+                </div>
+            </div>
+        
+    </div>
+</div>
+                
+                    <div class="border-2 border-tg-pink">
+    <h3 class="p-4 uppercase">Environnement</h3>
+    <div class="mx-4 h-px bg-tg-pink"></div>
+    <div class="my-4">
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fas fa-cubes"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    CI/CD, Docker, git
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fab fa-linux"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    OS : Linux, MacOS
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fas fa-code"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    IDE : PHPStorm, VSCode...
+                </div>
+            </div>
+        
+            <div class="flex gap-4">
+                <div class="ml-4 w-10 h-10 flex-none self-center text-center">
+                    
+                        <span class="fa-2x fas fa-mug-hot"></span>
+                    
+                </div>
+                <div class="flex-initial self-center mr-4">
+                    Café ou chocolat chaud :)
+                </div>
+            </div>
+        
+    </div>
+</div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="resume" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
+    <div class="container mx-auto">
+        
+<div class="flex justify-start pb-12">
+
+    <div class="px-2.5">
+        
+        <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInLeft" data-wow-offset="100">Carrière</h2>
+        
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+    </div>
+</div>
+
+        <div class="px-6 lg:px-20 xl:px-40">
+            <h4 class="mb-4 text-center text-tg-pink uppercase">
+                Expériences professionnelles
+            </h4>
+            <div class="my-12">
+                
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
+                            04/2018 - 04/2022
+                        </span>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur en développement et déploiement d'applications</p>
+                        <p class="text-tg-pink font-light italic">CNRS - Laboratoire d'Astrophysique de Marseille</p>
+                        <p class="pt-4 text-tg-white">La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts gamma, les étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces rayons.</p>
+                        <p class="pt-4 text-tg-white">Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission SVOM. Je suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite de tests unitaires pour la partie frontend sous Angular.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #Angular
+                            
+                            #RxJS
+                            
+                            #Jasmine
+                            
+                            #Jest
+                            
+                            #Bootstrap4
+                            
+                            #ResponsiveDesign
+                            
+                            #API
+                            
+                            #REST
+                            
+                            #git
+                            
+                            #Docker
+                            
+                            #CI/CD
+                            
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
+                            08/2017 - 02/2018
+                        </span>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur software</p>
+                        <p class="text-tg-pink font-light italic">The Currency Shop - Melbourne, Australie</p>
+                        <p class="pt-4 text-tg-white">The Currency Shop est un site de comparaison de taux de change et frais liés au transfert d'argent à l'étranger. Ils fournissent des guides, revues et convertisseurs afin de trouver le meilleur taux.</p>
+                        <p class="pt-4 text-tg-white">Mise en production de sites web pour l'international en WordPress hébergés sur Microsoft Azure. Rapatriement en interne du site web principal sous Symfony, sous-traité par une agence web. Création d'un convertisseur de devises communiquant avec les API de TransferWise.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #Azure
+                            
+                            #Symfony3
+                            
+                            #Bootstrap3
+                            
+                            #ResponsiveDesign
+                            
+                            #PHPOO
+                            
+                            #Doctrine2
+                            
+                            #MySQL
+                            
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
+                            04/2016 - 04/2017
+                        </span>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur en développement et déploiement d'applications</p>
+                        <p class="text-tg-pink font-light italic">CNRS - Laboratoire d'Astrophysique de Marseille</p>
+                        <p class="pt-4 text-tg-white">GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.</p>
+                        <p class="pt-4 text-tg-white">Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #Angular2
+                            
+                            #Bootstrap3
+                            
+                            #ResponsiveDesign
+                            
+                            #PHPOO
+                            
+                            #Slim3
+                            
+                            #Doctrine2
+                            
+                            #PostgreSQL
+                            
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
+                            10/2015 - 01/2016
+                        </span>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Ingénieur en base de données et programmation</p>
+                        <p class="text-tg-pink font-light italic">GIS Posidonie - Marseille</p>
+                        <p class="pt-4 text-tg-white">POPCOrn est un outil de comptage des poissons et coraux présents dans le Parc National des Calanques afin de déterminer l'efficacité de l’espace protégé. Cette application interne est destinée aux plongeurs du Groupement d’Intérêt Scientifique Posidonie, du parc, et à terme à ceux du Parc National de Port Cros.</p>
+                        <p class="pt-4 text-tg-white">Conception d'une base de données PostgreSQL et importation de données provenant d'une base Access. Stockage et manipulation de données spatiales grâce à PostGIS. Conception d'une application web afin d'intégrer de nouvelles données dans la base.</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #PostgreSQL
+                            
+                            #PostGIS
+                            
+                            #jQuery
+                            
+                            #Twig
+                            
+                            #Bootstrap3
+                            
+                            #PHP
+                            
+                            #Doctrine2
+                            
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+                    <div class="mb-3 md:text-right">
+                        <span class="pb-1 text-tg-pink md:text-tg-soft-gray
+                        text-sm md:text-base tracking-widest md:tracking-wider font-light
+                        border-b-2 border-tg-pink md:border-0">
+                            04/2015 - 08/2015
+                        </span>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-tg-soft-gray italic">Stage Développeur Web</p>
+                        <p class="text-tg-pink font-light italic">CNRS - Institut de Biologie du Développement de Marseille</p>
+                        <p class="pt-4 text-tg-white">Création d'une application interne de gestion des publications de l'institut et des préférences utilisateurs liées à ces publications. Opération faite manuellement auparavant.</p>
+                        <p class="pt-4 text-tg-white">Création d'une base de données MySQL avec MERISE. Création d'une interface web afin de recenser les publications du laboratoire et gestion des préférences utilisateurs en PHP, HTML/CSS et jQuery (+ différents plugins jQuery).</p>
+                        <p class="pt-4 text-tg-soft-gray">
+                            
+                            #MySQL
+                            
+                            #MERISE
+                            
+                            #PHP
+                            
+                            #Doctrine2
+                            
+                            #Twig
+                            
+                            #jQuery
+                            
+                            #jQueryPlugins
+                            
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+               target="_blank"
+               class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
+               title="Téléchargez mon CV">
+                Téléchargez mon CV
+            </a>
+        </div>
+    </div>
+</div>
 
 
 

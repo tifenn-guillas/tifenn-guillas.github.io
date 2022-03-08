@@ -1,0 +1,172 @@
+title:
+    fr: Expériences professionnelles
+    en: Professional experience
+
+download:
+    fr: Téléchargez mon CV
+    en: Download my French resume
+
+download_href:
+    fr: https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing
+    en: https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing
+
+download_description:
+    fr: Téléchargez mon CV
+    en: Download my French resume
+
+jobs:
+    -   title:
+            fr: Ingénieur en développement et déploiement d'applications
+            en: Software Engineer - Application Development and Deployment
+        start: 04/2018
+        end: 04/2022
+        location:
+            fr: CNRS - Laboratoire d'Astrophysique de Marseille
+            en: CNRS - Laboratoire d'Astrophysique de Marseille, France
+        description:
+            fr: La mission SVOM consiste à analyser les étoiles ayant existé grâce à un satellite dédié. Des rayons
+                gamma sont produits par les étoiles lorsqu'elles meurent. Le satellite va intercepter ces sursauts
+                gamma, les étudier et alerter les télescopes au sol afin qu'ils prennent le relais dans l'étude de ces
+                rayons.
+            en: The SVOM mission consist in analyzing past stars thanks to a dedicated satellite that intercepts gamma
+                ray bursts produced by the stars when they die. The satellite captures these rays, study them and send
+                information about it on Earth where telescopes take over the study.
+        tasks:
+            fr: Dans le cadre de ce projet, je participe au développement du framework ANIS de mise à disposition et de
+                visualisation de données astrophysiques, ainsi qu'au développement des modules spécifiques à la mission
+                SVOM. Je suis aussi en charge d'augmenter la qualité logicielle, notamment en mettant en place la suite
+                de tests unitaires pour la partie frontend sous Angular.
+            en: I was involved in the development of ANIS framework which is a dedicated tool to provide and visualize
+                astrophysics data. In addition, I developed the SVOM mission specific modules. I was also in charge of
+                improve the software quality, notably by setting up unit testing for the frontend part in Angular.
+        technologies:
+            - Angular
+            - RxJS
+            - Jasmine
+            - Jest
+            - Bootstrap4
+            - ResponsiveDesign
+            - API
+            - REST
+            - git
+            - Docker
+            - CI/CD
+
+    -   title:
+            fr: Ingénieur software
+            en: Software engineer
+        start: 08/2017
+        end: 02/2018
+        location:
+            fr: The Currency Shop - Melbourne, Australie
+            en: The Currency Shop - Melbourne, Australia
+        description:
+            fr: The Currency Shop est un site de comparaison de taux de change et frais liés au transfert d'argent à
+                l'étranger. Ils fournissent des guides, revues et convertisseurs afin de trouver le meilleur taux.
+            en: The Currency Shop is a comparison website for international money transfers and travel money. They
+                provide guides, reviews and converter to find the best exchange rates.
+        tasks:
+            fr: Mise en production de sites web pour l'international en WordPress hébergés sur Microsoft Azure.
+                Rapatriement en interne du site web principal sous Symfony, sous-traité par une agence web. Création
+                d'un convertisseur de devises communiquant avec les API de TransferWise.
+            en: To reach out new costumers internationally, I deployed Wordpress websites hosted on Microsoft Azure. I
+                was in charge of taking over in-house the main website from a web agency. I built a currency converter
+                that interacts with Wize APIs.
+        technologies:
+            - Azure
+            - Symfony3
+            - Bootstrap3
+            - ResponsiveDesign
+            - PHPOO
+            - Doctrine2
+            - MySQL
+
+    -   title:
+            fr: Ingénieur en développement et déploiement d'applications
+            en: Software Engineer - Application Development and Deployment
+        start: 04/2016
+        end: 04/2017
+        location:
+            fr: CNRS - Laboratoire d'Astrophysique de Marseille
+            en: CNRS - Laboratoire d'Astrophysique de Marseille, France
+        description:
+            fr: GAZPAR est une application qui permet de traiter des catalogues d’étoiles. Ses utilisateurs peuvent
+                exécuter à distance un ensemble d’outils développés par le LAM et ses partenaires. Ils obtiennent ainsi
+                des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.
+            en: GAZPAR is an application that allows users to execute some tools remotely on their own catalogues of
+                stars. These tools are developed and provided by the LAM and partners. Users get results with added
+                values due to the valuation of the scientific responsible of the choosen tool.
+        tasks:
+            fr: Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR,
+                précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l'upload
+                de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.
+            en: My main task was to rewrite the application in Angular2+ and PHP, previously in Django (Python). I had
+                to add new features like large file size to download and add new tools in GAZPAR. I was also able to
+                optimize the PostgreSQL database.
+        technologies:
+            - Angular2
+            - Bootstrap3
+            - ResponsiveDesign
+            - PHPOO
+            - Slim3
+            - Doctrine2
+            - PostgreSQL
+    -   title:
+            fr: Ingénieur en base de données et programmation
+            en: Database and programming engineer
+        start: 10/2015
+        end: 01/2016
+        location:
+            fr: GIS Posidonie - Marseille
+            en: GIS Posidonie, France
+        description:
+            fr : POPCOrn est un outil de comptage des poissons et coraux présents dans le Parc National des Calanques
+                afin de déterminer l'efficacité de l’espace protégé. Cette application interne est destinée aux
+                plongeurs du Groupement d’Intérêt Scientifique Posidonie, du parc, et à terme à ceux du Parc National
+                de Port Cros.
+            en: POPCOrn is a counting tool of fish and coral present in the Parc National des Calanques to dertermined
+                the good health of it. This internal application is made for GIS Posidonie divers, the Parc National
+                des Calanques divers, and in a long term, for the Parc National de Port Cros divers.
+        tasks:
+            fr: Conception d'une base de données PostgreSQL et importation de données provenant d'une base Access.
+                Stockage et manipulation de données spatiales grâce à PostGIS. Conception d'une application web afin
+                d'intégrer de nouvelles données dans la base.
+            en: I worked on a PostgreSQL database conception and data migration from an Microsoft Access database. In
+                addition I managed to store and manipulate spatial data with the PostGIS extension. Finally I built a
+                web application that allows divers to enter new data to the database.
+        technologies:
+            - PostgreSQL
+            - PostGIS
+            - jQuery
+            - Twig
+            - Bootstrap3
+            - PHP
+            - Doctrine2
+    -   title:
+            fr: Stage Développeur Web
+            en: Web developer internship
+        start: 04/2015
+        end: 08/2015
+        location:
+            fr: CNRS - Institut de Biologie du Développement de Marseille
+            en: CNRS - Institut de Biologie du Développement de Marseille, France
+        description:
+            fr: Création d'une application interne de gestion des publications de l'institut et des préférences
+                utilisateurs liées à ces publications. Opération faite manuellement auparavant.
+            en: Conception of a web application to manage IBDM publications and users preferences related to their
+                publications. These operations were done manually before the application.
+        tasks:
+            fr: Création d'une base de données MySQL avec MERISE. Création d'une interface web afin de recenser les
+                publications du laboratoire et gestion des préférences utilisateurs en PHP, HTML/CSS et jQuery (+
+                différents plugins jQuery).
+            en: I did a web application to manage institute publications and users preferences related to their
+                publications. These operations were done manually before the application. Made with PHP, HTML, CSS,
+                jQuery and few plugins, this application is based on MySQL database that I built with MERISE methodology.
+        technologies:
+            - MySQL
+            - MERISE
+            - PHP
+            - Doctrine2
+            - Twig
+            - jQuery
+            - jQueryPlugins

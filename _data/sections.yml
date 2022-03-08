@@ -1,36 +1,44 @@
 - name: navbar
   template: navbar.html
-  template_en: navbar_en.html
   menu_displayed: false
 
-#- name: header
-#  menu_displayed: false
-#
-#- name: about
-#  label: A propos
-#  menu_displayed: true
-#
-#- name: links
-#  menu_displayed: false
-#
-#- name: skills
-#  label: Compétences
-#  menu_displayed: true
-#
-#- name: resume
-#  label: Carrière
-#  menu_displayed: true
-#
+- name: header
+  menu_displayed: false
+
+- name: about
+  label:
+      fr: A propos
+      en: About
+  menu_displayed: true
+
+- name: links
+  menu_displayed: false
+
+- name: skills
+  label:
+      fr: Compétences
+      en: Skills
+  menu_displayed: true
+
+- name: resume
+  label:
+      fr: Carrière
+      en: Resume
+  menu_displayed: true
+
 #- name: formation
 #  label: Formation
+#  label_en: Education
 #  menu_displayed: true
 #
 #- name: portfolio
 #  label: Portfolio
+#  label_en: Portfolio
 #  menu_displayed: true
 #
 #- name: goals
 #  label: Objectifs
+#  label_en: TODO list
 #  menu_displayed: true
 #
 #- name: hobbies
@@ -38,6 +46,7 @@
 #
 #- name: contact
 #  label: Contact
+#  label_en: Contact
 #  menu_displayed: true
 #
 #- name: footer

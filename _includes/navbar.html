@@ -1,3 +1,5 @@
+{% assign translation = site.data.navbar %}
+
 <!-- Navbar for mobile menu -->
 <nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex justify-between">
@@ -18,11 +20,10 @@
         </div>
 
         <div class="flex-none my-auto mx-2.5">
-            <a href="{{ page.resume }}"
+            <a href="{{ translation.download_href[page.lang] }}"
                target="_blank"
                class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
-               title="Téléchargez mon CV">
-                <span class="hidden lg:inline-block">Télécharger</span>
+               title="{{ translation.download_description[page.lang] }}">
                 <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
             </a>
         </div>
@@ -33,28 +34,18 @@
             {% if section.menu_displayed %}
             <li class="li-section flex hover:text-tg-pink">
                 <a href="#{{ section.name }}" class="anchor py-4 flex-1">
-                    {{ section.label }}
+                    {{ section.label[page.lang] }}
                 </a>
             </li>
             {% endif %}
             {% endfor %}
-<!--            <li class="flex">-->
-<!--                {% assign i18n = site.data.internationalization[page.lang] %}-->
-<!--                <a href="{% link {{ i18n.page }} %}" class="py-4 flex-1">-->
-<!--                    <img src="{{ site.baseurl }}/assets/images/{{ i18n.flag }}" alt="{{ i18n.alt_flag }}">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <li class="inline-block">-->
-<!--                {% if site.lang == 'fr-FR' %}-->
-<!--                <a class="p-4" href="{{ site.baseurl }}/fr/">-->
-<!--                    <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
-<!--                </a>-->
-<!--                {% else %}-->
-<!--                <a class="p-4" href="{{ site.baseurl }}/en/">-->
-<!--                    <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
-<!--                </a>-->
-<!--                {% endif %}-->
-<!--            </li>-->
+            <li class="flex">
+                <a href="{% link {{ translation.page[page.lang] }} %}" class="py-4 flex-1">
+                    <img src="{{ site.baseurl }}/assets/images/{{ translation.flag[page.lang] }}"
+                         class="inline-block"
+                         alt="{{ translation.alt_flag[page.lang] }}">
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -72,25 +63,28 @@
         {% if section.menu_displayed %}
         <li class="inline-block hover:text-tg-pink">
             <a href="#{{ section.name }}" class="anchor p-4">
-                {{ section.label }}
+                {{ section.label[page.lang] }}
             </a>
         </li>
         {% endif %}
     {% endfor %}
         <li class="inline-block">
-            {% assign i18n = site.data.internationalization[page.lang] %}
-            <a class="inline-block" href="{% link {{ i18n.page }} %}">
-                <img class="inline-block" src="{{ site.baseurl }}/assets/images/{{ i18n.flag }}" alt="{{ i18n.alt_flag }}">
+            <a class="inline-block" href="{% link {{ translation.page[page.lang] }} %}">
+                <img class="inline-block"
+                     src="{{ site.baseurl }}/assets/images/{{ translation.flag[page.lang] }}"
+                     alt="{{ translation.alt_flag[page.lang] }}">
             </a>
         </li>
     </ul>
 
     <div class="flex-none my-auto mx-2.5">
-        <a href="{{ page.resume }}"
+        <a href="{{ translation.download_href[page.lang] }}"
             target="_blank"
             class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
-            title="Téléchargez mon CV">
-            <span>Télécharger</span>
+            title="{{ translation.download_description[page.lang] }}">
+            <span>
+                {{ translation.download[page.lang] }}
+            </span>
         </a>
     </div>
 </nav>
