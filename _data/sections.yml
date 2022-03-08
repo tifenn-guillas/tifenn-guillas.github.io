@@ -26,11 +26,12 @@
       en: Resume
   menu_displayed: true
 
-#- name: formation
-#  label: Formation
-#  label_en: Education
-#  menu_displayed: true
-#
+- name: formation
+  label:
+      fr: Formation
+      en: Education
+  menu_displayed: true
+
 #- name: portfolio
 #  label: Portfolio
 #  label_en: Portfolio
