@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--<html lang="fr-FR">-->
+<html>
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>Tifenn Guillas</title>
+        <meta name="description" content="Développeur d'Applications Web">
+        <meta name="author" content="Tifenn Guillas">
+        <meta name="keywords" content="web, developer, développeur, symfony, angular2, angular4, angular, php, postgresql, mysql, html, html5, css3, javascript">
+
+        <!-- Open Graph -->
+        <meta property='og:url' content='https://tifenn-guillas.fr'/>
+        <meta property='og:type' content='website'/>
+        <meta property='og:title' content="Tifenn Guillas - Développeur d'Applications Web"/>
+        <meta property='og:description' content="Développeur d'Applications Web"/>
+        <meta property='og:locale' content='fr-FR'/>
+        <meta property='og:site_name' content='Tifenn Guillas'/>
+        <meta property="og:image" content="http://0.0.0.0:4000/assets/images/miniature.jpg">
+
+        <!-- Facebook -->
+        <meta property="fb:app_id" content="264362930673821">
+
+        <!-- Twitter -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@tifenn_guillas">
+        <meta name="twitter:creator" content="@tifenn_guillas">
+        <meta name="twitter:title" content="Tifenn Guillas - Développeur d'Applications Web">
+        <meta name="twitter:description" content="Développeur d'Applications Web">
+        <meta name="twitter:image" content="http://0.0.0.0:4000/assets/images/miniature.jpg">
+
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/dist/libs.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png" />
+
+        <!-- Google analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88060393-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-88060393-1', { cookie_flags: 'SameSite=None;Secure' });
+        </script>
+
+    </head>
+    <body class="bg-tg-blue font-roboto text-tg-gray">
+        <div class="loader fixed flex justify-center items-center z-50 bg-tg-pink h-screen w-screen">
+    <span class="text-tg-white fa-spin fa-3x fas fa-fan"></span>
+</div>
+
+
+<!-- Navbar for mobile menu -->
+<nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="flex justify-between">
+        <button type="button"
+                id="mobile-menu-button"
+                class="lg:hidden inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-pink"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <span id="mobile-menu-button-closed" class="fas fa-bars fa-lg fa-fw"></span>
+            <span id="mobile-menu-button-opened" class="fas fa-times fa-lg fa-fw hidden"></span>
+        </button>
+
+        <div class="lg:flex-none my-auto mx-2.5 p-2">
+            <a class="anchor" href="#page-top">
+                <img src="/assets/images/logo.svg" alt="logo">
+            </a>
+        </div>
+
+        <div class="flex-none my-auto mx-2.5">
+            <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+               target="_blank"
+               class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+               title="Téléchargez mon CV">
+                <span class="hidden lg:inline-block">Télécharger</span>
+                <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
+            </a>
+        </div>
+    </div>
+    <div id="mobile-menu-sections" class="hidden">
+        <ul class="text-center">
+            
+            
+            
+<!--            <li class="flex">-->
+<!--                -->
+<!--                <a href="/en/" class="py-4 flex-1">-->
+<!--                    <img src="/assets/images/en_flag.png" alt="English flag">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="inline-block">-->
+<!--                -->
+<!--                <a class="p-4" href="/fr/">-->
+<!--                    <img class="inline-block" src="/assets/images/fr_flag.png" alt="`French flag">-->
+<!--                </a>-->
+<!--                -->
+<!--            </li>-->
+        </ul>
+    </div>
+</nav>
+
+<!--Navbar for desktop menu-->
+<nav class="nav-desktop hidden lg:flex justify-between items-center fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="flex-none my-auto mx-2.5 p-2">
+        <a class="anchor" href="#page-top">
+            <img src="/assets/images/logo.svg" alt="logo">
+        </a>
+    </div>
+
+    <ul class="text-center">
+    
+        
+    
+        <li class="inline-block">
+            
+            <a class="inline-block" href="/en/">
+                <img class="inline-block" src="/assets/images/en_flag.png" alt="English flag">
+            </a>
+        </li>
+    </ul>
+
+    <div class="flex-none my-auto mx-2.5">
+        <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
+            target="_blank"
+            class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+            title="Téléchargez mon CV">
+            <span>Télécharger</span>
+        </a>
+    </div>
+</nav>
+
+
+
+
+        <!-- Scripts JS -->
+        <script src="/assets/dist/libs.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org/",
+                "@type": "Person",
+                "name": "Tifenn Guillas",
+                "jobTitle": "Développeur d'Applications Web",
+                "url": "https://tifenn-guillas.fr",
+                "image": "http://0.0.0.0:4000/dist/assets/logo.svg",
+                "sameAs" : [
+                    
+                    "https://twitter.com/tifenn_guillas",
+                    
+                    "https://github.com/tifenn-guillas",
+                    
+                    "https://www.linkedin.com/in/tifenn-guillas",
+                    
+                ],
+                "email": "tifenn.guillas@gmail.com"
+            }
+        </script>
+    </body>
+</html>

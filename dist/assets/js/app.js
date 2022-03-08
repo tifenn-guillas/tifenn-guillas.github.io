@@ -12,7 +12,7 @@ $(document).ready(function () {
     let mobileMenuItems = $('nav:first').find('li').find('a');
     let desktopMenuItems = $('nav:last').find('li').find('a');
     // Anchors corresponding to menu items
-    let scrollItems = mobileMenuItems.map(function() {
+    let scrollItems = $('nav:first').find('.li-section').map(function() {
         const item = $($(this).attr('href'));
         if (item.length) { return item; }
     });

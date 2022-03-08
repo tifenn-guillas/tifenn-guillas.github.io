@@ -40,6 +40,7 @@ defaults:
 # Build settings
 plugins:
     - jekyll-postcss
+    - jekyll-redirect-from
 
 # other configs
 exclude:

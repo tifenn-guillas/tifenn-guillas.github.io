@@ -38,17 +38,23 @@
             </li>
             {% endif %}
             {% endfor %}
-            <!--        <li class="inline-block">-->
-            <!--            {% if site.lang == 'fr-FR' %}-->
-            <!--            <a class="p-4" href="{{ site.baseurl }}/fr/">-->
-            <!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
-            <!--            </a>-->
-            <!--            {% else %}-->
-            <!--            <a class="p-4" href="{{ site.baseurl }}/en/">-->
-            <!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
-            <!--            </a>-->
-            <!--            {% endif %}-->
-            <!--        </li>-->
+<!--            <li class="flex">-->
+<!--                {% assign i18n = site.data.internationalization[page.lang] %}-->
+<!--                <a href="{% link {{ i18n.page }} %}" class="py-4 flex-1">-->
+<!--                    <img src="{{ site.baseurl }}/assets/images/{{ i18n.flag }}" alt="{{ i18n.alt_flag }}">-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="inline-block">-->
+<!--                {% if site.lang == 'fr-FR' %}-->
+<!--                <a class="p-4" href="{{ site.baseurl }}/fr/">-->
+<!--                    <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
+<!--                </a>-->
+<!--                {% else %}-->
+<!--                <a class="p-4" href="{{ site.baseurl }}/en/">-->
+<!--                    <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
+<!--                </a>-->
+<!--                {% endif %}-->
+<!--            </li>-->
         </ul>
     </div>
 </nav>
@@ -71,17 +77,12 @@
         </li>
         {% endif %}
     {% endfor %}
-<!--        <li class="inline-block">-->
-<!--            {% if site.lang == 'fr-FR' %}-->
-<!--            <a class="p-4" href="{{ site.baseurl }}/fr/">-->
-<!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
-<!--            </a>-->
-<!--            {% else %}-->
-<!--            <a class="p-4" href="{{ site.baseurl }}/en/">-->
-<!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
-<!--            </a>-->
-<!--            {% endif %}-->
-<!--        </li>-->
+        <li class="inline-block">
+            {% assign i18n = site.data.internationalization[page.lang] %}
+            <a class="inline-block" href="{% link {{ i18n.page }} %}">
+                <img class="inline-block" src="{{ site.baseurl }}/assets/images/{{ i18n.flag }}" alt="{{ i18n.alt_flag }}">
+            </a>
+        </li>
     </ul>
 
     <div class="flex-none my-auto mx-2.5">
