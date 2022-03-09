@@ -1,9 +1,11 @@
+{% assign translation = site.data.navbar %}
+
 <!-- Navbar for mobile menu -->
-<nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-mobile xl:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex justify-between">
         <button type="button"
                 id="mobile-menu-button"
-                class="lg:hidden inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-pink"
+                class="inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-pink"
                 aria-controls="mobile-menu"
                 aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -18,12 +20,11 @@
         </div>
 
         <div class="flex-none my-auto mx-2.5">
-            <a href="{{ page.resume }}"
+            <a href="{{ translation.download_href[page.lang] }}"
                target="_blank"
                class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
-               title="Téléchargez mon CV">
-                <span class="hidden lg:inline-block">Télécharger</span>
-                <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
+               title="{{ translation.download_description[page.lang] }}">
+                <span class="fas fa-download fa-lg fa-fw"></span>
             </a>
         </div>
     </div>
@@ -33,63 +34,58 @@
             {% if section.menu_displayed %}
             <li class="li-section flex hover:text-tg-pink">
                 <a href="#{{ section.name }}" class="anchor py-4 flex-1">
-                    {{ section.label }}
+                    {{ section.label[page.lang] }}
                 </a>
             </li>
             {% endif %}
             {% endfor %}
-            <!--        <li class="inline-block">-->
-            <!--            {% if site.lang == 'fr-FR' %}-->
-            <!--            <a class="p-4" href="{{ site.baseurl }}/fr/">-->
-            <!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
-            <!--            </a>-->
-            <!--            {% else %}-->
-            <!--            <a class="p-4" href="{{ site.baseurl }}/en/">-->
-            <!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
-            <!--            </a>-->
-            <!--            {% endif %}-->
-            <!--        </li>-->
+            <li class="flex">
+                <a href="{% link {{ translation.page[page.lang] }} %}" class="py-4 flex-1">
+                    <img src="{{ site.baseurl }}/assets/images/{{ translation.flag[page.lang] }}"
+                         class="inline-block"
+                         alt="{{ translation.alt_flag[page.lang] }}">
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
 
 <!--Navbar for desktop menu-->
-<nav class="nav-desktop hidden lg:flex justify-between items-center fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
-    <div class="flex-none my-auto mx-2.5 p-2">
+<nav class="nav-desktop hidden xl:grid grid-cols-5 items-center fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="my-auto mx-2.5 p-2">
         <a class="anchor" href="#page-top">
             <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="logo">
         </a>
     </div>
 
-    <ul class="text-center">
-    {% for section in site.data.sections %}
+    <ul class="col-span-3 text-center">
+        {% for section in site.data.sections %}
         {% if section.menu_displayed %}
         <li class="inline-block hover:text-tg-pink">
-            <a href="#{{ section.name }}" class="anchor p-4">
-                {{ section.label }}
+            <a href="#{{ section.name }}" class="anchor p-3">
+                {{ section.label[page.lang] }}
             </a>
         </li>
         {% endif %}
-    {% endfor %}
-<!--        <li class="inline-block">-->
-<!--            {% if site.lang == 'fr-FR' %}-->
-<!--            <a class="p-4" href="{{ site.baseurl }}/fr/">-->
-<!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/fr_flag.png" alt="`French flag">-->
-<!--            </a>-->
-<!--            {% else %}-->
-<!--            <a class="p-4" href="{{ site.baseurl }}/en/">-->
-<!--                <img class="inline-block" src="{{ site.baseurl }}/assets/images/en_flag.png" alt="English flag">-->
-<!--            </a>-->
-<!--            {% endif %}-->
-<!--        </li>-->
+        {% endfor %}
+        <li class="inline-block">
+            <a class="p-3" href="{% link {{ translation.page[page.lang] }} %}">
+                <img class="inline-block"
+                     src="{{ site.baseurl }}/assets/images/{{ translation.flag[page.lang] }}"
+                     alt="{{ translation.alt_flag[page.lang] }}">
+            </a>
+        </li>
     </ul>
 
-    <div class="flex-none my-auto mx-2.5">
-        <a href="{{ page.resume }}"
+
+    <div class="text-right my-auto mx-2.5 p-2">
+        <a href="{{ translation.download_href[page.lang] }}"
             target="_blank"
             class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
-            title="Téléchargez mon CV">
-            <span>Télécharger</span>
+            title="{{ translation.download_description[page.lang] }}">
+            <span>
+                {{ translation.download[page.lang] }}
+            </span>
         </a>
     </div>
 </nav>

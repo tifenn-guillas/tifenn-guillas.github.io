@@ -3,13 +3,14 @@
         {% include block-name.html label=include.label background="white" direction="right" %}
 
         <div class="text-center px-6 lg:px-20 xl:px-40">
-            <h4 class="mb-4 uppercase">Mon savoir-faire</h4>
-            <p class="md:text-left">
-                Grâce à mes différentes expériences, qu'elles soient professionnelles ou personnelles, j'ai pu acquérir
-                des compétences, en particulier dans les catégories suivantes :
+            <h4 class="mb-4 uppercase">
+                {{ site.data.skills.title[page.lang] }}
+            </h4>
+            <p>
+                {{ site.data.skills.description[page.lang] }}
             </p>
             <div class="mt-10 grid grid-flow-raw lg:grid-flow-col gap-10 md:px-12 lg:px-0 text-left">
-                {% for stack in site.data.skills %}
+                {% for stack in site.data.skills.list %}
                     {% include card.html name=stack.stack technologies=stack.technologies %}
                 {% endfor %}
             </div>

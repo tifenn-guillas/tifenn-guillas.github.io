@@ -5,7 +5,9 @@
         <div class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12">
             {% for project in site.data.portfolio %}
             <a class="image-popup flex" href="#{{ project.id }}">
-                <img class="flex-1 object-fill" src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}" alt="Project {{ project.title }} thumbnail">
+                <img class="flex-1 object-fill"
+                     src="{{ site.baseurl }}/assets/images/portfolio/{{ project.miniature }}"
+                     alt="Project {{ project.title }} thumbnail">
             </a>
             <div id="{{ project.id }}" class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
                 <div class="bg-tg-blue">
@@ -15,8 +17,12 @@
                         </button>
                     </div>
                     <div class="px-14">
-                        <h4 class="text-tg-white">{{ project.title }}</h4>
-                        <p class="pt-6 text-justify text-tg-soft-gray">{{ project.description }}</p>
+                        <h4 class="text-tg-white">
+                            {{ project.title }}
+                        </h4>
+                        <p class="pt-6 text-justify text-tg-soft-gray">
+                            {{ project.description[page.lang] }}
+                        </p>
                         {% if project.hashtags %}
                         <p class="pt-6 text-tg-pink font-thin tracking-wide italic">
                             {% for tech in project.hashtags %}

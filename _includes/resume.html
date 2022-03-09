@@ -3,9 +3,11 @@
         {% include block-name.html label=include.label background="blue" direction="left" %}
 
         <div class="px-6 lg:px-20 xl:px-40">
-            <h4 class="mb-4 text-center text-tg-pink uppercase">Expériences professionnelles</h4>
+            <h4 class="mb-4 text-center text-tg-pink uppercase">
+                {{ site.data.resume.title[page.lang] }}
+            </h4>
             <div class="my-12">
-                {% for job in site.data.jobs %}
+                {% for job in site.data.resume.jobs %}
                 <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
                     <div class="mb-3 md:text-right">
                         <span class="pb-1 text-tg-pink md:text-tg-soft-gray
@@ -15,10 +17,10 @@
                         </span>
                     </div>
                     <div class="md:col-span-2">
-                        <p class="text-tg-soft-gray italic">{{ job.title }}</p>
-                        <p class="text-tg-pink font-light italic">{{ job.location }}</p>
-                        <p class="pt-4 text-tg-white">{{ job.description }}</p>
-                        <p class="pt-4 text-tg-white">{{ job.tasks }}</p>
+                        <p class="text-tg-soft-gray italic">{{ job.title[page.lang] }}</p>
+                        <p class="text-tg-pink font-light italic">{{ job.location[page.lang] }}</p>
+                        <p class="pt-4 text-tg-white">{{ job.description[page.lang] }}</p>
+                        <p class="pt-4 text-tg-white">{{ job.tasks[page.lang] }}</p>
                         <p class="pt-4 text-tg-soft-gray">
                             {% for techno in job.technologies %}
                             #{{ techno }}
@@ -31,11 +33,11 @@
         </div>
 
         <div class="text-center">
-            <a href="{{ page.resume }}"
+            <a href="{{ site.data.resume.download_href[page.lang] }}"
                target="_blank"
                class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
-               title="Téléchargez mon CV">
-                Téléchargez mon CV
+               title="{{ site.data.resume.download_description[page.lang] }}">
+                {{ site.data.resume.download[page.lang] }}
             </a>
         </div>
     </div>

@@ -1,0 +1,54 @@
+title:
+    fr: Études et certifications
+    en: Formation and certifications
+
+list:
+    -   title:
+            fr: Angular - The Complete Guide
+            en: Angular - The Complete Guide
+        date: 2017
+        location:
+            fr: Udemy
+            en: Udemy
+    -   title:
+            fr: "Python : des fondamentaux à l'utilisation du langage"
+            en: "Python: from fundamentals to the use of the language"
+        date: 2016
+        location:
+            fr: FUN MOOC
+            en: FUN MOOC
+    -   title:
+            fr: Licence professionnelle en Gestion et Traitements Statistiques de Bases de Données
+            en: Bachelor Degree in Management and Statistical Processing of Database
+        date: 2015
+        location:
+            fr: Aix-Marseille Université
+            en: Aix-Marseille Université, France
+        note:
+            fr: Major de Promotion - Mention Bien
+            en: With honors
+    -   title:
+            fr: Licence Biologie Cellulaire
+            en: Bachelor of Science Degree in Cellular Biology
+        date: 2013
+        location:
+            fr: Aix-Marseille Université
+            en: Aix-Marseille Université, France
+        note:
+            fr: Mention Assez Bien
+            en: With honors
+    -   title:
+            fr: Certificat informatique et internet (C2i) niveau 1
+            en: C2i level 1 (Internet and Computer Science Certificate), France
+        date: 2011
+    -   title:
+            fr: Baccalauréat Scientifique spécialité Science de la Vie et de la Terre
+            en: Baccalauréat (French secondary school diploma) with a major in Biology
+        date: 2009
+        location:
+            fr: Lycée Alain-René Lesage
+            en: Lycée Alain-René Lesage, France
+        note:
+            fr: Mention Assez Bien
+            en: With honors
+

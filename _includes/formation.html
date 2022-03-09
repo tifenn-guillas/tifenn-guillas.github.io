@@ -3,10 +3,12 @@
         {% include block-name.html label=include.label background="white" direction="right" %}
 
         <div class="px-6 lg:px-20 xl:px-40">
-            <h4 class="mb-4 text-center uppercase">Études et certifications</h4>
+            <h4 class="mb-4 text-center uppercase">
+                {{ site.data.formation.title[page.lang] }}
+            </h4>
             <div class="my-12">
                 <div class="mt-10 grid grid-col-1 md:grid-col-2 md:gap-6">
-                    {% for formation in site.data.formations %}
+                    {% for formation in site.data.formation.list %}
                     <div class="mb-2 md:text-right">
                         <div class="inline-block leading-loose md:leading-normal text-tg-pink md:text-tg-gray
                             text-sm md:text-base tracking-widest md:tracking-wider font-light
@@ -15,9 +17,9 @@
                         </div>
                     </div>
                     <div class="pb-4 md:pb-0 md:col-start-2">
-                        <p class="italic">{{ formation.title }}</p>
-                        <p class="font-thin italic">{{ formation.note }}</p>
-                        <p class="text-tg-pink italic">{{ formation.location }}</p>
+                        <p class="italic">{{ formation.title[page.lang] }}</p>
+                        <p class="font-thin italic">{{ formation.note[page.lang] }}</p>
+                        <p class="text-tg-pink italic">{{ formation.location[page.lang] }}</p>
                     </div>
                     {% endfor %}
                 </div>

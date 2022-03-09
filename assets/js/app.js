@@ -9,8 +9,8 @@ $(document).ready(function () {
     // Navbar
     let lastId;
     // All list items
-    let mobileMenuItems = $('nav:first').find('li').find('a');
-    let desktopMenuItems = $('nav:last').find('li').find('a');
+    let mobileMenuItems = $('nav:first').find('li').find('.anchor');
+    let desktopMenuItems = $('nav:last').find('li').find('.anchor');
     // Anchors corresponding to menu items
     let scrollItems = mobileMenuItems.map(function() {
         const item = $($(this).attr('href'));
