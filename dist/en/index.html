@@ -73,11 +73,11 @@
 
 
 <!-- Navbar for mobile menu -->
-<nav class="nav-mobile lg:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+<nav class="nav-mobile xl:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
     <div class="flex justify-between">
         <button type="button"
                 id="mobile-menu-button"
-                class="lg:hidden inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-pink"
+                class="inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-pink"
                 aria-controls="mobile-menu"
                 aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -96,7 +96,7 @@
                target="_blank"
                class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
                title="Download my French resume">
-                <span class="lg:hidden fas fa-download fa-lg fa-fw"></span>
+                <span class="fas fa-download fa-lg fa-fw"></span>
             </a>
         </div>
     </div>
@@ -181,83 +181,83 @@
 </nav>
 
 <!--Navbar for desktop menu-->
-<nav class="nav-desktop hidden lg:flex justify-between items-center fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
-    <div class="flex-none my-auto mx-2.5 p-2">
+<nav class="nav-desktop hidden xl:grid grid-cols-5 items-center fixed z-10 top-0 inset-x-0 bg-tg-blue bg-opacity-80 text-tg-white text-xs tracking-wider uppercase">
+    <div class="my-auto mx-2.5 p-2">
         <a class="anchor" href="#page-top">
             <img src="/assets/images/logo.svg" alt="logo">
         </a>
     </div>
 
-    <ul class="text-center">
-    
+    <ul class="col-span-3 text-center">
         
-    
         
-    
+        
+        
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#about" class="anchor p-4">
+            <a href="#about" class="anchor p-3">
                 About
             </a>
         </li>
         
-    
         
-    
+        
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#skills" class="anchor p-4">
+            <a href="#skills" class="anchor p-3">
                 Skills
             </a>
         </li>
         
-    
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#resume" class="anchor p-4">
+            <a href="#resume" class="anchor p-3">
                 Resume
             </a>
         </li>
         
-    
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#formation" class="anchor p-4">
+            <a href="#formation" class="anchor p-3">
                 Education
             </a>
         </li>
         
-    
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#portfolio" class="anchor p-4">
+            <a href="#portfolio" class="anchor p-3">
                 Portfolio
             </a>
         </li>
         
-    
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#goals" class="anchor p-4">
+            <a href="#goals" class="anchor p-3">
                 TODO list
             </a>
         </li>
         
-    
         
-    
+        
+        
         
         <li class="inline-block hover:text-tg-pink">
-            <a href="#contact" class="anchor p-4">
+            <a href="#contact" class="anchor p-3">
                 Contact
             </a>
         </li>
         
-    
         
-    
+        
+        
         <li class="inline-block">
-            <a class="p-4" href="/fr/">
+            <a class="p-3" href="/fr/">
                 <img class="inline-block"
                      src="/assets/images/fr_flag.png"
                      alt="Français">
@@ -265,7 +265,8 @@
         </li>
     </ul>
 
-    <div class="flex-none my-auto mx-2.5">
+
+    <div class="text-right my-auto mx-2.5 p-2">
         <a href="https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing"
             target="_blank"
             class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
