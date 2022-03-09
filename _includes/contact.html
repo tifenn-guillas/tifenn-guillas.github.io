@@ -3,10 +3,11 @@
         {% include block-name.html label=include.label background="white" direction="left" %}
 
         <div class="px-6 lg:px-20 xl:px-40 text-center">
-            <h4 class="mb-4 uppercase">Restons en contact</h4>
+            <h4 class="mb-4 uppercase">
+                {{ site.data.contact.title[page.lang] }}
+            </h4>
             <p>
-                Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes
-                suivante :
+                {{ site.data.contact.description[page.lang] }}
             </p>
             <div class="mt-2.5 mb-8 flex justify-center">
                 <div class="bg-tg-pink w-10 h-0.5"></div>

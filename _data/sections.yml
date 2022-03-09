@@ -32,24 +32,27 @@
       en: Education
   menu_displayed: true
 
-#- name: portfolio
-#  label: Portfolio
-#  label_en: Portfolio
-#  menu_displayed: true
-#
-#- name: goals
-#  label: Objectifs
-#  label_en: TODO list
-#  menu_displayed: true
-#
-#- name: hobbies
-#  menu_displayed: false
-#
-#- name: contact
-#  label: Contact
-#  label_en: Contact
-#  menu_displayed: true
-#
-#- name: footer
-#  menu_displayed: false
+- name: portfolio
+  label:
+      fr: Portfolio
+      en: Portfolio
+  menu_displayed: true
+
+- name: goals
+  label:
+      fr: Objectifs
+      en: TODO list
+  menu_displayed: true
+
+- name: hobbies
+  menu_displayed: false
+
+- name: contact
+  label:
+      fr: Contact
+      en: Contact
+  menu_displayed: true
+
+- name: footer
+  menu_displayed: false
 
