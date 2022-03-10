@@ -1,6 +1,32 @@
-title: Tifenn Guillas
-description: Développeur d'Applications Web
-resume: https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing
-seo:
-    url: https://tifenn-guillas.fr
-    title: Tifenn Guillas - Développeur d'Applications Web
+lang:
+    fr: fr-FR
+    en: en-US
+
+title:
+    fr: Tifenn Guillas
+    en: Tifenn Guillas
+
+description:
+    fr: Développeuse d'Applications Web
+    en: Web Application Developer
+
+keywords:
+    fr: web, developer, développeur, symfony, angular2, angular4, angular, php, postgresql, mysql, html, html5, css3, javascript
+    en: web, developer, développeur, symfony, angular2, angular4, angular, php, postgresql, mysql, html, html5, css3, javascript
+
+og:
+    url:
+        fr: https://tifenn-guillas.fr/fr/
+        en: https://tifenn-guillas.fr/en/
+    title:
+        fr: Tifenn Guillas - Développeuse d'Applications Web
+        en: Tifenn Guillas - Web Application Developer
+    description:
+        fr: Développeuse d'Applications Web
+        en: Web Application Developer
+    locale:
+        fr: fr-FR
+        en: en-US
+    image:
+        fr: miniature.jpg
+        en: miniature.jpg
