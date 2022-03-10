@@ -20,7 +20,6 @@
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tifenn-guillas.fr" # the base hostname & protocol for your site, e.g. http://example.com
-lang: "fr-FR"
 
 project_url: "https://github.com/tifenn-guillas/tifenn-guillas.github.io"
 
@@ -29,12 +28,7 @@ defaults:
         scope:
             path: "" # All files in project are affected
         values:
-            title: Tifenn Guillas
-            description: Développeur d'Applications Web
-            resume: https://drive.google.com/file/d/1ZRJfRWh7VgBdC2HCWPvmAbCfQ8XFCA8h/view?usp=sharing
-            seo:
-                url: https://tifenn-guillas.fr
-                title: Tifenn Guillas - Développeur d'Applications Web
+            default: This is an unused default value
 
 
 # Build settings
