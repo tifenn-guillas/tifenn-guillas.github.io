@@ -35,6 +35,7 @@ defaults:
 plugins:
     - jekyll-postcss
     - jekyll-redirect-from
+    - webrick
 
 # other configs
 exclude:
