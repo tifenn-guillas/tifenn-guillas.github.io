@@ -13,13 +13,13 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
     "jquery": "^3.6.0",
-    "jquery-ui": "^1.13.1",
+    "jquery-ui": "^1.13.2",
     "magnific-popup": "^1.1.0",
     "postcss": "^8.4.1",
     "postcss-import": "^14.0.2",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^2",
-    "urijs": "^1.19.7",
+    "urijs": "^1.19.11",
     "wowjs": "^1.1.3"
   }
 }

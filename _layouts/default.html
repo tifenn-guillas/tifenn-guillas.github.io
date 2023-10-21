@@ -49,16 +49,6 @@
         <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/apple-touch-icon-152x152.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/apple-touch-icon-180x180.png" />
 
-        <!-- Google analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88060393-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){ dataLayer.push(arguments); }
-            gtag('js', new Date());
-
-            gtag('config', 'UA-88060393-1', { cookie_flags: 'SameSite=None;Secure' });
-        </script>
-
     </head>
     <body class="bg-tg-blue font-roboto text-tg-gray">
         {{ content }}
@@ -66,22 +56,5 @@
         <!-- Scripts JS -->
         <script src="{{ site.baseurl }}/assets/dist/libs.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app.js"></script>
-
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org/",
-                "@type": "Person",
-                "name": "{{ site.data.layout.og.title[page.lang] }}",
-                "jobTitle": "{{ site.data.layout.description[page.lang] }}",
-                "url": "{{ site.data.layout.og.url[page.lang] }}",
-                "image": "{{ site.baseurl }}/assets/images/logo.svg",
-                "sameAs" : [
-                    {% for social in site.data.socials %}
-                    "{{ social.url }}",
-                    {% endfor %}
-                ],
-                "email": "tifenn.guillas@gmail.com"
-            }
-        </script>
     </body>
 </html>
