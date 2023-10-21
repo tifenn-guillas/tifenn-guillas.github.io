@@ -56,5 +56,22 @@
         <!-- Scripts JS -->
         <script src="{{ site.baseurl }}/assets/dist/libs.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org/",
+                "@type": "Person",
+                "name": "{{ site.data.layout.og.title[page.lang] }}",
+                "jobTitle": "{{ site.data.layout.description[page.lang] }}",
+                "url": "{{ site.data.layout.og.url[page.lang] }}",
+                "image": "{{ site.baseurl }}/assets/images/logo.svg",
+                "sameAs" : [
+                    {% for social in site.data.socials %}
+                    "{{ social.url }}",
+                    {% endfor %}
+                ],
+                "email": "tifenn.guillas@gmail.com"
+            }
+        </script>
     </body>
 </html>
