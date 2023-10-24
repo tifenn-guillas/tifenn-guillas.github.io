@@ -1,6 +1,7 @@
-JEKYLL_IMAGE=jekyll/jekyll
-NODE_IMAGE=node:lts
+IMAGE=nextjs
 APP=tifenn-guillas.github.io
+UID := 1000
+GID := 1000
 
 .DEFAULT_GOAL := help
 
@@ -9,26 +10,27 @@ help:
 	@echo "Useful targets:"
 	@echo ""
 	@echo "  install  > Install project dependencies"
-	@echo "  jekyll   > Shell into Jekyll server"
 	@echo "  node     > Shell into Node container"
-	@echo "  start    > Run the Jekyll development server"
-	@echo "  stop     > Stop the Jekyll development server"
-	@echo "  restart  > Restart the Jekyll development server"
-	@echo "  build    > Build application for production"
+	@echo "  start    > Run the application in development mode"
+	@echo "  stop     > Stop the application"
+	@echo "  restart  > Restart the application in development mode"
+	@echo "  build    > Build the application for production"
 	@echo ""
 
-install:
-	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bundle install
-	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && npm install -g gulp && yarn && gulp"
+# DO NOT NOT LAUNCH THIS ONE. IT'S FOR TO INIT A PROJECT.
+init:
+	docker build -t $(IMAGE) .
+	docker run -it --user $(UID):$(GID) --volume="$(CURDIR):/src" $(IMAGE) bash -c "[ ! -f package.json ] && npx create-next-app@latest"
 
-jekyll:
-	docker run --rm --volume="$(PWD):/srv/jekyll" -it $(JEKYLL_IMAGE) bash
+install:
+	docker build -t $(IMAGE) .
+	docker run --rm --volume="$(CURDIR):/src" -it $(IMAGE) bash -c "yarn"
 
 node:
-	docker run --rm --volume="$(PWD):/src" -it $(NODE_IMAGE) bash -c "cd /src && bash"
+	docker run --rm --volume="$(CURDIR):/src" -it $(IMAGE) bash -c "cd /src && bash"
 
 start:
-	docker run --name $(APP) --rm --volume="$(PWD):/srv/jekyll" --publish 4000:4000 -it $(JEKYLL_IMAGE) jekyll serve --destination dist
+	docker run --name $(APP) --rm --volume="$(PWD):/src" --publish 80:80 --workdir /src -it $(IMAGE) yarn run dev
 
 stop:
 	docker stop $(APP)
@@ -36,5 +38,6 @@ stop:
 restart:	stop start
 
 build:
-	docker run --rm -v $(PWD):/srv/jekyll jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build --destination dist --trace"
+	#docker run --rm -v $(PWD):/srv/jekyll jekyll/builder:latest bash -c "chmod -R 777 /srv/jekyll && jekyll build --destination dist --trace"
+	docker run --name $(APP) --rm --volume="$(PWD):/src" --workdir /src -it $(IMAGE) yarn run build
 
