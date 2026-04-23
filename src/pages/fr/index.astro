@@ -1,15 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAlternateUrl, type Locale } from '../../i18n';
+import { layout } from '../../data/layout';
+import { header } from '../../data/header';
 
 const locale: Locale = 'fr';
 const alternateUrl = getAlternateUrl(Astro.url, locale);
 ---
-<BaseLayout locale={locale} title="Tifenn Guillas" description="Développeuse d'Applications Web">
+<BaseLayout
+  locale={locale}
+  title={layout.title[locale]}
+  description={layout.description[locale]}
+  ogTitle={layout.og.title[locale]}
+  ogDescription={layout.og.description[locale]}
+  ogUrl={layout.og.url[locale]}
+  keywords={layout.keywords[locale]}
+>
   <div class="flex flex-col items-center justify-center min-h-screen gap-4">
     <h1 class="text-4xl text-tg-white">Tifenn Guillas</h1>
     <span class="bg-tg-pink text-tg-white uppercase tracking-widest px-4 py-2">
-      Développeuse d'Applications Web
+      {header.title[locale]}
     </span>
     <a href={alternateUrl} class="text-tg-soft-gray text-sm underline hover:text-tg-white">
       Switch to EN →
