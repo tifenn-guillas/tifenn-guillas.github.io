@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-tg-pink: #ff7777;
+  --color-tg-soft-pink: #ff8888;
+  --color-tg-blue: #22273f;
+  --color-tg-white: #FCFCFC;
+  --color-tg-soft-gray: #d3d3d3;
+  --color-tg-gray: #555555;
+
+  /* Typography */
+  --font-roboto: 'Roboto', sans-serif;
+  --text-xxs: 0.65rem;
+
+  /* Letter spacing */
+  --tracking-normal: 0.025em;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.25em;
+}
+
+/* Background image utilities (not supported as CSS vars in Tailwind v4) */
+@utility bg-header-image {
+  background-image: url('/assets/images/background.jpg');
+}
+
+@utility bg-parallax-image {
+  background-image: url('/assets/images/parallax.jpg');
+}
