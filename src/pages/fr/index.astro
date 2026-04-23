@@ -1,21 +1,18 @@
 ---
-import '../../styles/global.css';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAlternateUrl, type Locale } from '../../i18n';
 
 const locale: Locale = 'fr';
 const alternateUrl = getAlternateUrl(Astro.url, locale);
 ---
-<html lang="fr">
-  <head><meta charset="utf-8" /><title>Tifenn Guillas</title></head>
-  <body class="bg-tg-blue font-roboto">
-    <div class="flex flex-col items-center justify-center min-h-screen gap-4">
-      <h1 class="text-4xl text-tg-white">Tifenn Guillas</h1>
-      <span class="bg-tg-pink text-tg-white uppercase tracking-widest px-4 py-2">
-        Développeuse d'Applications Web
-      </span>
-      <a href={alternateUrl} class="text-tg-soft-gray text-sm underline hover:text-tg-white">
-        Switch to EN →
-      </a>
-    </div>
-  </body>
-</html>
+<BaseLayout locale={locale} title="Tifenn Guillas" description="Développeuse d'Applications Web">
+  <div class="flex flex-col items-center justify-center min-h-screen gap-4">
+    <h1 class="text-4xl text-tg-white">Tifenn Guillas</h1>
+    <span class="bg-tg-pink text-tg-white uppercase tracking-widest px-4 py-2">
+      Développeuse d'Applications Web
+    </span>
+    <a href={alternateUrl} class="text-tg-soft-gray text-sm underline hover:text-tg-white">
+      Switch to EN →
+    </a>
+  </div>
+</BaseLayout>

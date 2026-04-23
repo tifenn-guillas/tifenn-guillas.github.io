@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+import type { Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogImage?: string;
+  keywords?: string;
+}
+
+const {
+  locale,
+  title,
+  description,
+  ogTitle = title,
+  ogDescription = description,
+  ogUrl = `https://tifenn-guillas.fr/${locale}/`,
+  ogImage = '/images/miniature.jpg',
+  keywords = 'web, developer, développeuse, symfony, angular, php, postgresql, typescript',
+} = Astro.props;
+
+const lang = locale === 'fr' ? 'fr-FR' : 'en-US';
+const jsonLd = {
+  '@context': 'http://schema.org/',
+  '@type': 'Person',
+  name: 'Tifenn Guillas',
+  jobTitle: description,
+  url: `https://tifenn-guillas.fr/${locale}/`,
+  image: 'https://tifenn-guillas.fr/images/logo.svg',
+  email: 'tifenn.guillas@gmail.com',
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Tifenn Guillas" />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:locale" content={lang} />
+    <meta property="og:site_name" content={ogTitle} />
+    <meta property="og:image" content={`https://tifenn-guillas.fr${ogImage}`} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tifenn_guillas" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={`https://tifenn-guillas.fr${ogImage}`} />
+
+    <!-- Fonts (temporary — self-hosted in E4-S1) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="bg-tg-blue font-roboto text-tg-gray">
+    <slot />
+  </body>
+</html>
