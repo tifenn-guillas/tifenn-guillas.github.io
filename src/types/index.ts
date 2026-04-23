@@ -1,0 +1,10 @@
+export type { BilingualString } from './common';
+export type { LayoutData, HeaderData, NavbarData, FooterData, Section } from './layout';
+export type { AboutData } from './about';
+export type { SkillsData, SkillStack, SkillTechnology } from './skills';
+export type { ResumeData, ResumeJob } from './resume';
+export type { FormationData, FormationItem } from './formation';
+export type { PortfolioProject } from './portfolio';
+export type { GoalYear, GoalTask } from './goals';
+export type { ContactData, HobbiesData } from './contact';
+export type { Social } from './socials';

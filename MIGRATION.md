@@ -19,7 +19,7 @@
 
 ## Epic 2 — Couche de données
 
-- [ ] **E2-S1** — Définir la config Content Collections et les schémas TypeScript
+- [x] **E2-S1** — Définir les interfaces TypeScript pour toutes les données (Option C : fichiers `.ts` dans `src/data/`)
 - [ ] **E2-S2** — Migrer `about.yml`, `header.yml`, `layout.yml`, `navbar.yml`
 - [ ] **E2-S3** — Migrer `skills.yml`, `formation.yml`
 - [ ] **E2-S4** — Migrer `resume.yml`
