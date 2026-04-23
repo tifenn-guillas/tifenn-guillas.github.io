@@ -13,7 +13,7 @@
 
 - [x] **E1-S1** — Initialiser le projet Astro (TypeScript strict, structure de dossiers)
 - [x] **E1-S2** — Intégrer Tailwind CSS (intégration officielle `@astrojs/tailwind`)
-- [ ] **E1-S3** — Configurer GitHub Actions pour le déploiement GitHub Pages
+- [x] **E1-S3** — Configurer GitHub Actions pour le déploiement GitHub Pages
 - [ ] **E1-S4** — Mettre en place le routing i18n (`/fr/`, `/en/`, redirect depuis `/`)
 - [ ] **E1-S5** — Créer le layout de base (équivalent de `_layouts/default.html`)
 
