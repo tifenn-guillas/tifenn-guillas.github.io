@@ -2,7 +2,7 @@
 
 ## Décisions d'architecture
 - **Stack** : Astro + TypeScript + Tailwind CSS
-- **Données** : Content Collections Astro (validation TypeScript des YAML)
+- **Données** : Fichiers TypeScript dans `src/data/` + interfaces dans `src/types/` (Option C — pas de Content Collections)
 - **Stratégie design** : migration à l'identique d'abord (Epic 3), redesign ensuite (Epic 5)
 - **Dark mode** : inclus dans l'Epic redesign (Epic 5)
 - **Branche de travail** : `feat/astro-migration`
@@ -12,7 +12,7 @@
 ## Epic 1 — Socle
 
 - [x] **E1-S1** — Initialiser le projet Astro (TypeScript strict, structure de dossiers)
-- [x] **E1-S2** — Intégrer Tailwind CSS (intégration officielle `@astrojs/tailwind`)
+- [x] **E1-S2** — Intégrer Tailwind CSS v4 (`@tailwindcss/vite` — `@astrojs/tailwind` déprécié sur Astro 6)
 - [x] **E1-S3** — Configurer GitHub Actions pour le déploiement GitHub Pages
 - [x] **E1-S4** — Mettre en place le routing i18n (`/fr/`, `/en/`, redirect depuis `/`)
 - [x] **E1-S5** — Créer le layout de base (équivalent de `_layouts/default.html`)
