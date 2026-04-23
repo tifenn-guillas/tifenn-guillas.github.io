@@ -1,6 +1,21 @@
 ---
+import '../../styles/global.css';
+import { getAlternateUrl, type Locale } from '../../i18n';
+
+const locale: Locale = 'en';
+const alternateUrl = getAlternateUrl(Astro.url, locale);
 ---
 <html lang="en">
   <head><meta charset="utf-8" /><title>Tifenn Guillas</title></head>
-  <body><p>EN — migration in progress</p></body>
+  <body class="bg-tg-blue font-roboto">
+    <div class="flex flex-col items-center justify-center min-h-screen gap-4">
+      <h1 class="text-4xl text-tg-white">Tifenn Guillas</h1>
+      <span class="bg-tg-pink text-tg-white uppercase tracking-widest px-4 py-2">
+        Web Application Developer
+      </span>
+      <a href={alternateUrl} class="text-tg-soft-gray text-sm underline hover:text-tg-white">
+        ← Passer en FR
+      </a>
+    </div>
+  </body>
 </html>
