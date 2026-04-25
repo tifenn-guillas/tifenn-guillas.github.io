@@ -34,7 +34,7 @@
 - [x] **3.4** — Section `About`
 - [x] **3.5** — Section `Links`
 - [x] **3.6** — Section `Skills`
-- [ ] **3.7** — Section `Formation`
+- [x] **3.7** — Section `Formation`
 - [ ] **3.8** — Section `Hobbies`
 - [ ] **3.9** — Section `Goals`
 - [ ] **3.10** — Section `Contact`
