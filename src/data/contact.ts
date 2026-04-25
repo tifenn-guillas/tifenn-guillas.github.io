@@ -6,7 +6,7 @@ export const contact: ContactData = {
     en: 'Stay in touch',
   },
   description: {
-    fr: "Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes suivante:",
-    en: 'Questions? More information maybe? Send me a message through these networks:',
+    fr: "Une question ? N'hésitez pas à me contacter :",
+    en: "A question? Don't hesitate to reach out:",
   },
 };

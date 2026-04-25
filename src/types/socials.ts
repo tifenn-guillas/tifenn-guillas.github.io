@@ -4,4 +4,5 @@ export interface Social {
   url: string;
   fontawesome: string;
   contact: boolean;
+  external?: boolean;
 }

@@ -2,13 +2,6 @@ import type { Social } from '../types';
 
 export const socials: Social[] = [
   {
-    name: 'Twitter',
-    username: '@tifenn_guillas',
-    url: 'https://twitter.com/tifenn_guillas',
-    fontawesome: 'fab fa-twitter',
-    contact: true,
-  },
-  {
     name: 'GitHub',
     username: 'tifenn-guillas',
     url: 'https://github.com/tifenn-guillas',
@@ -21,5 +14,13 @@ export const socials: Social[] = [
     url: 'https://www.linkedin.com/in/tifenn-guillas',
     fontawesome: 'fab fa-linkedin-in',
     contact: true,
+  },
+  {
+    name: 'Contact',
+    username: '',
+    url: '#contact',
+    fontawesome: 'fas fa-envelope',
+    contact: false,
+    external: false,
   },
 ];

@@ -16,6 +16,10 @@ export interface LayoutData {
 
 export interface HeaderData {
   title: BilingualString;
+  cta: {
+    portfolio: BilingualString;
+    contact: BilingualString;
+  };
 }
 
 export interface NavbarData {

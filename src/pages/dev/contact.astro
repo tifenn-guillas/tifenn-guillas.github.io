@@ -1,0 +1,199 @@
+---
+// TODO: supprimer cette page avant la release (Epic 6)
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const email = 'tguillas@duck.com';
+const linkedin = { url: 'https://www.linkedin.com/in/tifenn-guillas', username: 'tifenn-guillas' };
+const github = { url: 'https://github.com/tifenn-guillas', username: 'tifenn-guillas' };
+---
+
+<BaseLayout locale="fr" title="Dev — Contact mockups" description="Maquettes contact">
+
+  <!-- Nav entre variantes -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-tg-blue/90 flex justify-center gap-8 py-3 text-tg-white text-xs uppercase tracking-widest">
+    <a href="#actuel" class="hover:text-tg-pink transition-colors">Actuel</a>
+    <a href="#cards" class="hover:text-tg-pink transition-colors">A — Cartes</a>
+    <a href="#email-first" class="hover:text-tg-pink transition-colors">B — Email mis en avant</a>
+    <a href="#minimal" class="hover:text-tg-pink transition-colors">C — Minimaliste</a>
+  </nav>
+
+  <div class="pt-12">
+
+    <!-- ─── ACTUEL ──────────────────────────────────────────────────── -->
+    <section id="actuel" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+      <div class="absolute top-14 left-1/2 -translate-x-1/2 bg-tg-blue text-tg-white text-xs px-3 py-1 uppercase tracking-wider">
+        Actuel (référence)
+      </div>
+      <div class="container mx-auto">
+        <!-- BlockName -->
+        <div class="flex justify-start pb-12">
+          <div class="px-2.5">
+            <h2 class="mb-2.5 uppercase">Contact</h2>
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+        </div>
+        <div class="px-6 lg:px-20 xl:px-40 text-center">
+          <h4 class="mb-4 uppercase">Restons en contact</h4>
+          <p>Des questions ? Un renseignement peut-être ? N'hésitez pas à m'envoyer un message sur l'une des plateformes suivante:</p>
+          <div class="mt-2.5 mb-8 flex justify-center">
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+          <div class="flex justify-around">
+            <div class="text-tg-pink">
+              <a href={linkedin.url} target="_blank" title="LinkedIn">
+                <span class="fa-5x fab fa-linkedin-in"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gray-200"></div>
+
+    <!-- ─── A — Cartes (peaufinée) ────────────────────────────────── -->
+    <section id="cards" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+      <div class="container mx-auto">
+        <!-- BlockName -->
+        <div class="flex justify-start pb-12">
+          <div class="px-2.5">
+            <h2 class="mb-2.5 uppercase">Contact</h2>
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+        </div>
+        <div class="text-center">
+          <h4 class="mb-4 uppercase">Restons en contact</h4>
+          <p>Une question ? N'hésitez pas à me contacter :</p>
+          <div class="mt-2.5 mb-10 flex justify-center">
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+          <!-- Cartes égales, obfuscation email via JS -->
+          <div class="flex flex-row justify-center" style="gap: 6rem;">
+            <!-- Carte email : href construit par JS, jamais dans le HTML -->
+            <a id="contact-email-card" href="#" class="contact-card flex items-center gap-5">
+              <span class="fas fa-envelope fa-2x text-tg-pink shrink-0"></span>
+              <div class="text-left">
+                <div class="contact-card-label text-xs uppercase tracking-widest mb-1">Email</div>
+                <div id="contact-email-text" class="font-medium text-sm text-gray-500 italic">
+                  tifenn.guillas [at] gmail.com
+                </div>
+              </div>
+            </a>
+            <!-- Carte LinkedIn -->
+            <a href={linkedin.url} target="_blank" class="contact-card flex items-center gap-5">
+              <span class="fab fa-linkedin-in fa-2x text-tg-pink shrink-0"></span>
+              <div class="text-left">
+                <div class="contact-card-label text-xs uppercase tracking-widest mb-1">LinkedIn</div>
+                <div class="font-medium text-sm">{linkedin.username}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gray-200"></div>
+
+    <!-- ─── B — Email mis en avant ──────────────────────────────────── -->
+    <section id="email-first" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+      <div class="container mx-auto">
+        <!-- BlockName -->
+        <div class="flex justify-start pb-12">
+          <div class="px-2.5">
+            <h2 class="mb-2.5 uppercase">Contact</h2>
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+        </div>
+        <div class="px-6 lg:px-20 xl:px-40 text-center">
+          <h4 class="mb-4 uppercase">Restons en contact</h4>
+          <p>Un projet, une question, une opportunité ? Je suis disponible par email.</p>
+          <div class="mt-2.5 mb-10 flex justify-center">
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+          <!-- Email mis en avant -->
+          <a href={`mailto:${email}`}
+             class="inline-block text-2xl font-light tracking-wide text-tg-blue hover:text-tg-pink transition-colors border-b border-tg-pink pb-1 mb-10">
+            {email}
+          </a>
+          <!-- LinkedIn secondaire -->
+          <div class="text-sm text-gray-400">
+            Également sur
+            <a href={linkedin.url} target="_blank"
+               class="text-tg-blue hover:text-tg-pink transition-colors inline-flex items-center gap-1 ml-1">
+              <span class="fab fa-linkedin-in"></span> LinkedIn
+            </a>
+            et
+            <a href={github.url} target="_blank"
+               class="text-tg-blue hover:text-tg-pink transition-colors inline-flex items-center gap-1 ml-1">
+              <span class="fab fa-github"></span> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-px bg-gray-200"></div>
+
+    <!-- ─── C — Minimaliste ─────────────────────────────────────────── -->
+    <section id="minimal" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+      <div class="container mx-auto">
+        <!-- BlockName -->
+        <div class="flex justify-start pb-12">
+          <div class="px-2.5">
+            <h2 class="mb-2.5 uppercase">Contact</h2>
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+        </div>
+        <div class="px-6 lg:px-20 xl:px-40 text-center">
+          <h4 class="mb-4 uppercase">Restons en contact</h4>
+          <p>Vous pouvez me contacter directement via LinkedIn ou par email.</p>
+          <div class="mt-2.5 mb-10 flex justify-center">
+            <div class="bg-tg-pink w-10 h-0.5"></div>
+          </div>
+          <!-- Icônes avec labels -->
+          <div class="flex justify-center gap-16">
+            <div class="flex flex-col items-center gap-3">
+              <a href={linkedin.url} target="_blank"
+                 class="text-tg-pink hover:opacity-70 transition-opacity">
+                <span class="fab fa-linkedin-in fa-3x"></span>
+              </a>
+              <span class="text-xs uppercase tracking-widest text-gray-400">LinkedIn</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <a href={`mailto:${email}`}
+                 class="text-tg-pink hover:opacity-70 transition-opacity">
+                <span class="fas fa-envelope fa-3x"></span>
+              </a>
+              <span class="text-xs uppercase tracking-widest text-gray-400">Email</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+<style>
+  .contact-card-label { color: #9ca3af; transition: color 0.2s; }
+  .contact-card:hover .contact-card-label { color: #ff7777; }
+</style>
+
+<script is:inline>
+  // Obfuscation email : assemblé par JS, jamais présent en clair dans le HTML
+  document.addEventListener('DOMContentLoaded', function () {
+    const u = 'tifenn.guillas';
+    const d = 'gmail.com';
+    const card = document.getElementById('contact-email-card');
+    const label = document.getElementById('contact-email-text');
+    if (!card || !label) return;
+    label.textContent = u + '@' + d;
+    label.classList.remove('text-gray-500', 'italic');
+    card.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = 'mailto:' + u + '@' + d;
+    });
+  });
+</script>
+
+</BaseLayout>

@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../../i18n';
 import { header } from '../../data/header';
+import { socials } from '../../data/socials';
 
 interface Props {
   locale: Locale;
@@ -11,14 +12,38 @@ const { locale } = Astro.props;
 
 <div id="page-top" class="h-screen bg-header-image bg-cover bg-center bg-fixed">
   <div class="h-screen bg-tg-blue/30">
-    <div class="absolute top-1/3 inset-x-0">
-      <h1 class="pb-8 text-7xl text-tg-white text-center">
-        Tifenn Guillas
-      </h1>
-      <div class="text-center">
-        <span class="inline-block bg-tg-pink text-tg-white uppercase m-2.5 p-2.5 tracking-widest">
-          {header.title[locale]}
-        </span>
+    <div class="absolute top-1/3 inset-x-0 -translate-y-4">
+      <div class="relative">
+        <h1 class="pb-6 text-7xl text-tg-white text-center">
+          Tifenn Guillas
+        </h1>
+        <div class="text-center">
+          <span class="inline-block bg-tg-pink text-tg-white uppercase m-2.5 p-2.5 tracking-widest">
+            {header.title[locale]}
+          </span>
+        </div>
+        <!-- CTAs -->
+        <div class="mt-10 flex justify-center gap-6">
+          <a href="#portfolio"
+             class="anchor border-2 border-tg-white text-tg-white uppercase px-6 py-3 tracking-widest text-sm hover:bg-tg-white hover:text-tg-blue transition-colors">
+            {header.cta.portfolio[locale]}
+          </a>
+          <a href="#contact"
+             class="anchor border-2 border-tg-white text-tg-white uppercase px-6 py-3 tracking-widest text-sm hover:bg-tg-white hover:text-tg-blue transition-colors">
+            {header.cta.contact[locale]}
+          </a>
+        </div>
+        <!-- Socials alignés à droite du bloc contenu -->
+        <div class="absolute right-8 inset-y-0 flex flex-col justify-center gap-5">
+          {socials.map((s) => (
+            <a href={s.url}
+               target={s.external === false ? '_self' : '_blank'}
+               title={s.name}
+               class:list={["text-tg-white hover:text-tg-pink transition-colors text-xl", { anchor: s.external === false }]}>
+              <span class={s.fontawesome}></span>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
     <div class="absolute bottom-0 inset-x-0 text-center animate-bounce">
