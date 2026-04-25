@@ -1,0 +1,60 @@
+---
+// TODO: supprimer cette page avant la release (Epic 6)
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Loader from '../../components/atoms/Loader.astro';
+import BlockName from '../../components/atoms/BlockName.astro';
+import Card from '../../components/atoms/Card.astro';
+import type { SkillTechnology } from '../../types';
+
+const sampleTechnologies: SkillTechnology[] = [
+  { icon: 'fab fa-angular', icon_type: 'fontawesome', description: { fr: 'Angular framework', en: 'Angular framework' } },
+  { icon: 'fab fa-python', icon_type: 'fontawesome', description: { fr: 'Python', en: 'Python' } },
+  { icon: 'tailwindcss.svg', icon_type: 'custom', description: { fr: 'Tailwind CSS', en: 'Tailwind CSS' } },
+];
+---
+
+<BaseLayout locale="fr" title="Dev — Atoms" description="Page de développement">
+  <div class="p-8 space-y-16">
+
+    <h1 class="text-tg-white text-2xl uppercase tracking-widest border-b border-tg-pink pb-2">
+      Dev page — Atoms
+    </h1>
+
+    <!-- Loader -->
+    <section>
+      <h2 class="text-tg-soft-gray uppercase text-sm mb-4">Loader (positionné en relatif ici)</h2>
+      <div class="relative h-32 w-32 overflow-hidden border border-tg-pink">
+        <div class="absolute inset-0 flex justify-center items-center bg-tg-pink">
+          <span class="text-tg-white fa-spin fa-3x fas fa-fan"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BlockName — fond bleu -->
+    <section>
+      <h2 class="text-tg-soft-gray uppercase text-sm mb-4">BlockName — fond bleu</h2>
+      <div class="bg-tg-blue p-4">
+        <BlockName direction="left" background="blue" label="À gauche (blue)" />
+        <BlockName direction="right" background="blue" label="À droite (blue)" />
+      </div>
+    </section>
+
+    <!-- BlockName — fond blanc -->
+    <section>
+      <h2 class="text-tg-soft-gray uppercase text-sm mb-4">BlockName — fond blanc</h2>
+      <div class="bg-tg-white p-4">
+        <BlockName direction="left" background="white" label="À gauche (white)" />
+        <BlockName direction="right" background="white" label="À droite (white)" />
+      </div>
+    </section>
+
+    <!-- Card -->
+    <section>
+      <h2 class="text-tg-soft-gray uppercase text-sm mb-4">Card</h2>
+      <div class="max-w-sm">
+        <Card name="Frontend" technologies={sampleTechnologies} locale="fr" />
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
