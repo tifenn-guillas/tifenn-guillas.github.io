@@ -49,18 +49,24 @@ const jsonLd = {
     <!-- Open Graph -->
     <meta property="og:url" content={ogUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tifenn Guillas" />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
     <meta property="og:locale" content={lang} />
-    <meta property="og:site_name" content={ogTitle} />
+    <meta property="og:locale:alternate" content={locale === 'fr' ? 'en-US' : 'fr-FR'} />
     <meta property="og:image" content={`https://tifenn-guillas.fr${ogImage}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogTitle} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tifenn_guillas" />
+    <meta name="twitter:creator" content="@tifenn_guillas" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image" content={`https://tifenn-guillas.fr${ogImage}`} />
+    <meta name="twitter:image:alt" content={ogTitle} />
 
     <!-- Preload critical font files -->
     <link rel="preload" href="/assets/fonts/roboto-400-normal.woff2" as="font" type="font/woff2" crossorigin />
