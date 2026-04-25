@@ -28,7 +28,7 @@
 
 ## Epic 3 — Composants (migration à l'identique)
 
-- [ ] **3.1** — Atomes : `Loader`, `BlockName`, `Card`
+- [x] **3.1** — Atomes : `Loader`, `BlockName`, `Card`
 - [ ] **3.2** — `Navbar` + `Footer`
 - [ ] **3.3** — Section `Header` (hero)
 - [ ] **3.4** — Section `About`
@@ -45,12 +45,13 @@
 ## Epic 4 — SEO & Performance
 
 - [ ] **4.1** — Self-host la police Roboto (supprimer le CDN Google Fonts)
-- [ ] **4.2** — Corriger la meta description et affiner les keywords
-- [ ] **4.3** — Nettoyer et compléter Open Graph + Twitter cards
-- [ ] **4.4** — Générer un sitemap.xml (`@astrojs/sitemap`)
-- [ ] **4.5** — Ajouter `robots.txt`
-- [ ] **4.6** — Corriger le JSON-LD (structured data)
-- [ ] **4.7** — Audit Lighthouse baseline + quick wins
+- [ ] **4.2** — Self-host FontAwesome (supprimer le CDN cdnjs)
+- [ ] **4.3** — Corriger la meta description et affiner les keywords
+- [ ] **4.4** — Nettoyer et compléter Open Graph + Twitter cards
+- [ ] **4.5** — Générer un sitemap.xml (`@astrojs/sitemap`)
+- [ ] **4.6** — Ajouter `robots.txt`
+- [ ] **4.7** — Corriger le JSON-LD (structured data)
+- [ ] **4.8** — Audit Lighthouse baseline + quick wins
 
 ## Epic 5 — Redesign + Dark mode
 
@@ -58,12 +59,13 @@
 - [ ] **5.2** — Implémenter le dark mode (config Tailwind + composant toggle)
 - [ ] **5.3** — Refonte header hero
 - [ ] **5.4** — Passe globale typographie et espacements
-- [ ] **5.5** — Animations et micro-interactions
+- [ ] **5.5** — Animations et micro-interactions (remplacer jQuery + WoW.js par solution Astro native)
 - [ ] **5.6** — Revue mobile / responsive
 - [ ] **5.7** — QA design finale
 
 ## Epic 6 — Release
 
+- [ ] **6.0** — Supprimer les pages de dev (`src/pages/dev/`)
 - [ ] **6.1** — Tests cross-browser
 - [ ] **6.2** — Vérification du contenu FR et EN
 - [ ] **6.3** — Vérification domaine custom (CNAME) et DNS

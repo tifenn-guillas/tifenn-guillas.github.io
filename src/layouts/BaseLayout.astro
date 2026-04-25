@@ -65,6 +65,12 @@ const jsonLd = {
     <!-- Fonts (temporary — self-hosted in E4-S1) -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet" />
 
+    <!-- FontAwesome (temporary CDN — self-hosted in E4-S2) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Animate.css + WoW.js (temporary CDN — remplacés par solution Astro en E5-S5) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Favicons -->
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -81,5 +87,10 @@ const jsonLd = {
   </head>
   <body class="bg-tg-blue font-roboto text-tg-gray">
     <slot />
+
+    <!-- jQuery + WoW.js (temporary CDN — remplacés par solution Astro en E5-S5) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
   </body>
 </html>
