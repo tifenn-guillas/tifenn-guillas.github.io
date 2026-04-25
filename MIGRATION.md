@@ -51,7 +51,7 @@
 - [x] **4.5** — Générer un sitemap.xml (`@astrojs/sitemap`)
 - [x] **4.6** — Ajouter `robots.txt`
 - [x] **4.7** — Corriger le JSON-LD (structured data)
-- [ ] **4.8** — Audit Lighthouse baseline + quick wins
+- [x] **4.8** — Audit Lighthouse baseline + quick wins
 
 ## Epic 5 — Redesign + Dark mode
 
