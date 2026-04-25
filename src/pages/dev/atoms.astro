@@ -4,7 +4,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Loader from '../../components/atoms/Loader.astro';
 import BlockName from '../../components/atoms/BlockName.astro';
 import Card from '../../components/atoms/Card.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
 import type { SkillTechnology } from '../../types';
+
+const locale = 'fr' as const;
 
 const sampleTechnologies: SkillTechnology[] = [
   { icon: 'fab fa-angular', icon_type: 'fontawesome', description: { fr: 'Angular framework', en: 'Angular framework' } },
@@ -13,11 +17,15 @@ const sampleTechnologies: SkillTechnology[] = [
 ];
 ---
 
-<BaseLayout locale="fr" title="Dev — Atoms" description="Page de développement">
-  <div class="p-8 space-y-16">
+<BaseLayout locale={locale} title="Dev — Atoms" description="Page de développement">
+  <div id="page-top"></div>
+  <Loader />
+  <Navbar locale={locale} />
+
+  <div class="pt-24 p-8 space-y-16">
 
     <h1 class="text-tg-white text-2xl uppercase tracking-widest border-b border-tg-pink pb-2">
-      Dev page — Atoms
+      Dev page — Atoms & Nav
     </h1>
 
     <!-- Loader -->
@@ -52,9 +60,11 @@ const sampleTechnologies: SkillTechnology[] = [
     <section>
       <h2 class="text-tg-soft-gray uppercase text-sm mb-4">Card</h2>
       <div class="max-w-sm">
-        <Card name="Frontend" technologies={sampleTechnologies} locale="fr" />
+        <Card name="Frontend" technologies={sampleTechnologies} locale={locale} />
       </div>
     </section>
 
   </div>
+
+  <Footer locale={locale} />
 </BaseLayout>
