@@ -1,4 +1,4 @@
-// NOTE: carousel (.slick) et popup (.magnificPopup) ajoutés en E3-S12
+// NOTE: popup (.magnificPopup) ajouté en E3-S12
 new WOW().init();
 
 $(document).ready(function () {
@@ -41,6 +41,13 @@ $(document).ready(function () {
             desktopMenuItems.parent().removeClass('active').end().filter('[href="#' + id + '"]').parent().addClass('active');
         }
     }
+
+    // Carousel
+    $('.carousel').slick({
+        infinite: true,
+        prevArrow: '<button class="slick-prev" aria-label="Previous"><i class="fas fa-chevron-left fa-2x"></i></button>',
+        nextArrow: '<button class="slick-next" aria-label="Next"><i class="fas fa-chevron-right fa-2x"></i></button>'
+    });
 
     // Mobile menu
     $('#mobile-menu-button').click(function (e) {

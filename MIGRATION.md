@@ -36,7 +36,7 @@
 - [x] **3.6** — Section `Skills`
 - [x] **3.7** — Section `Formation`
 - [x] **3.8** — Section `Hobbies`
-- [ ] **3.9** — Section `Goals`
+- [x] **3.9** — Section `Goals`
 - [ ] **3.10** — Section `Contact`
 - [ ] **3.11** — Section `Resume`
 - [ ] **3.12** — Section `Portfolio` (la plus complexe : carousel + modal)

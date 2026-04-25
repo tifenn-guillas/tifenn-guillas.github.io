@@ -20,6 +20,25 @@
   --tracking-widest: 0.25em;
 }
 
+/* Slick carousel — remplace les flèches icône Slick (police woff non chargée) par FontAwesome */
+/* Slick force font-size:0 et color:transparent sur les boutons, ce qui masque FontAwesome */
+.slick-prev,
+.slick-next {
+  font-size: 20px !important;
+  color: #ff7777 !important;
+  z-index: 1;
+}
+.slick-prev:hover,
+.slick-next:hover {
+  color: #ff8888 !important;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+.slick-prev { left: -30px; }
+.slick-next { right: -30px; }
+
 /* Background image utilities (not supported as CSS vars in Tailwind v4) */
 @utility bg-header-image {
   background-image: url('/assets/images/background.jpg');
