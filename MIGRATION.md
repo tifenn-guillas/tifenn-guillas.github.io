@@ -30,7 +30,7 @@
 
 - [x] **3.1** — Atomes : `Loader`, `BlockName`, `Card`
 - [x] **3.2** — `Navbar` + `Footer`
-- [ ] **3.3** — Section `Header` (hero)
+- [x] **3.3** — Section `Header` (hero)
 - [ ] **3.4** — Section `About`
 - [ ] **3.5** — Section `Links`
 - [ ] **3.6** — Section `Skills`

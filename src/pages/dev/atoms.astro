@@ -6,6 +6,7 @@ import BlockName from '../../components/atoms/BlockName.astro';
 import Card from '../../components/atoms/Card.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import SectionHeader from '../../components/sections/Header.astro';
 import type { SkillTechnology } from '../../types';
 
 const locale = 'fr' as const;
@@ -18,11 +19,11 @@ const sampleTechnologies: SkillTechnology[] = [
 ---
 
 <BaseLayout locale={locale} title="Dev — Atoms" description="Page de développement">
-  <div id="page-top"></div>
   <Loader />
   <Navbar locale={locale} />
+  <SectionHeader locale={locale} />
 
-  <div class="pt-24 p-8 space-y-16">
+  <div class="p-8 space-y-16">
 
     <h1 class="text-tg-white text-2xl uppercase tracking-widest border-b border-tg-pink pb-2">
       Dev page — Atoms & Nav
