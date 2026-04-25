@@ -11,6 +11,48 @@ interface Props {
 const { locale, label } = Astro.props;
 ---
 
+<style is:global>
+  .image-popup {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-tg-pink);
+  }
+  .image-popup img {
+    transition: all 300ms ease-in;
+  }
+  .image-popup:hover img {
+    opacity: 0.2;
+  }
+  .image-popup::before,
+  .image-popup::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    background-color: var(--color-tg-white);
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in;
+  }
+  .image-popup::before {
+    width: 4rem;
+    height: 0.125rem;
+    left: 0;
+    top: 50%;
+  }
+  .image-popup::after {
+    height: 4rem;
+    width: 0.125rem;
+    top: 100%;
+    left: 50%;
+  }
+  .image-popup:hover::before,
+  .image-popup:hover::after {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+</style>
+
 <div id="portfolio" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
   <div class="container mx-auto">
     <BlockName label={label} background="blue" direction="left" />

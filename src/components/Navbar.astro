@@ -13,6 +13,13 @@ const alternateUrl = getAlternateUrl(Astro.url, locale);
 const menuSections = sections.filter((s) => s.menu_displayed);
 ---
 
+<style is:global>
+  nav { transition: all 300ms ease-in; }
+  .navbar-expanded { padding-block: 0.75rem; }
+  .navbar-collapsed { padding-block: 0; }
+  .active { color: var(--color-tg-soft-pink); }
+</style>
+
 <!-- Navbar mobile (xl:hidden) -->
 <nav class="nav-mobile xl:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue/80 text-tg-white text-xs tracking-wider uppercase">
   <div class="flex justify-between">

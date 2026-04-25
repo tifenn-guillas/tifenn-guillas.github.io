@@ -1,12 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAlternateUrl, type Locale } from '../../i18n';
+import { type Locale } from '../../i18n';
 import { layout } from '../../data/layout';
-import { header } from '../../data/header';
+import { sections } from '../../data/sections';
+import Loader from '../../components/atoms/Loader.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/sections/Header.astro';
+import About from '../../components/sections/About.astro';
+import Links from '../../components/sections/Links.astro';
+import Skills from '../../components/sections/Skills.astro';
+import Resume from '../../components/sections/Resume.astro';
+import Formation from '../../components/sections/Formation.astro';
+import Portfolio from '../../components/sections/Portfolio.astro';
+import Goals from '../../components/sections/Goals.astro';
+import Hobbies from '../../components/sections/Hobbies.astro';
+import Contact from '../../components/sections/Contact.astro';
 
 const locale: Locale = 'fr';
-const alternateUrl = getAlternateUrl(Astro.url, locale);
+
+const s = (name: string) => sections.find((sec) => sec.name === name)!;
 ---
+
 <BaseLayout
   locale={locale}
   title={layout.title[locale]}
@@ -16,13 +31,17 @@ const alternateUrl = getAlternateUrl(Astro.url, locale);
   ogUrl={layout.og.url[locale]}
   keywords={layout.keywords[locale]}
 >
-  <div class="flex flex-col items-center justify-center min-h-screen gap-4">
-    <h1 class="text-4xl text-tg-white">Tifenn Guillas</h1>
-    <span class="bg-tg-pink text-tg-white uppercase tracking-widest px-4 py-2">
-      {header.title[locale]}
-    </span>
-    <a href={alternateUrl} class="text-tg-soft-gray text-sm underline hover:text-tg-white">
-      Switch to EN →
-    </a>
-  </div>
+  <Loader />
+  <Navbar locale={locale} />
+  <Header locale={locale} />
+  <About locale={locale} label={s('about').label![locale]} />
+  <Links />
+  <Skills locale={locale} label={s('skills').label![locale]} />
+  <Resume locale={locale} label={s('resume').label![locale]} />
+  <Formation locale={locale} label={s('formation').label![locale]} />
+  <Portfolio locale={locale} label={s('portfolio').label![locale]} />
+  <Goals locale={locale} label={s('goals').label![locale]} />
+  <Hobbies locale={locale} />
+  <Contact locale={locale} label={s('contact').label![locale]} />
+  <Footer locale={locale} />
 </BaseLayout>
