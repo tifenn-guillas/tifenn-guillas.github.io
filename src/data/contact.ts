@@ -1,0 +1,12 @@
+import type { ContactData } from '../types';
+
+export const contact: ContactData = {
+  title: {
+    fr: 'Restons en contact',
+    en: 'Stay in touch',
+  },
+  description: {
+    fr: "Des questions ? Un renseignement peut-être ? N'hesitez pas à m'envoyer un message sur l'une des plateformes suivante:",
+    en: 'Questions? More information maybe? Send me a message through these networks:',
+  },
+};

@@ -21,10 +21,10 @@
 
 - [x] **2.1** — Définir les interfaces TypeScript pour toutes les données (Option C : fichiers `.ts` dans `src/data/`)
 - [x] **2.2** — Migrer `about.yml`, `header.yml`, `layout.yml`, `navbar.yml`
-- [ ] **2.3** — Migrer `skills.yml`, `formation.yml`
-- [ ] **2.4** — Migrer `resume.yml`
-- [ ] **2.5** — Migrer `portfolio.yml`
-- [ ] **2.6** — Migrer `goals.yml`, `hobbies.yml`, `contact.yml`, `footer.yml`, `socials.yml`, `sections.yml`
+- [x] **2.3** — Migrer `skills.yml`, `formation.yml`
+- [x] **2.4** — Migrer `resume.yml`
+- [x] **2.5** — Migrer `portfolio.yml`
+- [x] **2.6** — Migrer `goals.yml`, `hobbies.yml`, `contact.yml`, `footer.yml`, `socials.yml`, `sections.yml`
 
 ## Epic 3 — Composants (migration à l'identique)
 
