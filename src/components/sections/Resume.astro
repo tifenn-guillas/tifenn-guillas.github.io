@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../../i18n';
+import { resume } from '../../data/resume';
+import BlockName from '../atoms/BlockName.astro';
+
+interface Props {
+  locale: Locale;
+  label: string;
+}
+
+const { locale, label } = Astro.props;
+---
+
+<div id="resume" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
+  <div class="container mx-auto">
+    <BlockName label={label} background="blue" direction="left" />
+
+    <div class="px-6 lg:px-20 xl:px-40">
+      <h4 class="mb-4 text-center text-tg-pink uppercase">
+        {resume.title[locale]}
+      </h4>
+      <div class="my-12">
+        {resume.jobs.map((job) => (
+          <div class="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-6">
+            <div class="mb-3 md:text-right">
+              <span class="pb-1 text-tg-pink md:text-tg-soft-gray text-sm md:text-base tracking-widest md:tracking-wider font-light border-b-2 border-tg-pink md:border-0">
+                {job.start} - {job.end}
+              </span>
+            </div>
+            <div class="md:col-span-2">
+              <p class="text-tg-soft-gray italic">{job.title[locale]}</p>
+              <p class="text-tg-pink font-light italic">{job.location[locale]}</p>
+              <p class="pt-4 text-tg-white">{job.description[locale]}</p>
+              <p class="pt-4 text-tg-white">{job.tasks[locale]}</p>
+              <p class="pt-4 text-tg-soft-gray">
+                {job.technologies.map((techno) => `#${techno}`).join(' ')}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a
+        href={resume.download_href[locale]}
+        target="_blank"
+        class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase p-2.5 tracking-widest hover:bg-tg-white hover:text-tg-pink"
+        title={resume.download_description[locale]}
+      >
+        {resume.download[locale]}
+      </a>
+    </div>
+  </div>
+</div>

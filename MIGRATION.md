@@ -38,7 +38,7 @@
 - [x] **3.8** — Section `Hobbies`
 - [x] **3.9** — Section `Goals`
 - [x] **3.10** — Section `Contact`
-- [ ] **3.11** — Section `Resume`
+- [x] **3.11** — Section `Resume`
 - [ ] **3.12** — Section `Portfolio` (la plus complexe : carousel + modal)
 - [ ] **3.13** — Recette d'intégration : page complète fonctionnelle en FR et EN
 
