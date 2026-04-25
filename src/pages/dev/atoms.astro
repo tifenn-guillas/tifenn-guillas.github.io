@@ -9,6 +9,7 @@ import Footer from '../../components/Footer.astro';
 import SectionHeader from '../../components/sections/Header.astro';
 import About from '../../components/sections/About.astro';
 import Links from '../../components/sections/Links.astro';
+import Skills from '../../components/sections/Skills.astro';
 import type { SkillTechnology } from '../../types';
 
 const locale = 'fr' as const;
@@ -27,6 +28,7 @@ const sampleTechnologies: SkillTechnology[] = [
 
   <About locale={locale} label="À propos" />
   <Links />
+  <Skills locale={locale} label="Compétences" />
 
   <div class="p-8 space-y-16">
 

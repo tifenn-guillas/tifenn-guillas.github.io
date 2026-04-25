@@ -1,4 +1,6 @@
 // NOTE: carousel (.slick) et popup (.magnificPopup) ajoutés en E3-S12
+new WOW().init();
+
 $(document).ready(function () {
     // Loader
     $('.loader').fadeOut(1000, function () {
