@@ -1,4 +1,3 @@
-// NOTE: popup (.magnificPopup) ajouté en E3-S12
 new WOW().init();
 
 $(document).ready(function () {
@@ -60,6 +59,17 @@ $(document).ready(function () {
     });
     $('.li-section').click(function () {
         closeMobileMenu();
+    });
+
+    // Popup portfolio
+    $('.image-popup').magnificPopup({
+        type: 'inline',
+        gallery: { enabled: true },
+        mainClass: 'mfp-zoom-in'
+    });
+    $('.popup-modal-close').click(function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
     });
 
     // Smooth scroll

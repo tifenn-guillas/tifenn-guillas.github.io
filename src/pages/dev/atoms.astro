@@ -15,6 +15,7 @@ import Hobbies from '../../components/sections/Hobbies.astro';
 import Goals from '../../components/sections/Goals.astro';
 import Contact from '../../components/sections/Contact.astro';
 import Resume from '../../components/sections/Resume.astro';
+import Portfolio from '../../components/sections/Portfolio.astro';
 import type { SkillTechnology } from '../../types';
 
 const locale = 'fr' as const;
@@ -38,6 +39,7 @@ const sampleTechnologies: SkillTechnology[] = [
   <Hobbies locale={locale} />
   <Goals locale={locale} label="Objectifs" />
   <Resume locale={locale} label="Carrière" />
+  <Portfolio locale={locale} label="Portfolio" />
   <Contact locale={locale} label="Contact" />
 
   <div class="p-8 space-y-16">

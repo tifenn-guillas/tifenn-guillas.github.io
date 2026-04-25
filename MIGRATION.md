@@ -39,7 +39,7 @@
 - [x] **3.9** — Section `Goals`
 - [x] **3.10** — Section `Contact`
 - [x] **3.11** — Section `Resume`
-- [ ] **3.12** — Section `Portfolio` (la plus complexe : carousel + modal)
+- [x] **3.12** — Section `Portfolio` (la plus complexe : carousel + modal)
 - [ ] **3.13** — Recette d'intégration : page complète fonctionnelle en FR et EN
 
 ## Epic 4 — SEO & Performance
