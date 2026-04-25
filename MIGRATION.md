@@ -44,7 +44,7 @@
 
 ## Epic 4 — SEO & Performance
 
-- [ ] **4.1** — Self-host la police Roboto (supprimer le CDN Google Fonts)
+- [x] **4.1** — Self-host la police Roboto (supprimer le CDN Google Fonts)
 - [ ] **4.2** — Self-host FontAwesome (supprimer le CDN cdnjs)
 - [ ] **4.3** — Corriger la meta description et affiner les keywords
 - [ ] **4.4** — Nettoyer et compléter Open Graph + Twitter cards
