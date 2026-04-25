@@ -46,7 +46,7 @@
 
 - [x] **4.1** — Self-host la police Roboto (supprimer le CDN Google Fonts)
 - [x] **4.2** — Self-host FontAwesome (supprimer le CDN cdnjs)
-- [ ] **4.3** — Corriger la meta description et affiner les keywords
+- [x] **4.3** — Corriger la meta description et affiner les keywords
 - [ ] **4.4** — Nettoyer et compléter Open Graph + Twitter cards
 - [ ] **4.5** — Générer un sitemap.xml (`@astrojs/sitemap`)
 - [ ] **4.6** — Ajouter `robots.txt`
