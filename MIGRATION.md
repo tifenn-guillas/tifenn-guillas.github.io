@@ -35,7 +35,7 @@
 - [x] **3.5** — Section `Links`
 - [x] **3.6** — Section `Skills`
 - [x] **3.7** — Section `Formation`
-- [ ] **3.8** — Section `Hobbies`
+- [x] **3.8** — Section `Hobbies`
 - [ ] **3.9** — Section `Goals`
 - [ ] **3.10** — Section `Contact`
 - [ ] **3.11** — Section `Resume`

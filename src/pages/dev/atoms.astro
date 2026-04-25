@@ -11,6 +11,7 @@ import About from '../../components/sections/About.astro';
 import Links from '../../components/sections/Links.astro';
 import Skills from '../../components/sections/Skills.astro';
 import Formation from '../../components/sections/Formation.astro';
+import Hobbies from '../../components/sections/Hobbies.astro';
 import type { SkillTechnology } from '../../types';
 
 const locale = 'fr' as const;
@@ -31,6 +32,7 @@ const sampleTechnologies: SkillTechnology[] = [
   <Links />
   <Skills locale={locale} label="Compétences" />
   <Formation locale={locale} label="Formation" />
+  <Hobbies locale={locale} />
 
   <div class="p-8 space-y-16">
 
