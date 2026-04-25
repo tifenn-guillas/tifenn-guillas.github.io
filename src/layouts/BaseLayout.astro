@@ -88,8 +88,9 @@ const jsonLd = {
   <body class="bg-tg-blue font-roboto text-tg-gray">
     <slot />
 
-    <!-- jQuery + WoW.js + app.js (temporary CDN — remplacés par solution Astro en E5-S5) -->
+    <!-- jQuery + plugins + WoW.js + app.js (temporary CDN — remplacés par solution Astro en E5-S5) -->
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script is:inline src="/assets/js/app.js"></script>
   </body>
