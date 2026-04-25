@@ -15,11 +15,11 @@ const { locale, label } = Astro.props;
   <div class="container mx-auto">
     <BlockName label={label} background="white" direction="right" />
 
-    <div class="px-12 lg:px-20 xl:px-40">
+    <div class="px-6 lg:px-20 xl:px-40">
       <div class="carousel">
         {goals.map((goal) => (
           <div>
-            <h3 class="mb-9 xl:pl-12 text-center text-xl font-semibold text-wide">
+            <h3 class="mb-9 xl:pl-12 text-center text-xl font-semibold tracking-wide">
               {goal.year}
             </h3>
             {goal.tasks.map((task) => (
