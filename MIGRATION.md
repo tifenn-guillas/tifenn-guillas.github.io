@@ -32,7 +32,7 @@
 - [x] **3.2** — `Navbar` + `Footer`
 - [x] **3.3** — Section `Header` (hero)
 - [x] **3.4** — Section `About`
-- [ ] **3.5** — Section `Links`
+- [x] **3.5** — Section `Links`
 - [ ] **3.6** — Section `Skills`
 - [ ] **3.7** — Section `Formation`
 - [ ] **3.8** — Section `Hobbies`
