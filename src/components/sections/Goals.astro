@@ -15,8 +15,8 @@ const { locale, label } = Astro.props;
   <div class="container mx-auto">
     <BlockName label={label} background="white" direction="right" />
 
-    <div class="relative">
-      <div class="px-6 lg:px-20 xl:px-40 overflow-hidden">
+    <div class="relative px-12 lg:px-20 xl:px-40">
+      <div class="overflow-hidden relative">
         <div class="carousel-track flex transition-transform duration-500 ease-in-out">
           {goals.map((goal) => (
             <div class="min-w-full">

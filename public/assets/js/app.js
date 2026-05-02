@@ -6,12 +6,17 @@
         if (!entry.isIntersecting) return;
         const el = entry.target;
         if (el.dataset.wowDuration) el.style.animationDuration = el.dataset.wowDuration;
-        el.style.visibility = 'visible';
+        // Remove animation class, force reflow, re-add to restart animation
+        const animClass = ['fadeInLeft', 'fadeInRight'].find(c => el.classList.contains(c));
+        if (animClass) el.classList.remove(animClass);
+        void el.offsetWidth;
         el.classList.add('animated');
+        if (animClass) el.classList.add(animClass);
+        el.style.visibility = 'visible';
         observer.unobserve(el);
       });
     },
-    { rootMargin: '-100px 0px' }
+    { rootMargin: '0px 0px -100px 0px' }
   );
   document.querySelectorAll('.wow').forEach((el) => observer.observe(el));
 })();
@@ -123,18 +128,34 @@ document.addEventListener('click', (e) => {
 
 // ─── Portfolio modals ─────────────────────────────────────────────────────
 (function () {
-  document.querySelectorAll('.image-popup').forEach((trigger) => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const dialog = document.getElementById('dialog-' + trigger.dataset.modal);
-      dialog?.showModal();
-    });
+  const triggers = Array.from(document.querySelectorAll('.image-popup'));
+  const dialogs = triggers.map(t => document.getElementById('dialog-' + t.dataset.modal));
+  let currentIndex = -1;
+
+  function openAt(index) {
+    if (currentIndex >= 0) dialogs[currentIndex]?.close();
+    currentIndex = index;
+    dialogs[currentIndex]?.showModal();
+  }
+
+  function closeAll() {
+    if (currentIndex >= 0) dialogs[currentIndex]?.close();
+    currentIndex = -1;
+  }
+
+  triggers.forEach((trigger, i) => {
+    trigger.addEventListener('click', (e) => { e.preventDefault(); openAt(i); });
   });
 
-  document.querySelectorAll('.portfolio-dialog').forEach((dialog) => {
-    dialog.querySelector('.popup-modal-close')?.addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (e) => {
-      if (e.target === dialog) dialog.close();
-    });
+  dialogs.forEach((dialog, i) => {
+    if (!dialog) return;
+    dialog.querySelector('.popup-modal-close')?.addEventListener('click', closeAll);
+    dialog.querySelector('.gallery-prev')?.addEventListener('click', () =>
+      openAt((i - 1 + dialogs.length) % dialogs.length)
+    );
+    dialog.querySelector('.gallery-next')?.addEventListener('click', () =>
+      openAt((i + 1) % dialogs.length)
+    );
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) closeAll(); });
   });
 })();

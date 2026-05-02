@@ -59,7 +59,7 @@
 - [x] **5.2** — Implémenter le dark mode (config Tailwind + composant toggle)
 - [x] **5.3** — Refonte header hero
 - [x] **5.4** — Passe globale typographie et espacements
-- [ ] **5.5** — Animations et micro-interactions (remplacer jQuery + WoW.js par solution Astro native)
+- [x] **5.5** — Animations et micro-interactions (remplacer jQuery + WoW.js par solution Astro native)
 - [ ] **5.6** — Revue mobile / responsive
 - [ ] **5.7** — QA design finale
 
