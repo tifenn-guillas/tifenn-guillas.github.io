@@ -15,35 +15,48 @@ const { locale, label } = Astro.props;
   <div class="container mx-auto">
     <BlockName label={label} background="white" direction="right" />
 
-    <div class="px-6 lg:px-20 xl:px-40">
-      <div class="carousel">
-        {goals.map((goal) => (
-          <div>
-            <h3 class="mb-9 xl:pl-12 text-center text-xl font-semibold tracking-wide">
-              {goal.year}
-            </h3>
-            {goal.tasks.map((task) => (
-              <div class="relative mt-20 md:mt-8 lg:mx-12 xl:mx-20 2xl:mx-32">
-                <div class="absolute rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink -top-14 inset-x-0 mx-auto md:m-0 md:inset-y-0 md:my-auto">
-                  {task.icon_type === 'fontawesome' ? (
-                    <span class={`fa-3x ${task.icon}`}></span>
-                  ) : (
-                    <img
-                      class="max-h-12 max-w-12"
-                      src={`/assets/images/${task.icon}`}
-                      alt={`${task.title[locale]} logo`}
-                    />
-                  )}
+    <div class="relative">
+      <div class="px-6 lg:px-20 xl:px-40 overflow-hidden">
+        <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+          {goals.map((goal) => (
+            <div class="min-w-full">
+              <h3 class="mb-9 xl:pl-12 text-center text-xl font-semibold tracking-wide">
+                {goal.year}
+              </h3>
+              {goal.tasks.map((task) => (
+                <div class="relative mt-20 md:mt-8 lg:mx-12 xl:mx-20 2xl:mx-32">
+                  <div class="absolute rounded-full h-28 w-28 flex items-center justify-center bg-gray-100 border-2 border-tg-pink -top-14 inset-x-0 mx-auto md:m-0 md:inset-y-0 md:my-auto">
+                    {task.icon_type === 'fontawesome' ? (
+                      <span class={`fa-3x ${task.icon}`}></span>
+                    ) : (
+                      <img
+                        class="max-h-12 max-w-12"
+                        src={`/assets/images/${task.icon}`}
+                        alt={`${task.title[locale]} logo`}
+                      />
+                    )}
+                  </div>
+                  <div class="min-h-40 mx-6 md:ml-14 pt-20 md:pt-6 pb-6 px-6 md:pl-20 bg-gray-100 border-b-2 border-r border-tg-pink">
+                    <h4>{task.title[locale]}</h4>
+                    <p class="text-justify" set:html={task.description[locale]} />
+                  </div>
                 </div>
-                <div class="min-h-40 mx-6 md:ml-14 pt-20 md:pt-6 pb-6 px-6 md:pl-20 bg-gray-100 border-b-2 border-r border-tg-pink">
-                  <h4>{task.title[locale]}</h4>
-                  <p class="text-justify" set:html={task.description[locale]} />
-                </div>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
+
+      <button id="carousel-prev"
+        class="absolute left-0 top-1/3 -translate-y-1/2 text-tg-pink hover:text-tg-soft-pink transition-colors p-2"
+        aria-label="Précédent">
+        <i class="fas fa-chevron-left fa-2x"></i>
+      </button>
+      <button id="carousel-next"
+        class="absolute right-0 top-1/3 -translate-y-1/2 text-tg-pink hover:text-tg-soft-pink transition-colors p-2"
+        aria-label="Suivant">
+        <i class="fas fa-chevron-right fa-2x"></i>
+      </button>
     </div>
   </div>
 </div>

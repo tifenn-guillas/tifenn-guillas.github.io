@@ -35,7 +35,7 @@ const jsonLd = {
   url: `https://tifenn-guillas.fr/${locale}/`,
   image: 'https://tifenn-guillas.fr/assets/images/logo.svg',
   email: 'tifenn.guillas@gmail.com',
-  sameAs: socials.map((s) => s.url),
+  sameAs: socials.filter((s) => s.url.startsWith('http')).map((s) => s.url),
 };
 ---
 
@@ -62,10 +62,8 @@ const jsonLd = {
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={ogTitle} />
 
-    <!-- Twitter -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@tifenn_guillas" />
-    <meta name="twitter:creator" content="@tifenn_guillas" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image" content={`https://tifenn-guillas.fr${ogImage}`} />
@@ -75,11 +73,6 @@ const jsonLd = {
     <link rel="preload" href="/assets/fonts/roboto-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/roboto-300-normal.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- CSS self-hosted (remplacés par solution Astro en E5-S5) -->
-    <link rel="stylesheet" href="/assets/libs/slick.min.css" />
-    <link rel="stylesheet" href="/assets/libs/slick-theme.min.css" />
-    <link rel="stylesheet" href="/assets/libs/magnific-popup.min.css" />
-    <link rel="stylesheet" href="/assets/libs/animate.min.css" />
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" />
 
     <!-- Favicons -->
@@ -99,12 +92,6 @@ const jsonLd = {
   <body class="bg-tg-blue font-roboto text-tg-gray">
     <slot />
 
-    <!-- jQuery + plugins + WoW.js + Slick + app.js (temporary CDN — remplacés par solution Astro en E5-S5) -->
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script is:inline src="/assets/js/app.js"></script>
   </body>
 </html>

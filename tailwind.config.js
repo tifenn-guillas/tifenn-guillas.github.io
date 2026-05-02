@@ -24,7 +24,7 @@ module.exports = {
                 roboto: ['Roboto'],
             },
             backgroundImage: theme => ({
-                'header-image': "url('/assets/images/background.jpg')",
+                'header-image': "url('/assets/images/hero.png')",
                 'parallax-image': "url('/assets/images/parallax.jpg')"
             }),
             minHeight: (theme) => ({

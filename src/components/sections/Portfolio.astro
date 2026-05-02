@@ -16,6 +16,7 @@ const { locale, label } = Astro.props;
     position: relative;
     overflow: hidden;
     background-color: var(--color-tg-pink);
+    cursor: pointer;
   }
   .image-popup img {
     transition: all 300ms ease-in;
@@ -60,7 +61,7 @@ const { locale, label } = Astro.props;
     <div class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12">
       {portfolio.map((project) => (
         <>
-          <a class="image-popup flex" href={`#${project.id}`}>
+          <a class="image-popup flex" href="#" data-modal={project.id}>
             <img
               class="flex-1 object-fill"
               src={`/assets/images/portfolio/${project.miniature}`}
@@ -68,14 +69,14 @@ const { locale, label } = Astro.props;
             />
           </a>
 
-          <div id={project.id} class="container mx-auto my-32 zoom-anim-dialog mfp-hide">
+          <dialog id={`dialog-${project.id}`} class="portfolio-dialog">
             <div class="bg-tg-blue">
               <div class="flex justify-end">
                 <button type="button" class="popup-modal-close p-2.5 text-tg-pink">
                   <span class="fas fa-times fa-lg fa-fw"></span>
                 </button>
               </div>
-              <div class="px-14">
+              <div class="px-14 pb-14">
                 <h4 class="text-tg-white">{project.title}</h4>
                 <p class="pt-6 text-justify text-tg-soft-gray" set:html={project.description[locale]} />
                 {project.hashtags && (
@@ -85,14 +86,14 @@ const { locale, label } = Astro.props;
                 )}
                 {project.images.map((image) => (
                   <img
-                    class="py-9"
+                    class="py-9 w-full"
                     src={`/assets/images/portfolio/${image}`}
                     alt={`Image ${image}`}
                   />
                 ))}
               </div>
             </div>
-          </div>
+          </dialog>
         </>
       ))}
     </div>

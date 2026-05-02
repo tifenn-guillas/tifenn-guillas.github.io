@@ -1,111 +1,140 @@
-new WOW().init();
+// ─── Scroll animations (WoW.js replacement) ──────────────────────────────
+(function () {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        if (el.dataset.wowDuration) el.style.animationDuration = el.dataset.wowDuration;
+        el.style.visibility = 'visible';
+        el.classList.add('animated');
+        observer.unobserve(el);
+      });
+    },
+    { rootMargin: '-100px 0px' }
+  );
+  document.querySelectorAll('.wow').forEach((el) => observer.observe(el));
+})();
 
-$(document).ready(function () {
-    // Loader
-    $('.loader').fadeOut(1000, function () {
-        $(this).remove();
-    });
+// ─── Loader ───────────────────────────────────────────────────────────────
+(function () {
+  const loader = document.querySelector('.loader');
+  if (!loader) return;
+  loader.style.transition = 'opacity 1s';
+  loader.style.opacity = '0';
+  setTimeout(() => loader.remove(), 1000);
+})();
 
-    // Navbar
-    let lastId;
-    let mobileMenuItems = $('nav:first').find('li').find('.anchor');
-    let desktopMenuItems = $('nav:last').find('li').find('.anchor');
-    let scrollItems = mobileMenuItems.map(function () {
-        const item = $($(this).attr('href'));
-        if (item.length) { return item; }
-    });
+// ─── Navbar collapse ──────────────────────────────────────────────────────
+function collapseNavbar() {
+  const scrolled = window.scrollY > 50;
+  document.querySelectorAll('nav').forEach((nav) => {
+    nav.classList.toggle('navbar-collapsed', scrolled);
+    nav.classList.toggle('navbar-expanded', !scrolled);
+  });
+}
+collapseNavbar();
+window.addEventListener('scroll', collapseNavbar, { passive: true });
 
-    collapseNavbar();
-    scrollSpyNavbar();
+// ─── Scrollspy ────────────────────────────────────────────────────────────
+(function () {
+  const navLinks = document.querySelectorAll('nav li .anchor[href^="#"]');
+  if (!navLinks.length) return;
 
-    $(window).scroll(function () {
-        collapseNavbar();
-        scrollSpyNavbar();
-    });
+  const sections = Array.from(
+    new Set(Array.from(navLinks).map((a) => document.querySelector(a.getAttribute('href'))))
+  ).filter(Boolean);
 
-    function scrollSpyNavbar() {
-        const fromTop = $(this).scrollTop();
-        let cur = scrollItems.map(function () {
-            if ($(this).offset().top <= fromTop + 1) {
-                return this;
-            } else if ((window.innerHeight + window.scrollY + 1) >= document.body.scrollHeight) {
-                return this;
-            }
-        });
-        cur = cur[cur.length - 1];
-        const id = cur && cur.length ? cur[0].id : '';
-        if (lastId !== id) {
-            lastId = id;
-            mobileMenuItems.parent().removeClass('active').end().filter('[href="#' + id + '"]').parent().addClass('active');
-            desktopMenuItems.parent().removeClass('active').end().filter('[href="#' + id + '"]').parent().addClass('active');
-        }
+  let lastId = '';
+
+  function updateActive() {
+    const scrollY = window.scrollY;
+    const atBottom = window.innerHeight + window.scrollY + 1 >= document.body.scrollHeight;
+    let current = sections[0];
+    for (const section of sections) {
+      if (section.offsetTop <= scrollY + 1 || atBottom) current = section;
     }
+    const id = current?.id ?? '';
+    if (id === lastId) return;
+    lastId = id;
+    navLinks.forEach((link) => {
+      link.parentElement.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  }
 
-    // Carousel
-    $('.carousel').slick({
-        infinite: true,
-        prevArrow: '<button class="slick-prev" aria-label="Previous"><i class="fas fa-chevron-left fa-2x"></i></button>',
-        nextArrow: '<button class="slick-next" aria-label="Next"><i class="fas fa-chevron-right fa-2x"></i></button>'
-    });
+  updateActive();
+  window.addEventListener('scroll', updateActive, { passive: true });
+})();
 
-    // Mobile menu
-    $('#mobile-menu-button').click(function (e) {
-        e.preventDefault();
-        if ($('#mobile-menu-button').attr('aria-expanded') === 'true') {
-            closeMobileMenu();
-        } else {
-            openMobileMenu();
-        }
-    });
-    $('.li-section').click(function () {
-        closeMobileMenu();
-    });
-
-    // Popup portfolio
-    $('.image-popup').magnificPopup({
-        type: 'inline',
-        gallery: { enabled: true },
-        mainClass: 'mfp-zoom-in'
-    });
-    $('.popup-modal-close').click(function (e) {
-        e.preventDefault();
-        $.magnificPopup.close();
-    });
-
-    // Smooth scroll
-    $('.anchor').bind('click', function (event) {
-        const anchor = $(this);
-        const anchorId = anchor.attr('href').split('#')[1];
-        animateAnchor(anchorId, event);
-    });
+// ─── Smooth scroll ────────────────────────────────────────────────────────
+document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('.anchor');
+  if (!anchor) return;
+  const href = anchor.getAttribute('href');
+  if (!href?.startsWith('#')) return;
+  const target = document.getElementById(href.slice(1));
+  if (!target) return;
+  e.preventDefault();
+  target.scrollIntoView({ behavior: 'smooth' });
 });
 
-function collapseNavbar() {
-    if ($('.nav-desktop').offset().top > 50 || $('.nav-mobile').offset().top > 50) {
-        $('nav').removeClass('navbar-expanded').addClass('navbar-collapsed');
-    } else {
-        $('nav').removeClass('navbar-collapsed').addClass('navbar-expanded');
-    }
-}
+// ─── Mobile menu ──────────────────────────────────────────────────────────
+(function () {
+  const btn = document.getElementById('mobile-menu-button');
+  if (!btn) return;
 
-function animateAnchor(anchorId, event) {
-    const elm = $('[id=' + anchorId + ']');
-    if (elm.length >= 1) {
-        $('html, body').stop().animate({ scrollTop: elm.offset().top }, 1500, 'easeInOutExpo');
-        if (event) { event.preventDefault(); }
-    }
-}
+  function openMenu() {
+    document.getElementById('mobile-menu-button-closed').style.display = 'none';
+    document.getElementById('mobile-menu-button-opened').style.display = '';
+    btn.setAttribute('aria-expanded', 'true');
+    document.getElementById('mobile-menu-sections').classList.remove('hidden');
+  }
 
-function openMobileMenu() {
-    $('#mobile-menu-button-closed').hide();
-    $('#mobile-menu-button-opened').show();
-    $('#mobile-menu-button').attr('aria-expanded', 'true');
-    $('#mobile-menu-sections').removeClass('hidden');
-}
+  function closeMenu() {
+    document.getElementById('mobile-menu-button-closed').style.display = '';
+    document.getElementById('mobile-menu-button-opened').style.display = 'none';
+    btn.setAttribute('aria-expanded', 'false');
+    document.getElementById('mobile-menu-sections').classList.add('hidden');
+  }
 
-function closeMobileMenu() {
-    $('#mobile-menu-button-closed').show();
-    $('#mobile-menu-button-opened').hide();
-    $('#mobile-menu-button').attr('aria-expanded', 'false');
-    $('#mobile-menu-sections').addClass('hidden');
-}
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    btn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+  });
+
+  document.querySelectorAll('.li-section').forEach((li) => li.addEventListener('click', closeMenu));
+})();
+
+// ─── Carousel ─────────────────────────────────────────────────────────────
+(function () {
+  const track = document.querySelector('.carousel-track');
+  if (!track) return;
+  const slides = Array.from(track.children);
+  let current = 0;
+
+  function goTo(index) {
+    current = ((index % slides.length) + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+  }
+
+  document.getElementById('carousel-prev')?.addEventListener('click', () => goTo(current - 1));
+  document.getElementById('carousel-next')?.addEventListener('click', () => goTo(current + 1));
+})();
+
+// ─── Portfolio modals ─────────────────────────────────────────────────────
+(function () {
+  document.querySelectorAll('.image-popup').forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dialog = document.getElementById('dialog-' + trigger.dataset.modal);
+      dialog?.showModal();
+    });
+  });
+
+  document.querySelectorAll('.portfolio-dialog').forEach((dialog) => {
+    dialog.querySelector('.popup-modal-close')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+  });
+})();
