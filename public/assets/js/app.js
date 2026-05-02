@@ -150,11 +150,11 @@ document.addEventListener('click', (e) => {
   dialogs.forEach((dialog, i) => {
     if (!dialog) return;
     dialog.querySelector('.popup-modal-close')?.addEventListener('click', closeAll);
-    dialog.querySelector('.gallery-prev')?.addEventListener('click', () =>
-      openAt((i - 1 + dialogs.length) % dialogs.length)
+    dialog.querySelectorAll('.gallery-prev').forEach(btn =>
+      btn.addEventListener('click', () => openAt((i - 1 + dialogs.length) % dialogs.length))
     );
-    dialog.querySelector('.gallery-next')?.addEventListener('click', () =>
-      openAt((i + 1) % dialogs.length)
+    dialog.querySelectorAll('.gallery-next').forEach(btn =>
+      btn.addEventListener('click', () => openAt((i + 1) % dialogs.length))
     );
     dialog.addEventListener('click', (e) => { if (e.target === dialog) closeAll(); });
   });

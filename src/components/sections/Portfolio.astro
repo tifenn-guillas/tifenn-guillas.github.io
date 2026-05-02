@@ -82,21 +82,35 @@ const { locale, label } = Astro.props;
                         >
                             <button
                                 type="button"
-                                class="gallery-prev flex-shrink-0 text-tg-white hover:text-tg-pink transition-colors p-4"
+                                class="gallery-prev hidden sm:block flex-shrink-0 text-tg-white hover:text-tg-pink transition-colors p-4"
                             >
                                 <span class="fas fa-chevron-left fa-2x fa-fw" />
                             </button>
 
                             <div class="portfolio-panel bg-tg-blue">
-                                <div class="flex justify-end">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center sm:hidden">
+                                        <button
+                                            type="button"
+                                            class="gallery-prev p-2.5 text-tg-white hover:text-tg-pink transition-colors"
+                                        >
+                                            <span class="fas fa-chevron-left fa-lg fa-fw" />
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="gallery-next p-2.5 text-tg-white hover:text-tg-pink transition-colors"
+                                        >
+                                            <span class="fas fa-chevron-right fa-lg fa-fw" />
+                                        </button>
+                                    </div>
                                     <button
                                         type="button"
-                                        class="popup-modal-close p-2.5 text-tg-pink hover:text-tg-soft-pink transition-colors"
+                                        class="popup-modal-close ml-auto p-2.5 text-tg-pink hover:text-tg-soft-pink transition-colors"
                                     >
                                         <span class="fas fa-times fa-lg fa-fw" />
                                     </button>
                                 </div>
-                                <div class="px-14 pb-14">
+                                <div class="px-6 pb-6 sm:px-14 sm:pb-14">
                                     <h4 class="text-tg-white">
                                         {project.title}
                                     </h4>
@@ -123,7 +137,7 @@ const { locale, label } = Astro.props;
 
                             <button
                                 type="button"
-                                class="gallery-next flex-shrink-0 text-tg-white hover:text-tg-pink transition-colors p-4"
+                                class="gallery-next hidden sm:block flex-shrink-0 text-tg-white hover:text-tg-pink transition-colors p-4"
                             >
                                 <span class="fas fa-chevron-right fa-2x fa-fw" />
                             </button>
