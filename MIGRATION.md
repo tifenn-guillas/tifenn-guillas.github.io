@@ -60,8 +60,8 @@
 - [x] **5.3** — Refonte header hero
 - [x] **5.4** — Passe globale typographie et espacements
 - [x] **5.5** — Animations et micro-interactions (remplacer jQuery + WoW.js par solution Astro native)
-- [ ] **5.6** — Revue mobile / responsive
-- [ ] **5.7** — QA design finale
+- [x] **5.6** — Revue mobile / responsive
+- [x] **5.7** — QA design finale
 
 ## Epic 6 — Release
 

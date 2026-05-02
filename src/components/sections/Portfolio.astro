@@ -65,12 +65,12 @@ const { locale, label } = Astro.props;
                 portfolio.map((project) => (
                     <>
                         <a
-                            class="image-popup flex"
+                            class="image-popup aspect-video"
                             href="#"
                             data-modal={project.id}
                         >
                             <img
-                                class="flex-1 object-fill"
+                                class="w-full h-full object-cover"
                                 src={`/assets/images/portfolio/${project.miniature}`}
                                 alt={`Project ${project.title} thumbnail`}
                             />

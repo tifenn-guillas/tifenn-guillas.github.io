@@ -19,9 +19,9 @@ const { locale, label } = Astro.props;
       <div class="flex-none self-center md:order-last p-6">
         <div class="rounded-full border-2 border-tg-pink">
           <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-tg-white overflow-hidden">
-            <picture>
+            <picture class="block w-full h-full">
               <source srcset="/assets/images/profile.webp" type="image/webp" />
-              <img src="/assets/images/profile.jpg" alt="Photo de profil de Tifenn Guillas" width="248" height="272" />
+              <img src="/assets/images/profile.jpg" alt="Photo de profil de Tifenn Guillas" class="w-full h-full object-cover" width="248" height="272" />
             </picture>
           </div>
         </div>
