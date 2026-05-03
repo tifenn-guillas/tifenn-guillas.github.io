@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { type Locale } from '../../i18n';
+import { layout } from '../../data/layout';
+import { sections } from '../../data/sections';
+import Loader from '../../components/atoms/Loader.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/sections/Header.astro';
+import About from '../../components/sections/About.astro';
+import Links from '../../components/sections/Links.astro';
+import Skills from '../../components/sections/Skills.astro';
+import Resume from '../../components/sections/Resume.astro';
+import Formation from '../../components/sections/Formation.astro';
+import Portfolio from '../../components/sections/Portfolio.astro';
+import Goals from '../../components/sections/Goals.astro';
+import Hobbies from '../../components/sections/Hobbies.astro';
+import Contact from '../../components/sections/Contact.astro';
+
+const locale: Locale = 'fr';
+
+const s = (name: string) => sections.find((sec) => sec.name === name)!;
+---
+
+<BaseLayout
+  locale={locale}
+  title={layout.title[locale]}
+  description={layout.description[locale]}
+  ogTitle={layout.og.title[locale]}
+  ogDescription={layout.og.description[locale]}
+  ogUrl={layout.og.url[locale]}
+  ogImage={layout.og.image[locale]}
+  keywords={layout.keywords[locale]}
+>
+  <Loader />
+  <Navbar locale={locale} />
+  <main>
+    <Header locale={locale} />
+    <About locale={locale} label={s('about').label![locale]} />
+    <Links />
+    <Skills locale={locale} label={s('skills').label![locale]} />
+    <Resume locale={locale} label={s('resume').label![locale]} />
+    <Formation locale={locale} label={s('formation').label![locale]} />
+    <Portfolio locale={locale} label={s('portfolio').label![locale]} />
+    <Goals locale={locale} label={s('goals').label![locale]} />
+    <Hobbies locale={locale} />
+    <Contact locale={locale} label={s('contact').label![locale]} />
+  </main>
+  <Footer locale={locale} />
+</BaseLayout>

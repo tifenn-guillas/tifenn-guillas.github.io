@@ -1,0 +1,74 @@
+---
+import type { Locale } from '../../i18n';
+import { contact } from '../../data/contact';
+import { socials } from '../../data/socials';
+import BlockName from '../atoms/BlockName.astro';
+
+interface Props {
+  locale: Locale;
+  label: string;
+}
+
+const { locale, label } = Astro.props;
+const linkedin = socials.find((s) => s.name === 'LinkedIn')!;
+---
+
+<div id="contact" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+  <div class="container mx-auto">
+    <BlockName label={label} background="white" direction="left" />
+
+    <div class="text-center">
+      <h4 class="mb-4 uppercase">
+        {contact.title[locale]}
+      </h4>
+      <p>
+        {contact.description[locale]}
+      </p>
+      <div class="mt-2.5 mb-10 flex justify-center">
+        <div class="bg-tg-pink w-10 h-0.5"></div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-center items-start gap-8 sm:gap-24 w-fit mx-auto sm:w-auto">
+        <!-- Email : href construit par JS, jamais en clair dans le HTML -->
+        <a id="contact-email-card" href="#" class="contact-card flex items-center gap-5">
+          <span class="fas fa-envelope fa-2x text-tg-pink shrink-0"></span>
+          <div class="text-left">
+            <div class="contact-card-label text-xs uppercase tracking-widest mb-1">Email</div>
+            <div id="contact-email-text" class="font-medium text-sm text-gray-500 italic">
+              tifenn.guillas [at] gmail.com
+            </div>
+          </div>
+        </a>
+        <!-- LinkedIn -->
+        <a href={linkedin.url} target="_blank" class="contact-card flex items-center gap-5">
+          <span class="fab fa-linkedin-in fa-2x text-tg-pink shrink-0"></span>
+          <div class="text-left">
+            <div class="contact-card-label text-xs uppercase tracking-widest mb-1">LinkedIn</div>
+            <div class="font-medium text-sm">{linkedin.username}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .contact-card-label { color: var(--color-tg-soft-gray); transition: color 0.2s; }
+  .contact-card:hover .contact-card-label { color: var(--color-tg-pink); }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    const u = 'tifenn.guillas';
+    const d = 'gmail.com';
+    const card = document.getElementById('contact-email-card');
+    const label = document.getElementById('contact-email-text');
+    if (!card || !label) return;
+    label.textContent = u + '@' + d;
+    label.classList.remove('text-gray-500', 'italic');
+    card.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = 'mailto:' + u + '@' + d;
+    });
+  });
+</script>

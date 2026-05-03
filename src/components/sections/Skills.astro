@@ -1,0 +1,33 @@
+---
+import type { Locale } from '../../i18n';
+import { skills } from '../../data/skills';
+import BlockName from '../atoms/BlockName.astro';
+import Card from '../atoms/Card.astro';
+
+interface Props {
+  locale: Locale;
+  label: string;
+}
+
+const { locale, label } = Astro.props;
+---
+
+<div id="skills" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
+  <div class="container mx-auto">
+    <BlockName label={label} background="white" direction="right" />
+
+    <div class="text-center px-6 lg:px-20 xl:px-40">
+      <h4 class="mb-4 uppercase">
+        {skills.title[locale]}
+      </h4>
+      <p>
+        {skills.description[locale]}
+      </p>
+      <div class="mt-10 grid grid-flow-row lg:grid-flow-col gap-10 md:px-12 lg:px-0 text-left">
+        {skills.list.map((stack) => (
+          <Card name={stack.stack[locale]} technologies={stack.technologies} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

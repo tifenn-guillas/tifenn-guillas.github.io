@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+import type { Locale } from '../i18n';
+import { socials } from '../data/socials';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogImage?: string;
+  keywords?: string;
+}
+
+const {
+  locale,
+  title,
+  description,
+  ogTitle = title,
+  ogDescription = description,
+  ogUrl = `https://tifenn-guillas.fr/${locale}/`,
+  ogImage = '/assets/images/miniature.jpg',
+  keywords = 'web developer, angular, symfony, php, postgresql, typescript, docker',
+} = Astro.props;
+
+const lang = locale === 'fr' ? 'fr-FR' : 'en-US';
+const jobTitle = locale === 'fr' ? "Développeuse d'Applications Web" : 'Web Application Developer';
+const jsonLd = {
+  '@context': 'https://schema.org/',
+  '@type': 'Person',
+  name: 'Tifenn Guillas',
+  jobTitle,
+  url: `https://tifenn-guillas.fr/${locale}/`,
+  image: 'https://tifenn-guillas.fr/assets/images/logo.svg',
+  email: 'tifenn.guillas@gmail.com',
+  sameAs: socials.filter((s) => s.url.startsWith('http')).map((s) => s.url),
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Tifenn Guillas" />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tifenn Guillas" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:locale" content={lang} />
+    <meta property="og:locale:alternate" content={locale === 'fr' ? 'en-US' : 'fr-FR'} />
+    <meta property="og:image" content={`https://tifenn-guillas.fr${ogImage}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogTitle} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={`https://tifenn-guillas.fr${ogImage}`} />
+    <meta name="twitter:image:alt" content={ogTitle} />
+
+    <!-- Preload critical font files -->
+    <link rel="preload" href="/assets/fonts/roboto-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/roboto-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preload LCP hero background -->
+    <link rel="preload" href="/assets/images/hero.webp" as="image" type="image/webp" />
+
+    <!-- FontAwesome non-blocking -->
+    <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" /></noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="bg-tg-blue font-roboto text-tg-gray">
+    <slot />
+
+    <script is:inline src="/assets/js/app.js"></script>
+  </body>
+</html>

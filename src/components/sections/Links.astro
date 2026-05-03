@@ -1,0 +1,17 @@
+---
+import { socials } from '../../data/socials';
+---
+
+<div id="links" class="bg-parallax-image bg-cover bg-center bg-fixed">
+  <div class="bg-tg-blue/70">
+    <div class="container mx-auto py-16 grid grid-cols-3 divide-x divide-tg-pink">
+      {socials.map((social) => (
+        <div class="text-center text-tg-pink">
+          <a href={social.url} class="mx-1" target={social.external === false ? '_self' : '_blank'} title={social.name}>
+            <span class={`fa-4x ${social.fontawesome}`}></span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

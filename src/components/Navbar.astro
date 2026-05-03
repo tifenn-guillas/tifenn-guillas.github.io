@@ -1,0 +1,119 @@
+---
+import type { Locale } from '../i18n';
+import { getAlternateUrl } from '../i18n';
+import { navbar } from '../data/navbar';
+import { sections } from '../data/sections';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const alternateUrl = getAlternateUrl(Astro.url, locale);
+const menuSections = sections.filter((s) => s.menu_displayed);
+---
+
+<style is:global>
+  nav { transition: padding 300ms ease-in; }
+  .navbar-expanded { padding-block: 0.75rem; }
+  .navbar-collapsed { padding-block: 0; }
+  .active { color: var(--color-tg-soft-pink); }
+</style>
+
+<!-- Navbar mobile (xl:hidden) -->
+<nav class="nav-mobile xl:hidden flex flex-col fixed z-10 top-0 inset-x-0 bg-tg-blue/80 text-tg-white text-xs tracking-wider uppercase">
+  <div class="flex justify-between">
+    <button
+      type="button"
+      id="mobile-menu-button"
+      class="inline-flex items-center justify-center mx-2.5 p-2.5 text-tg-pink"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <span id="mobile-menu-button-closed" class="fas fa-bars fa-lg fa-fw"></span>
+      <span id="mobile-menu-button-opened" class="fas fa-times fa-lg fa-fw" style="display:none"></span>
+    </button>
+
+    <div class="lg:flex-none my-auto mx-2.5 p-2">
+      <a class="anchor" href="#page-top">
+        <img src="/assets/images/logo.svg" alt="logo" width="40" height="40" />
+      </a>
+    </div>
+
+    <div class="flex-none my-auto mx-2.5">
+      <a
+        href={navbar.download_href[locale]}
+        target="_blank"
+        class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+        title={navbar.download_description[locale]}
+      >
+        <span class="fas fa-download fa-lg fa-fw"></span>
+      </a>
+    </div>
+  </div>
+
+  <div id="mobile-menu-sections" class="hidden">
+    <ul class="text-center">
+      {menuSections.map((section) => (
+        <li class="li-section flex hover:text-tg-pink">
+          <a href={`#${section.name}`} class="anchor py-4 flex-1">
+            {section.label![locale]}
+          </a>
+        </li>
+      ))}
+      <li class="flex">
+        <a href={alternateUrl} class="py-4 flex-1">
+          <img
+            src={`/assets/images/${navbar.flag[locale]}`}
+            class="inline-block"
+            alt={navbar.alt_flag[locale]}
+            width="24"
+            height="16"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Navbar desktop (xl+) -->
+<nav class="nav-desktop hidden xl:grid grid-cols-5 items-center fixed z-10 top-0 inset-x-0 bg-tg-blue/80 text-tg-white text-xs tracking-wider uppercase">
+  <div class="my-auto mx-2.5 p-2">
+    <a class="anchor" href="#page-top">
+      <img src="/assets/images/logo.svg" alt="logo" width="40" height="40" />
+    </a>
+  </div>
+
+  <ul class="col-span-3 text-center">
+    {menuSections.map((section) => (
+      <li class="inline-block hover:text-tg-pink">
+        <a href={`#${section.name}`} class="anchor p-3">
+          {section.label![locale]}
+        </a>
+      </li>
+    ))}
+    <li class="inline-block">
+      <a class="p-3" href={alternateUrl}>
+        <img
+          class="inline-block"
+          src={`/assets/images/${navbar.flag[locale]}`}
+          alt={navbar.alt_flag[locale]}
+          width="24"
+          height="16"
+        />
+      </a>
+    </li>
+  </ul>
+
+  <div class="text-right my-auto mx-2.5 p-2">
+    <a
+      href={navbar.download_href[locale]}
+      target="_blank"
+      class="p-2.5 border border-tg-pink bg-tg-pink text-center text-tg-white uppercase font-semibold tracking-widest hover:text-tg-pink hover:bg-tg-white"
+      title={navbar.download_description[locale]}
+    >
+      {navbar.download[locale]}
+    </a>
+  </div>
+</nav>

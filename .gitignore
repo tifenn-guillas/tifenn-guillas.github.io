@@ -1,9 +1,23 @@
+# Jekyll
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-.idea
 vendor
+
+# Astro
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
 yarn-error.log
-node_modules
-assets/dist
-!assets/dist/.gitkeep
+npm-debug.log*
+
+# Editor
+.idea
+.vscode/
+
+# Claude Code
+CLAUDE.md

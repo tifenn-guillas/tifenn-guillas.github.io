@@ -1,0 +1,44 @@
+import type { Section } from '../types';
+
+export const sections: Section[] = [
+  { name: 'navbar', template: 'navbar.html', menu_displayed: false },
+  { name: 'header', menu_displayed: false },
+  {
+    name: 'about',
+    label: { fr: 'A propos', en: 'About' },
+    menu_displayed: true,
+  },
+  { name: 'links', menu_displayed: false },
+  {
+    name: 'skills',
+    label: { fr: 'Compétences', en: 'Skills' },
+    menu_displayed: true,
+  },
+  {
+    name: 'resume',
+    label: { fr: 'Carrière', en: 'Resume' },
+    menu_displayed: true,
+  },
+  {
+    name: 'formation',
+    label: { fr: 'Formation', en: 'Education' },
+    menu_displayed: true,
+  },
+  {
+    name: 'portfolio',
+    label: { fr: 'Portfolio', en: 'Portfolio' },
+    menu_displayed: true,
+  },
+  {
+    name: 'goals',
+    label: { fr: 'Objectifs', en: 'TODO list' },
+    menu_displayed: true,
+  },
+  { name: 'hobbies', menu_displayed: false },
+  {
+    name: 'contact',
+    label: { fr: 'Contact', en: 'Contact' },
+    menu_displayed: true,
+  },
+  { name: 'footer', menu_displayed: false },
+];

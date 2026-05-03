@@ -1,25 +1,25 @@
 {
-  "name": "tifenn-guillas.github.io",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "tifenn-guillas",
+  "type": "module",
+  "version": "0.0.1",
   "repository": "git@github.com:tifenn-guillas/tifenn-guillas.github.io.git",
   "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "autoprefixer": "^10.4.0",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-replace": "^1.1.3",
-    "gulp-uglify": "^3.0.2",
-    "gulp-uglifycss": "^1.1.0",
-    "jquery": "^3.6.0",
-    "jquery-ui": "^1.13.2",
-    "magnific-popup": "^1.1.0",
-    "postcss": "^8.4.1",
-    "postcss-import": "^14.0.2",
-    "slick-carousel": "^1.8.1",
-    "tailwindcss": "^2",
-    "urijs": "^1.19.11",
-    "wowjs": "^1.1.3"
+    "@tailwindcss/vite": "^4.1.1",
+    "astro": "^6.1.9",
+    "tailwindcss": "^4.1.1"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.7.2",
+    "sharp": "^0.34.5"
   }
 }

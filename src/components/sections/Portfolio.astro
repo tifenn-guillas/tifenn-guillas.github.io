@@ -1,0 +1,158 @@
+---
+import type { Locale } from "../../i18n";
+import { portfolio } from "../../data/portfolio";
+import BlockName from "../atoms/BlockName.astro";
+
+interface Props {
+    locale: Locale;
+    label: string;
+}
+
+const { locale, label } = Astro.props;
+---
+
+<style is:global>
+    .image-popup {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--color-tg-pink);
+        cursor: pointer;
+    }
+    .image-popup img {
+        transition: all 300ms ease-in;
+    }
+    .image-popup:hover img {
+        opacity: 0.2;
+    }
+    .image-popup::before,
+    .image-popup::after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        z-index: 10;
+        background-color: var(--color-tg-white);
+        transform: translate(-50%, -50%);
+        transition: all 300ms ease-in;
+    }
+    .image-popup::before {
+        width: 4rem;
+        height: 0.125rem;
+        left: 0;
+        top: 50%;
+    }
+    .image-popup::after {
+        height: 4rem;
+        width: 0.125rem;
+        top: 100%;
+        left: 50%;
+    }
+    .image-popup:hover::before,
+    .image-popup:hover::after {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+</style>
+
+<div id="portfolio" class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
+    <div class="container mx-auto">
+        <BlockName label={label} background="blue" direction="left" />
+
+        <div
+            class="px-6 lg:px-20 xl:px-40 grid grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-12"
+        >
+            {
+                portfolio.map((project) => (
+                    <>
+                        <a
+                            class="image-popup aspect-video"
+                            href="#"
+                            data-modal={project.id}
+                        >
+                            <img
+                                class="w-full h-full object-cover"
+                                src={`/assets/images/portfolio/${project.miniature}`}
+                                alt={project.title}
+                                loading="lazy"
+                                decoding="async"
+                                width="400"
+                                height="225"
+                            />
+                        </a>
+
+                        <dialog
+                            id={`dialog-${project.id}`}
+                            class="portfolio-dialog"
+                        >
+                            <button
+                                type="button"
+                                class="gallery-prev hidden sm:block flex-shrink-0 text-tg-white hover:text-tg-pink transition-colors p-4"
+                            >
+                                <span class="fas fa-chevron-left fa-2x fa-fw" />
+                            </button>
+
+                            <div class="portfolio-panel bg-tg-blue">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center sm:hidden">
+                                        <button
+                                            type="button"
+                                            class="gallery-prev p-2.5 text-tg-white hover:text-tg-pink transition-colors"
+                                        >
+                                            <span class="fas fa-chevron-left fa-lg fa-fw" />
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="gallery-next p-2.5 text-tg-white hover:text-tg-pink transition-colors"
+                                        >
+                                            <span class="fas fa-chevron-right fa-lg fa-fw" />
+                                        </button>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="popup-modal-close ml-auto p-2.5 text-tg-pink hover:text-tg-soft-pink transition-colors"
+                                    >
+                                        <span class="fas fa-times fa-lg fa-fw" />
+                                    </button>
+                                </div>
+                                <div class="px-6 pb-6 sm:px-14 sm:pb-14">
+                                    <h4 class="text-tg-white">
+                                        {project.title}
+                                    </h4>
+                                    <p
+                                        class="pt-6 text-justify text-tg-soft-gray"
+                                        set:html={project.description[locale]}
+                                    />
+                                    {project.hashtags && (
+                                        <p class="pt-6 text-tg-pink font-light tracking-wide italic">
+                                            {project.hashtags
+                                                .map((tech) => `#${tech}`)
+                                                .join(" ")}
+                                        </p>
+                                    )}
+                                    {project.images.map((image) => (
+                                        <img
+                                            class="py-9 w-full"
+                                            src={`/assets/images/portfolio/${image}`}
+                                            alt={`${project.title} screenshot`}
+                                            loading="lazy"
+                                            decoding="async"
+                                            width="900"
+                                            height="600"
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="gallery-next hidden sm:block flex-shrink-0 text-tg-white hover:text-tg-pink transition-colors p-4"
+                            >
+                                <span class="fas fa-chevron-right fa-2x fa-fw" />
+                            </button>
+                        </dialog>
+                    </>
+                ))
+            }
+        </div>
+    </div>
+</div>

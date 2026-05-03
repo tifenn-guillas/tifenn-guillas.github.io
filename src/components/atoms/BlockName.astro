@@ -1,0 +1,30 @@
+---
+interface Props {
+  direction: 'left' | 'right';
+  background: 'blue' | 'white';
+  label: string;
+}
+
+const { direction, background, label } = Astro.props;
+
+const isLeft = direction === 'left';
+const isBlue = background === 'blue';
+---
+
+<div class={`flex ${isLeft ? 'justify-start' : 'justify-end'} pb-12`}>
+  <div class="px-2.5">
+    {isBlue && isLeft && (
+      <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInLeft" data-wow-offset="100">{label}</h2>
+    )}
+    {isBlue && !isLeft && (
+      <h2 class="mb-2.5 text-tg-soft-gray uppercase wow fadeInRight" data-wow-offset="100">{label}</h2>
+    )}
+    {!isBlue && isLeft && (
+      <h2 class="mb-2.5 uppercase wow fadeInLeft" data-wow-offset="100" data-wow-duration="1s">{label}</h2>
+    )}
+    {!isBlue && !isLeft && (
+      <h2 class="mb-2.5 uppercase wow fadeInRight" data-wow-offset="100" data-wow-duration="1s">{label}</h2>
+    )}
+    <div class="bg-tg-pink w-10 h-0.5"></div>
+  </div>
+</div>
