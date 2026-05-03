@@ -72,7 +72,11 @@ const { locale, label } = Astro.props;
                             <img
                                 class="w-full h-full object-cover"
                                 src={`/assets/images/portfolio/${project.miniature}`}
-                                alt={`Project ${project.title} thumbnail`}
+                                alt={project.title}
+                                loading="lazy"
+                                decoding="async"
+                                width="400"
+                                height="225"
                             />
                         </a>
 
@@ -129,7 +133,11 @@ const { locale, label } = Astro.props;
                                         <img
                                             class="py-9 w-full"
                                             src={`/assets/images/portfolio/${image}`}
-                                            alt={`Image ${image}`}
+                                            alt={`${project.title} screenshot`}
+                                            loading="lazy"
+                                            decoding="async"
+                                            width="900"
+                                            height="600"
                                         />
                                     ))}
                                 </div>

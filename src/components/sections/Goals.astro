@@ -33,6 +33,10 @@ const { locale, label } = Astro.props;
                         class="max-h-12 max-w-12"
                         src={`/assets/images/${task.icon}`}
                         alt={`${task.title[locale]} logo`}
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                        decoding="async"
                       />
                     )}
                   </div>

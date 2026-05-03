@@ -21,7 +21,7 @@ const { name, technologies, locale } = Astro.props;
           {techno.icon_type === 'fontawesome' ? (
             <span class={`fa-2x ${techno.icon}`}></span>
           ) : (
-            <img src={`/assets/images/${techno.icon}`} alt={techno.description[locale]} class="w-8 h-8 object-contain mx-auto" />
+            <img src={`/assets/images/${techno.icon}`} alt={techno.description[locale]} class="w-8 h-8 object-contain mx-auto" loading="lazy" decoding="async" width="32" height="32" />
           )}
         </div>
         <div class="flex-initial self-center mr-4">

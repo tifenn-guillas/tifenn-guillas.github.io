@@ -7,7 +7,7 @@ export interface SkillTechnology {
 }
 
 export interface SkillStack {
-  stack: string;
+  stack: BilingualString;
   technologies: SkillTechnology[];
 }
 

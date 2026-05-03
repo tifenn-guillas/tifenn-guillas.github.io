@@ -136,9 +136,9 @@ dialog.portfolio-dialog::backdrop {
 
 /* Background image utilities (not supported as CSS vars in Tailwind v4) */
 @utility bg-header-image {
-    background-image: url("/assets/images/hero.png");
+    background-image: url("/assets/images/hero.webp");
 }
 
 @utility bg-parallax-image {
-    background-image: url("/assets/images/parallax.jpg");
+    background-image: url("/assets/images/parallax.webp");
 }

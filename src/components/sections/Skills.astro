@@ -25,7 +25,7 @@ const { locale, label } = Astro.props;
       </p>
       <div class="mt-10 grid grid-flow-row lg:grid-flow-col gap-10 md:px-12 lg:px-0 text-left">
         {skills.list.map((stack) => (
-          <Card name={stack.stack} technologies={stack.technologies} locale={locale} />
+          <Card name={stack.stack[locale]} technologies={stack.technologies} locale={locale} />
         ))}
       </div>
     </div>

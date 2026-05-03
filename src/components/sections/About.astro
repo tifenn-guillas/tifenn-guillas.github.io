@@ -20,8 +20,8 @@ const { locale, label } = Astro.props;
         <div class="rounded-full border-2 border-tg-pink">
           <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-tg-white overflow-hidden">
             <picture class="block w-full h-full">
-              <source srcset="/assets/images/profile.webp" type="image/webp" />
-              <img src="/assets/images/profile.jpg" alt="Photo de profil de Tifenn Guillas" class="w-full h-full object-cover" width="248" height="272" />
+              <source srcset="/assets/images/profile-496.webp 2x, /assets/images/profile.webp 1x" type="image/webp" />
+              <img src="/assets/images/profile.webp" alt="Photo de profil de Tifenn Guillas" class="w-full h-full object-cover" width="248" height="248" loading="lazy" decoding="async" />
             </picture>
           </div>
         </div>
@@ -31,9 +31,9 @@ const { locale, label } = Astro.props;
         <h3 class="mb-2.5 text-tg-gray text-xl tracking-normal">
           {about.title[locale]}
         </h3>
-        <h5 class="mb-6 italic text-sm font-thin">
+        <h4 class="mb-6 italic text-sm font-thin">
           {about.subtitle[locale]}
-        </h5>
+        </h4>
         <p class="leading-6 text-justify">
           {about.description[locale]}
         </p>

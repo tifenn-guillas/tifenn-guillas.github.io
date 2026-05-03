@@ -65,9 +65,10 @@
 
 ## Epic 6 — Release
 
-- [ ] **6.0** — Supprimer les pages de dev (`src/pages/dev/`)
-- [ ] **6.1** — Tests cross-browser
-- [ ] **6.2** — Vérification du contenu FR et EN
-- [ ] **6.3** — Vérification domaine custom (CNAME) et DNS
-- [ ] **6.4** — Audit Lighthouse final (objectif : 90+ sur toutes les catégories)
-- [ ] **6.5** — Merge sur `main` + surveillance du déploiement
+- [x] **6.0** — Supprimer les pages de dev (`src/pages/dev/`)
+- [x] **6.1** — Tests cross-browser
+- [x] **6.2** — Vérification du contenu FR et EN
+- [x] **6.3** — Vérification domaine custom (CNAME) et DNS
+- [x] **6.4** — Nettoyage post-migration : supprimer tout le contenu Jekyll résiduel du repo (`_data/`, `_includes/`, `_layouts/`, `_plugins/`, `_posts/`, `_sass/`, `assets/` Jekyll, `_config.yml`, `Gemfile`, `Gemfile.lock`, `.bundle/`, tout fichier `.html` racine hérité de Jekyll) pour avoir un repo propre Astro uniquement
+- [x] **6.5** — Audit Lighthouse final (objectif : 90+ sur toutes les catégories)
+- [ ] **6.6** — Merge sur `main` + surveillance du déploiement

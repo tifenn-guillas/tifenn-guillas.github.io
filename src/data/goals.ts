@@ -106,7 +106,7 @@ export const goals: GoalYear[] = [
         },
       },
       {
-        title: { fr: 'Anglais', en: 'Anglais' },
+        title: { fr: 'Anglais', en: 'English' },
         icon_type: 'fontawesome',
         icon: 'fas fa-globe-asia',
         description: {

@@ -72,11 +72,16 @@ const jsonLd = {
     <!-- Preload critical font files -->
     <link rel="preload" href="/assets/fonts/roboto-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/roboto-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preload LCP hero background -->
+    <link rel="preload" href="/assets/images/hero.webp" as="image" type="image/webp" />
 
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" />
+    <!-- FontAwesome non-blocking -->
+    <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" /></noscript>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />

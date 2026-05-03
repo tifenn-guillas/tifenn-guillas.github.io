@@ -68,7 +68,7 @@ export const resume: ResumeData = {
       },
       tasks: {
         fr: "Mise en production de sites web pour l'international en WordPress hébergés sur Microsoft Azure. Rapatriement en interne du site web principal sous Symfony, sous-traité par une agence web. Création d'un convertisseur de devises communiquant avec les API de TransferWise.",
-        en: 'To reach out new costumers internationally, I deployed Wordpress websites hosted on Microsoft Azure. I was in charge of taking over in-house the main website from a web agency. I built a currency converter that interacts with Wize APIs.',
+        en: 'To reach out new costumers internationally, I deployed Wordpress websites hosted on Microsoft Azure. I was in charge of taking over in-house the main website from a web agency. I built a currency converter that interacts with TransferWise APIs.',
       },
       technologies: [
         'Azure',
@@ -93,7 +93,7 @@ export const resume: ResumeData = {
       },
       description: {
         fr: "GAZPAR est une application qui permet de traiter des catalogues d'étoiles. Ses utilisateurs peuvent exécuter à distance un ensemble d'outils développés par le LAM et ses partenaires. Ils obtiennent ainsi des résultats à valeurs ajoutées du fait de l'expertise du responsable scientifique de l'outil choisi.",
-        en: 'GAZPAR is an application that allows users to execute some tools remotely on their own catalogues of stars. These tools are developed and provided by the LAM and partners. Users get results with added values due to the valuation of the scientific responsible of the choosen tool.',
+        en: 'GAZPAR is an application that allows users to execute some tools remotely on their own catalogues of stars. These tools are developed and provided by the LAM and partners. Users get results with added values due to the valuation of the scientific responsible of the chosen tool.',
       },
       tasks: {
         fr: 'Restructuration de la base de données sous PostgreSQL. Réécriture en Angular2 et PHP de GAZPAR, précédemment en Django (Python). Prise en compte de nouvelles spécificités, comme par exemple l\'upload de fichiers de gros volumes. Ajout de nouveaux algorithmes de traitements de catalogues.',
@@ -122,7 +122,7 @@ export const resume: ResumeData = {
       },
       description: {
         fr: "POPCOrn est un outil de comptage des poissons et coraux présents dans le Parc National des Calanques afin de déterminer l'efficacité de l'espace protégé. Cette application interne est destinée aux plongeurs du Groupement d'Intérêt Scientifique Posidonie, du parc, et à terme à ceux du Parc National de Port Cros.",
-        en: 'POPCOrn is a counting tool of fish and coral present in the Parc National des Calanques to dertermined the good health of it. This internal application is made for GIS Posidonie divers, the Parc National des Calanques divers, and in a long term, for the Parc National de Port Cros divers.',
+        en: 'POPCOrn is a counting tool of fish and coral present in the Parc National des Calanques to determined the good health of it. This internal application is made for GIS Posidonie divers, the Parc National des Calanques divers, and in a long term, for the Parc National de Port Cros divers.',
       },
       tasks: {
         fr: "Conception d'une base de données PostgreSQL et importation de données provenant d'une base Access. Stockage et manipulation de données spatiales grâce à PostGIS. Conception d'une application web afin d'intégrer de nouvelles données dans la base.",

@@ -11,7 +11,7 @@ export const skills: SkillsData = {
   },
   list: [
     {
-      stack: 'Backend',
+      stack: { fr: 'Backend', en: 'Backend' },
       technologies: [
         {
           icon: 'fab fa-php',
@@ -42,7 +42,7 @@ export const skills: SkillsData = {
       ],
     },
     {
-      stack: 'Frontend',
+      stack: { fr: 'Frontend', en: 'Frontend' },
       technologies: [
         {
           icon: 'fab fa-angular',
@@ -79,7 +79,7 @@ export const skills: SkillsData = {
       ],
     },
     {
-      stack: 'Environnement',
+      stack: { fr: 'Environnement', en: 'Environment' },
       technologies: [
         {
           icon: 'fas fa-cubes',
