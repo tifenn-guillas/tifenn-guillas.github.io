@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tifenn-guillas.fr/sitemap-index.xml
