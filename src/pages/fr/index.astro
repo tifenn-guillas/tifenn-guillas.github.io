@@ -43,7 +43,7 @@ const s = (name: string) => sections.find((sec) => sec.name === name)!;
     <Formation locale={locale} label={s('formation').label![locale]} />
     <Portfolio locale={locale} label={s('portfolio').label![locale]} />
     <Goals locale={locale} label={s('goals').label![locale]} />
-    <Hobbies locale={locale} />
+    <Hobbies locale={locale} label={s('hobbies').label![locale]} />
     <Contact locale={locale} label={s('contact').label![locale]} />
   </main>
   <Footer locale={locale} />

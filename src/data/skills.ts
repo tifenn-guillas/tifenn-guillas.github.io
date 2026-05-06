@@ -1,118 +1,67 @@
-import type { SkillsData } from '../types';
+import type { SkillsData } from "../types";
 
 export const skills: SkillsData = {
   title: {
-    fr: 'Mon savoir-faire',
-    en: 'My skills',
+    fr: "Mon savoir-faire",
+    en: "My skills",
   },
   description: {
     fr: "Grâce à mes différentes expériences, qu'elles soient professionnelles ou personnelles, j'ai pu acquérir des compétences, en particulier dans les catégories suivantes:",
-    en: 'Thanks to the various projects I have worked on, professional or personal, I acquired some skills, especially in these areas:',
+    en: "Thanks to the various projects I have worked on, I acquired skills in these areas.",
   },
   list: [
     {
-      stack: { fr: 'Backend', en: 'Backend' },
+      stack: { fr: "Backend", en: "Backend" },
       technologies: [
-        {
-          icon: 'fab fa-php',
-          icon_type: 'fontawesome',
-          description: { fr: 'PHP', en: 'PHP' },
-        },
-        {
-          icon: 'fab fa-symfony',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'Framework Symfony, Doctrine, Twig...',
-            en: 'Symfony framework, Doctrine, Twig...',
-          },
-        },
-        {
-          icon: 'fab fa-python',
-          icon_type: 'fontawesome',
-          description: { fr: 'Python', en: 'Python' },
-        },
-        {
-          icon: 'fas fa-database',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'MySQL, PostgreSQL, PL/SQL, PostGIS...',
-            en: 'MySQL, PostgreSQL, PL/SQL, PostGIS...',
-          },
-        },
+        { label: "PHP", tech: "php", icon: "fab fa-php" },
+        { label: "Symfony", tech: "symfony", icon: "fab fa-symfony" },
+        { label: "Doctrine", tech: "doctrine", svg: "doctrine.svg" },
+        { label: "Twig", tech: "twig", svg: "twig.svg" },
+        { label: "Python", tech: "python", icon: "fab fa-python" },
+        { label: "Java", tech: "java", icon: "fab fa-java" },
+        { label: "gRPC", tech: "grpc" },
+        { label: "REST API", tech: "restapi" },
       ],
     },
     {
-      stack: { fr: 'Frontend', en: 'Frontend' },
+      stack: { fr: "Frontend", en: "Frontend" },
       technologies: [
-        {
-          icon: 'fab fa-angular',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'Framework Angular, Typescript, NgRx, RxJS...',
-            en: 'Angular framework, Typescript, NgRx, RxJS...',
-          },
-        },
-        {
-          icon: 'far fa-check-square',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'Tests unitaires : Jasmine, Jest',
-            en: 'Unit test: Jasmine, Jest',
-          },
-        },
-        {
-          icon: 'fab fa-bootstrap',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'Frameworks CSS : Bootstrap, Tailwindcss',
-            en: 'CSS frameworks: Bootstrap, Tailwindcss',
-          },
-        },
-        {
-          icon: 'far fa-file-code',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'Sites web statiques : Jekyll - GitHub Pages',
-            en: 'Static websites: Jekyll - GitHub Pages',
-          },
-        },
+        { label: "Angular", tech: "angular", icon: "fab fa-angular" },
+        { label: "TypeScript", tech: "typescript", icon: "fab fa-typescript" },
+        { label: "RxJS", tech: "rxjs", svg: "rxjs.svg" },
+        { label: "NgRx", tech: "ngrx", svg: "ngrx.svg" },
+        { label: "Bootstrap", tech: "bootstrap", icon: "fab fa-bootstrap" },
+        { label: "Tailwind", tech: "tailwind", icon: "fab fa-tailwind-css" },
       ],
     },
     {
-      stack: { fr: 'Environnement', en: 'Environment' },
+      stack: { fr: "Data", en: "Data" },
       technologies: [
-        {
-          icon: 'fas fa-cubes',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'CI/CD, Docker, git',
-            en: 'CI/CD, Docker, git',
-          },
-        },
-        {
-          icon: 'fab fa-linux',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'OS : Linux, MacOS',
-            en: 'OS: Linux, MacOS',
-          },
-        },
-        {
-          icon: 'fas fa-code',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'IDE : PHPStorm, VSCode...',
-            en: 'IDE: PHPStorm, VSCode...',
-          },
-        },
-        {
-          icon: 'fas fa-mug-hot',
-          icon_type: 'fontawesome',
-          description: {
-            fr: 'Café ou chocolat chaud :)',
-            en: 'Coffee or hot chocolate :)',
-          },
-        },
+        { label: "PostgreSQL", tech: "postgresql", icon: "fab fa-postgresql" },
+        { label: "MySQL", tech: "mysql" },
+        { label: "PostGIS", tech: "postgis" },
+        { label: "PL/SQL", tech: "plsql" },
+      ],
+    },
+    {
+      stack: { fr: "Tests & qualité", en: "Tests & quality" },
+      technologies: [
+        { label: "Jest", tech: "jest" },
+        { label: "Jasmine", tech: "jasmine" },
+        { label: "PHPUnit", tech: "phpunit" },
+        { label: "Pest", tech: "pest" },
+        { label: "SonarQube", tech: "sonarqube" },
+      ],
+    },
+    {
+      stack: { fr: "Environnement", en: "Environment" },
+      technologies: [
+        { label: "Docker", tech: "docker", icon: "fab fa-docker" },
+        { label: "Git", tech: "git", icon: "fab fa-git-alt" },
+        { label: "CI/CD", tech: "cicd" },
+        { label: "Linux", tech: "linux", icon: "fab fa-linux" },
+        { label: "Azure", tech: "azure" },
+        { label: "Café", tech: "cafe", icon: "fas fa-mug-hot" },
       ],
     },
   ],

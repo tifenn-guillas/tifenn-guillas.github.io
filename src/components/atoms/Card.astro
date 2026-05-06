@@ -1,32 +1,22 @@
 ---
-import type { Locale } from '../../i18n';
 import type { SkillTechnology } from '../../types';
 
 interface Props {
   name: string;
   technologies: SkillTechnology[];
-  locale: Locale;
 }
 
-const { name, technologies, locale } = Astro.props;
+const { name, technologies } = Astro.props;
 ---
 
 <div class="border-2 border-tg-pink">
   <h3 class="p-4 uppercase">{name}</h3>
   <div class="mx-4 h-px bg-tg-pink"></div>
   <div class="my-4">
-    {technologies.map((techno) => (
-      <div class="flex gap-4">
-        <div class="ml-4 w-10 h-10 flex-none self-center text-center">
-          {techno.icon_type === 'fontawesome' ? (
-            <span class={`fa-2x ${techno.icon}`}></span>
-          ) : (
-            <img src={`/assets/images/${techno.icon}`} alt={techno.description[locale]} class="w-8 h-8 object-contain mx-auto" loading="lazy" decoding="async" width="32" height="32" />
-          )}
-        </div>
-        <div class="flex-initial self-center mr-4">
-          {techno.description[locale]}
-        </div>
+    {technologies.map((tech) => (
+      <div class="flex gap-4 ml-4 my-2 items-center">
+        <i class={`${tech.icon} fa-fw fa-lg flex-none`} aria-hidden="true" />
+        <span class="text-sm">{tech.label}</span>
       </div>
     ))}
   </div>

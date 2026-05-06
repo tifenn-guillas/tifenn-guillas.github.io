@@ -34,7 +34,7 @@ export const sections: Section[] = [
     label: { fr: 'Objectifs', en: 'TODO list' },
     menu_displayed: true,
   },
-  { name: 'hobbies', menu_displayed: false },
+  { name: 'hobbies', label: { fr: 'Aparté', en: 'Aside' }, menu_displayed: false },
   {
     name: 'contact',
     label: { fr: 'Contact', en: 'Contact' },

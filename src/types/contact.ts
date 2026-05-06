@@ -5,9 +5,14 @@ export interface ContactData {
   description: BilingualString;
 }
 
+export interface HobbyItem {
+  svg: string;
+  title: BilingualString;
+  text: BilingualString;
+}
+
 export interface HobbiesData {
-  description: BilingualString;
-  download: BilingualString;
-  download_href: BilingualString;
-  download_description: BilingualString;
+  title: BilingualString;
+  subtitle: BilingualString;
+  items: HobbyItem[];
 }

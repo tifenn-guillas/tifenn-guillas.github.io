@@ -1,9 +1,10 @@
 import type { BilingualString } from './common';
 
 export interface SkillTechnology {
-  icon: string;
-  icon_type: 'fontawesome' | 'custom';
-  description: BilingualString;
+  label: string;
+  tech: string;
+  icon?: string;
+  svg?: string;
 }
 
 export interface SkillStack {
