@@ -6,5 +6,5 @@ export type { ResumeData, ResumeJob } from './resume';
 export type { FormationData, FormationItem } from './formation';
 export type { PortfolioProject } from './portfolio';
 export type { GoalYear, GoalTask } from './goals';
-export type { ContactData, HobbiesData } from './contact';
+export type { ContactData, HobbiesData, HobbyItem } from './contact';
 export type { Social } from './socials';

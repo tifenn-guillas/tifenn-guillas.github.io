@@ -1,33 +1,117 @@
 ---
-import type { Locale } from '../../i18n';
-import { skills } from '../../data/skills';
-import BlockName from '../atoms/BlockName.astro';
-import Card from '../atoms/Card.astro';
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import type { Locale } from "../../i18n";
+import { skills } from "../../data/skills";
+import BlockName from "../atoms/BlockName.astro";
+
+const readSvg = (filename: string): string => {
+    try {
+        return readFileSync(resolve(process.cwd(), "public/assets/images", filename), "utf-8");
+    } catch {
+        return "";
+    }
+};
 
 interface Props {
-  locale: Locale;
-  label: string;
+    locale: Locale;
+    label: string;
 }
 
 const { locale, label } = Astro.props;
+
+const hoverColors: Record<string, string> = {
+    php: "#777BB4",
+    symfony: "var(--color-tg-blue)",
+    doctrine: "#FC6A31",
+    twig: "#8fbc14",
+    python: "#3776AB",
+    java: "#007396",
+    grpc: "var(--color-tg-blue)",
+    restapi: "var(--color-tg-blue)",
+    angular: "#DD0031",
+    typescript: "#3178C6",
+    rxjs: "#B7178C",
+    ngrx: "#BA2BD2",
+    bootstrap: "#7952B3",
+    tailwind: "#06B6D4",
+    postgresql: "#4169E1",
+    mysql: "#4479A1",
+    postgis: "#4169E1",
+    plsql: "#F80000",
+    jest: "#C21325",
+    jasmine: "#8A4182",
+    phpunit: "#6C7EB7",
+    pest: "#F9322C",
+    sonarqube: "#4E9BCD",
+    docker: "#2496ED",
+    git: "#F05032",
+    cicd: "var(--color-tg-blue)",
+    linux: "#e09d00",
+    azure: "#0089D6",
+    cafe: "var(--color-tg-pink)",
+};
 ---
 
 <div id="skills" class="py-16 xl:px-24 2xl:px-52 bg-tg-white">
-  <div class="container mx-auto">
-    <BlockName label={label} background="white" direction="right" />
+    <div class="container mx-auto">
+        <BlockName label={label} background="white" direction="right" />
 
-    <div class="text-center px-6 lg:px-20 xl:px-40">
-      <h4 class="mb-4 uppercase">
-        {skills.title[locale]}
-      </h4>
-      <p>
-        {skills.description[locale]}
-      </p>
-      <div class="mt-10 grid grid-flow-row lg:grid-flow-col gap-10 md:px-12 lg:px-0 text-left">
-        {skills.list.map((stack) => (
-          <Card name={stack.stack[locale]} technologies={stack.technologies} locale={locale} />
-        ))}
-      </div>
+        <div class="text-center px-6 lg:px-20 xl:px-40 mb-10">
+            <h4 class="mb-4 uppercase">{skills.title[locale]}</h4>
+            <p>{skills.description[locale]}</p>
+        </div>
+
+        <div class="px-6 lg:px-12 xl:px-10">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-10"
+            >
+                {
+                    skills.list.map((stack) => (
+                        <div>
+                            <div class="text-xxs font-semibold tracking-widest uppercase text-tg-soft-gray mb-4 pb-3 border-b border-tg-soft-gray">
+                                {stack.stack[locale]}
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                {stack.technologies.map((tech) => (
+                                    <span
+                                        class="tech-tag group inline-flex items-center gap-2 px-3.5 py-2 rounded text-sm font-medium bg-gray-100 text-tg-gray border-1 border-transparent leading-none cursor-default transition duration-200 hover:bg-tg-white hover:border-current hover:-translate-y-1 hover:shadow-md hover:shadow-tg-soft-gray"
+                                        data-tech={tech.tech}
+                                        style={`--hover-color: ${hoverColors[tech.tech] ?? "var(--color-tg-gray)"}`}
+                                    >
+                                        {tech.icon && (
+                                            <i
+                                                class={`${tech.icon} fa-fw text-base shrink-0 transition-transform duration-200 group-hover:scale-110`}
+                                                aria-hidden="true"
+                                            />
+                                        )}
+                                        {tech.svg && (
+                                            <span
+                                                class="svg-icon inline-flex w-4 h-4 shrink-0 transition-transform duration-200 group-hover:scale-110"
+                                                set:html={readSvg(tech.svg)}
+                                                aria-hidden="true"
+                                            />
+                                        )}
+                                        {tech.label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+
+<style>
+    .tech-tag:hover {
+        color: var(--hover-color) !important;
+    }
+
+    .svg-icon :global(svg) {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+</style>

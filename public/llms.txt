@@ -1,0 +1,24 @@
+# Tifenn Guillas
+
+> Fullstack web developer with 8+ years of experience, specialized in Angular, TypeScript, Symfony and PHP. Based in France. Open to opportunities.
+
+Tifenn Guillas is a French fullstack web developer. After a Biology degree, she transitioned into web development and has been building applications for over 8 years. She is specialized in Angular, TypeScript, Symfony, PHP, PostgreSQL and Docker. She values code quality, best practices, and is increasingly interested in AI-assisted development.
+
+This site is her personal portfolio, available in French and English.
+
+## Pages
+
+- [Portfolio FR](https://tifenn-guillas.fr/fr/): Full portfolio in French — about, skills, career, education, projects, goals, hobbies and contact.
+- [Portfolio EN](https://tifenn-guillas.fr/en/): Full portfolio in English — about, skills, career, education, projects, goals, hobbies and contact.
+
+## Sections
+
+- About: Fullstack developer since 2016, former biology student, passionate about clean code and meaningful projects.
+- Skills: Angular, TypeScript, RxJS, NgRx, PHP, Symfony, Doctrine, Twig, Python, Java, PostgreSQL, MySQL, Docker, Git, CI/CD, Linux, Azure.
+- Career: Professional experience including work on the SVOM scientific satellite project, cybersecurity products, and various fullstack web applications.
+- Education: Self-taught transition from biology to web development.
+- Contact: tifenn.guillas@gmail.com — LinkedIn: tifenn-guillas.
+
+## Languages
+
+French (native), English (professional).

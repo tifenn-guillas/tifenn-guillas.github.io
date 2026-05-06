@@ -1,28 +1,83 @@
 ---
-import type { Locale } from '../../i18n';
-import { hobbies } from '../../data/hobbies';
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import type { Locale } from "../../i18n";
+import { hobbies } from "../../data/hobbies";
+import BlockName from "../atoms/BlockName.astro";
+
+const readSvg = (filename: string): string => {
+    try {
+        return readFileSync(
+            resolve(process.cwd(), "public/assets/images", filename),
+            "utf-8",
+        );
+    } catch {
+        return "";
+    }
+};
 
 interface Props {
-  locale: Locale;
+    locale: Locale;
+    label: string;
 }
 
-const { locale } = Astro.props;
+const { locale, label } = Astro.props;
 ---
 
-<div class="py-16 bg-tg-blue">
-  <div class="container mx-auto px-6">
-    <p class="mb-10 text-center text-lg text-tg-soft-gray">
-      {hobbies.description[locale]}
-    </p>
-    <div class="text-center">
-      <a
-        href={hobbies.download_href[locale]}
-        target="_blank"
-        class="inline-block border-2 border-tg-pink bg-tg-pink text-tg-white text-sm uppercase px-6 py-3 tracking-widest hover:bg-tg-white hover:text-tg-pink"
-        title={hobbies.download_description[locale]}
-      >
-        {hobbies.download[locale]}
-      </a>
+<div class="py-16 xl:px-24 2xl:px-52 bg-tg-blue">
+    <div class="container mx-auto">
+        <BlockName label={label} background="blue" direction="left" />
+
+        <div class="px-6 lg:px-12 xl:px-10 text-center">
+            <div class="px-6 lg:px-14 xl:px-28 mb-10">
+                <h4 class="mb-4 uppercase text-tg-white">
+                    {hobbies.title[locale]}
+                </h4>
+                <p class="text-tg-soft-gray">{hobbies.subtitle[locale]}</p>
+            </div>
+
+            <div class="flex flex-col gap-3 max-w-2xl mx-auto text-left">
+                {
+                    hobbies.items.map((item) => (
+                        <div
+                            class="hobby-item grid cursor-default transition-colors duration-200 gap-x-4"
+                            style="grid-template-columns: 3px 4rem 1fr; background: rgba(255,255,255,0.02);"
+                        >
+                            <div style="background-color: var(--color-tg-pink);" />
+                            <div class="flex items-center justify-center self-center">
+                                <span
+                                    class="hobby-svg w-full h-full text-tg-white"
+                                    set:html={readSvg(item.svg)}
+                                    aria-hidden="true"
+                                />
+                            </div>
+                            <div class="py-5 pr-5 pl-2">
+                                <p class="hobby-title text-sm font-bold tracking-widest uppercase text-tg-soft-gray mb-1.5 transition-colors duration-200">
+                                    {item.title[locale]}
+                                </p>
+                                <p
+                                    class="text-sm text-tg-soft-gray leading-relaxed"
+                                    set:html={item.text[locale]}
+                                />
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+
+<style>
+    .hobby-item:hover {
+        background: rgba(255, 255, 255, 0.035) !important;
+    }
+    .hobby-item:hover .hobby-title {
+        color: var(--color-tg-pink);
+    }
+    .hobby-svg :global(svg) {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+</style>

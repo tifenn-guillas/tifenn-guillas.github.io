@@ -4,7 +4,7 @@ import { join, extname, basename } from 'path';
 
 const targets = [
   { src: 'public/assets/images/hero.png', dest: 'public/assets/images/hero.webp', quality: 85 },
-  { src: 'public/assets/images/parallax.jpg', dest: 'public/assets/images/parallax.webp', quality: 85 },
+  { src: 'public/assets/images/parallax.png', dest: 'public/assets/images/parallax.webp', quality: 85 },
   { src: 'public/assets/images/profile.jpg', dest: 'public/assets/images/profile.webp', quality: 85 },
   { src: 'public/assets/images/miniature.jpg', dest: 'public/assets/images/miniature.webp', quality: 85 },
 ];
