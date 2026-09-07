@@ -34,14 +34,13 @@ export const resume: ResumeData = {
         en: 'Prozon is the B2B e-commerce platform for professionals and organizations. Specializing in technical supplies and equipment—signage, safety, urban furniture, and more—it\'s often called "the Amazon for professionals." It serves construction firms, major accounts, and local authorities with an ever-growing product catalog.',
       },
       tasks: {
-        fr: "Mise en place de la brique back-office dans le cadre de la migration e-commerce vers Sylius, basée sur Symfony, gRPC et Angular. Contribution à la démarche qualité par la création d'outils dédiés aux développeurs. Intégration de l'IA dans le workflow de développement, avec les bases d'une approche inspirée de la méthode BMAD.",
-        en: "Built the back-office module for the Sylius e-commerce migration using Symfony, gRPC, and Angular. Created developer-focused tools to raise code quality standards. Pioneered AI integration into the development workflow, establishing practices inspired by the BMAD methodology.",
+        fr: "Mise en place de la brique back-office dans le cadre de la migration e-commerce, basée sur Symfony, gRPC et Angular. Contribution à la démarche qualité par la création d'outils dédiés aux développeurs. Intégration de l'IA dans le workflow de développement, avec les bases d'une approche inspirée de la méthode BMAD.",
+        en: "Built the back-office module for the e-commerce migration using Symfony, gRPC, and Angular. Created developer-focused tools to raise code quality standards. Pioneered AI integration into the development workflow, establishing practices inspired by the BMAD methodology.",
       },
       technologies: [
         "Symfony",
         "gRPC",
         "Angular",
-        "Sylius",
         "CI/CD",
         "IA",
         "Claude",
